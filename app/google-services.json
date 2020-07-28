@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "856690994947",
+    "firebase_url": "https://mcres-octarus.firebaseio.com",
+    "project_id": "mcres-octarus",
+    "storage_bucket": "mcres-octarus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856690994947:android:6f24a23421ec9a2b784336",
+        "android_client_info": {
+          "package_name": "com.mcres.octarus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856690994947-mu476g15qpfprqc633rd0o90ru3jvr68.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mcres.octarus",
+            "certificate_hash": "df8c58d8cc5ecae3610125efcaff36775616ca2c"
+          }
+        },
+        {
+          "client_id": "856690994947-h242cp655u309vtqgja8tgndp9mtqh76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC10CN04ymkkxdIw0vovu0lVqbx4nKrPnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856690994947-h242cp655u309vtqgja8tgndp9mtqh76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
