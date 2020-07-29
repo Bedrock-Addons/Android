@@ -101,7 +101,7 @@ public class ActivityNewsDetails extends AppCompatActivity {
     private TextView total_comment;
     private View lyt_main_content, lyt_bottom_bar, lyt_toolbar;
     private WebView web_view = null;
-    private TextView top_title, type, total_view, download, update, creator;
+    private TextView top_title, type, total_view, download, update, creator, how_to;
     private MenuItem menu_refresh;
     private boolean is_running;
     private boolean is_activity_active = false;
@@ -156,6 +156,7 @@ public class ActivityNewsDetails extends AppCompatActivity {
         update = findViewById(R.id.updated);
         shimmer = findViewById(R.id.shimmer);
         creator = findViewById(R.id.creator);
+        how_to = findViewById(R.id.howto);
         total_comment = findViewById(R.id.total_comment);
 
         parent_view = findViewById(android.R.id.content);
@@ -283,6 +284,7 @@ public class ActivityNewsDetails extends AppCompatActivity {
             type.setText("Other");
             download.setText("Unable to Download");
             download.setVisibility(View.GONE);
+            how_to.setVisibility(View.GONE);
         }
 
         if (news.url.equalsIgnoreCase("")) {
