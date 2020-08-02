@@ -6,8 +6,8 @@ android {
         applicationId "com.mcres.octarus"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 14
-        versionName "1.16.3"
+        versionCode 15
+        versionName "1.16.4"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
     }
