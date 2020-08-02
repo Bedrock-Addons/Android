@@ -594,7 +594,7 @@ public class ActivityNewsDetails extends AppCompatActivity {
         (dialog.findViewById(R.id.bt_default)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cur_text_size = 15;
+                cur_text_size = 14;
                 refreshFontSize(tv_size, cur_text_size);
             }
         });

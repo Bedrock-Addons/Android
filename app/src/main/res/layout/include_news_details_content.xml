@@ -195,6 +195,7 @@
 
 
             <LinearLayout
+                android:id="@+id/lyt_comment"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -250,7 +251,6 @@
                     android:textStyle="" />
 
                 <TextView
-                    android:id="@+id/lyt_comment"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:layout_marginRight="10dp"
@@ -314,10 +314,7 @@
                 android:id="@+id/web_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:layout_marginRight="7dp"
-                android:layout_marginLeft="7dp"
-                android:layout_marginBottom="2dp"/>
+                android:layout_margin="7dp" />
 
             <TextView
                 android:id="@+id/howto"
@@ -326,7 +323,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="15dp"
                 android:background="@drawable/button_green"
                 android:gravity="center"
                 android:onClick="howto"
