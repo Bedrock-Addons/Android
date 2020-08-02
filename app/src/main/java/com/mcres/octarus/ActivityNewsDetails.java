@@ -345,7 +345,7 @@ public class ActivityNewsDetails extends AppCompatActivity {
             }
         });
 
-        (findViewById(R.id.lyt_comment)).setOnClickListener(new View.OnClickListener() {
+        (findViewById(R.id.lyt_review)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ActivityComment.navigate(ActivityNewsDetails.this, news);

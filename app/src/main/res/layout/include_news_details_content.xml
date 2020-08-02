@@ -195,7 +195,7 @@
 
 
             <LinearLayout
-                android:id="@+id/lyt_comment"
+                android:id="@+id/lyt_review"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
