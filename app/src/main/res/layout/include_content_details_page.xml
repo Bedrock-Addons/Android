@@ -293,7 +293,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="6dp"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/download_button"
             android:gravity="center"
             android:onClick="download"
@@ -314,7 +314,10 @@
                 android:id="@+id/web_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="7dp" />
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="4dp"/>
 
             <TextView
                 android:id="@+id/howto"
