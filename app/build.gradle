@@ -19,7 +19,7 @@ android {
     }
 }
 
-// Dependancies listed here
+// Project dependancies are listed here
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.0'
