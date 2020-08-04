@@ -126,7 +126,8 @@
                 android:padding="@dimen/spacing_medium"
                 android:text="@string/forgot_password"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
-                android:textColor="@color/colorTextAction" />
+                android:textColor="@color/colorTextAction"
+                android:visibility="gone"/>
 
         </LinearLayout>
 
