@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mcres.octarus.ActivityNewsDetails;
+import com.mcres.octarus.ActivityContentDetails;
 import com.mcres.octarus.R;
 import com.mcres.octarus.adapter.AdapterNews;
 import com.mcres.octarus.data.Constant;
@@ -58,7 +58,7 @@ public class FragmentSaved extends Fragment {
             @Override
             public void onItemClick(View view, News obj, int pos) {
                 obj.source_type = SourceType.SAVED;
-                ActivityNewsDetails.navigate(getActivity(), obj);
+                ActivityContentDetails.navigate(getActivity(), obj);
             }
         });
 

@@ -19,7 +19,7 @@ import com.mcres.octarus.utils.Tools;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterComment extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class AdapterReview extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private final int VIEW_ITEM = 1;
     private final int VIEW_PROG = 0;
@@ -39,7 +39,7 @@ public class AdapterComment extends RecyclerView.Adapter<RecyclerView.ViewHolder
         this.mOnItemClickListener = mItemClickListener;
     }
 
-    public AdapterComment(Context context, RecyclerView view) {
+    public AdapterReview(Context context, RecyclerView view) {
         ctx = context;
     }
 
@@ -77,10 +77,10 @@ public class AdapterComment extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder vh;
         if (viewType == VIEW_ITEM) {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_comment, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_review, parent, false);
             vh = new OriginalViewHolder(v);
         } else {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_loadmore_comment, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_loadmore_reviews, parent, false);
             vh = new ProgressViewHolder(v);
         }
         return vh;

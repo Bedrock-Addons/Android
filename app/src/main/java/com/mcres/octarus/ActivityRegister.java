@@ -40,13 +40,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ActivityRegisterProfile extends AppCompatActivity {
+public class ActivityRegister extends AppCompatActivity {
 
     private static final String EXTRA_OBJECT = "key.EXTRA_OBJECT";
 
     // activity transition
     public static void navigate(Context context, User user) {
-        Intent i = new Intent(context, ActivityRegisterProfile.class);
+        Intent i = new Intent(context, ActivityRegister.class);
         i.putExtra(EXTRA_OBJECT, user);
         context.startActivity(i);
     }
@@ -107,7 +107,7 @@ public class ActivityRegisterProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                ActivityLogin.navigate(ActivityRegisterProfile.this);
+                ActivityLogin.navigate(ActivityRegister.this);
             }
         });
 
@@ -137,7 +137,7 @@ public class ActivityRegisterProfile extends AppCompatActivity {
         (findViewById(R.id.lyt_term_policies)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.openInAppBrowser(ActivityRegisterProfile.this, getString(R.string.privacy_policy_url), false);
+                Tools.openInAppBrowser(ActivityRegister.this, getString(R.string.privacy_policy_url), false);
             }
         });
 
@@ -285,7 +285,7 @@ public class ActivityRegisterProfile extends AppCompatActivity {
                 if (is_profile) {
                     ThisApp.get().setUser(user);
                 } else {
-                    ActivityLogin.navigate(ActivityRegisterProfile.this);
+                    ActivityLogin.navigate(ActivityRegister.this);
                 }
             }
         });

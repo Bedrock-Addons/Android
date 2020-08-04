@@ -42,13 +42,13 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mcres.octarus.ActivityRegisterProfile"
+            android:name="com.mcres.octarus.ActivityRegister"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.mcres.octarus.ActivityLogin"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.mcres.octarus.ActivitySearchFilter"
+            android:name="com.mcres.octarus.ActivityFilterSearch"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
@@ -63,7 +63,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mcres.octarus.ActivityNewsDetails"
+            android:name="com.mcres.octarus.ActivityContentDetails"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
@@ -78,7 +78,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mcres.octarus.ActivityComment"
+            android:name="com.mcres.octarus.ActivityReview"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" /> <!-- admob data -->
         <meta-data

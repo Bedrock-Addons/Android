@@ -125,7 +125,7 @@ public class ActivityMain extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (is_login) {
-                    ActivityRegisterProfile.navigate(ActivityMain.this, user);
+                    ActivityRegister.navigate(ActivityMain.this, user);
                 } else {
                     ActivityLogin.navigate(ActivityMain.this);
                 }
@@ -356,7 +356,7 @@ public class ActivityMain extends AppCompatActivity {
             }
         });
 
-        // interstitial
+        // interstitial ads controller
         mInterstitialAd = new InterstitialAd(getApplicationContext());
         mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
         if (AppConfig.ADS_MAIN_INTERS) mInterstitialAd.loadAd(adRequest);
@@ -375,7 +375,7 @@ public class ActivityMain extends AppCompatActivity {
         });
     }
 
-    /* show ads */
+    // displays the ads
     public void showInterstitial() {
         // Show the ad if it's ready
         if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {

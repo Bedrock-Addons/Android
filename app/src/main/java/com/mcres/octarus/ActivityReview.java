@@ -11,11 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mcres.octarus.adapter.AdapterComment;
+import com.mcres.octarus.adapter.AdapterReview;
 import com.mcres.octarus.connection.API;
 import com.mcres.octarus.connection.RestAdapter;
 import com.mcres.octarus.connection.response.ResponseCommentAdd;
@@ -35,13 +34,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ActivityComment extends AppCompatActivity {
+public class ActivityReview extends AppCompatActivity {
 
     private static final String EXTRA_OBJECT = "key.EXTRA_OBJECT";
 
     // activity transition
     public static void navigate(Activity activity, News news) {
-        Intent i = new Intent(activity, ActivityComment.class);
+        Intent i = new Intent(activity, ActivityReview.class);
         i.putExtra(EXTRA_OBJECT, news);
         activity.startActivity(i);
     }
@@ -59,7 +58,7 @@ public class ActivityComment extends AppCompatActivity {
     private API api = RestAdapter.createAPI();
     private Call<ResponseCommentList> callbackList;
     private Call<ResponseCommentAdd> callbackAdd;
-    private AdapterComment mAdapter;
+    private AdapterReview mAdapter;
 
     private int count_total = 0;
     private int failed_page = 0;
@@ -67,7 +66,7 @@ public class ActivityComment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comment);
+        setContentView(R.layout.activity_review);
 
         news = (News) getIntent().getSerializableExtra(EXTRA_OBJECT);
 
@@ -94,11 +93,11 @@ public class ActivityComment extends AppCompatActivity {
         recycler_view.setHasFixedSize(true);
 
         //set data and list adapter
-        mAdapter = new AdapterComment(this, recycler_view);
+        mAdapter = new AdapterReview(this, recycler_view);
         recycler_view.setAdapter(mAdapter);
 
         // detect when scroll reach bottom
-        mAdapter.setOnLoadMoreListener(new AdapterComment.OnLoadMoreListener() {
+        mAdapter.setOnLoadMoreListener(new AdapterReview.OnLoadMoreListener() {
             @Override
             public void onLoadMore(int current_page) {
                 if (count_total > mAdapter.getItemCount() && current_page != 0) {
@@ -114,7 +113,7 @@ public class ActivityComment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!is_login) {
-                    ActivityLogin.navigate(ActivityComment.this);
+                    ActivityLogin.navigate(ActivityReview.this);
                     return;
                 }
                 final String comment = et_comment.getText().toString().trim();

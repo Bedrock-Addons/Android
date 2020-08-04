@@ -112,7 +112,7 @@ public class ActivitySearch extends AppCompatActivity {
         mAdapter.setOnItemClickListener(new AdapterNews.OnItemClickListener() {
             @Override
             public void onItemClick(View v, News obj, int pos) {
-                ActivityNewsDetails.navigate(ActivitySearch.this, obj);
+                ActivityContentDetails.navigate(ActivitySearch.this, obj);
             }
         });
 
@@ -143,7 +143,7 @@ public class ActivitySearch extends AppCompatActivity {
         btn_filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivitySearchFilter.navigate(ActivitySearch.this, searchFilter);
+                ActivityFilterSearch.navigate(ActivitySearch.this, searchFilter);
             }
         });
 
@@ -172,8 +172,8 @@ public class ActivitySearch extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == ActivitySearchFilter.REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            searchFilter = (SearchFilter) data.getSerializableExtra(ActivitySearchFilter.RESULT_DATA);
+        if (requestCode == ActivityFilterSearch.REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            searchFilter = (SearchFilter) data.getSerializableExtra(ActivityFilterSearch.RESULT_DATA);
             hint = getString(R.string.hint_default);
             checkFilterIsActive();
         }

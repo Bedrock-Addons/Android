@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mcres.octarus.ActivityNewsDetails;
+import com.mcres.octarus.ActivityContentDetails;
 import com.mcres.octarus.ActivitySearch;
 import com.mcres.octarus.R;
 import com.mcres.octarus.adapter.AdapterHome;
@@ -28,7 +28,6 @@ import com.mcres.octarus.model.News;
 import com.mcres.octarus.model.SearchBody;
 import com.mcres.octarus.model.SearchFilter;
 import com.mcres.octarus.model.Topic;
-import com.mcres.octarus.model.TopicList;
 import com.mcres.octarus.utils.NetworkCheck;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
@@ -94,7 +93,7 @@ public class FragmentHome extends Fragment {
         mAdapter.setOnItemClickListener(new AdapterHome.OnItemClickListener() {
             @Override
             public void onItemNewsClick(View view, News obj, int position) {
-                ActivityNewsDetails.navigate(getActivity(), obj);
+                ActivityContentDetails.navigate(getActivity(), obj);
             }
 
             @Override

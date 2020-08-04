@@ -110,7 +110,7 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder vh;
         if (viewType == VIEW_ITEM_NEWS) {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_news, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_content, parent, false);
             vh = new ItemNewsViewHolder(v);
         } else if (viewType == VIEW_ITEM_TOPIC) {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_section_topic_home, parent, false);

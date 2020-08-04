@@ -46,7 +46,6 @@ import com.mcres.octarus.room.AppDatabase;
 import com.mcres.octarus.room.DAO;
 import com.mcres.octarus.room.table.NewsEntity;
 import com.mcres.octarus.utils.NetworkCheck;
-import com.mcres.octarus.utils.TimeAgo;
 import com.mcres.octarus.utils.Tools;
 import com.mcres.octarus.utils.ViewAnimation;
 import com.facebook.shimmer.ShimmerFrameLayout;
@@ -64,7 +63,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ActivityNewsDetails extends AppCompatActivity {
+public class ActivityContentDetails extends AppCompatActivity {
 
     private static final String EXTRA_OBJECT = "key.EXTRA_OBJECT";
 
@@ -75,7 +74,7 @@ public class ActivityNewsDetails extends AppCompatActivity {
     }
 
     public static Intent navigateBase(Context context, News news) {
-        Intent i = new Intent(context, ActivityNewsDetails.class);
+        Intent i = new Intent(context, ActivityContentDetails.class);
         i.putExtra(EXTRA_OBJECT, news);
         return i;
     }
@@ -110,7 +109,7 @@ public class ActivityNewsDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news_details);
+        setContentView(R.layout.activity_content_details);
 
         news = (News) getIntent().getSerializableExtra(EXTRA_OBJECT);
         dao = AppDatabase.getDb(this).getDAO();
@@ -263,7 +262,7 @@ public class ActivityNewsDetails extends AppCompatActivity {
         web_view.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                Tools.actionLinkFromContent(ActivityNewsDetails.this, url);
+                Tools.actionLinkFromContent(ActivityContentDetails.this, url);
                 return true;
             }
         });
@@ -348,14 +347,14 @@ public class ActivityNewsDetails extends AppCompatActivity {
         (findViewById(R.id.lyt_review)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityComment.navigate(ActivityNewsDetails.this, news);
+                ActivityReview.navigate(ActivityContentDetails.this, news);
             }
         });
 
         (findViewById(R.id.btn_share)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.methodShare(ActivityNewsDetails.this, news);
+                Tools.methodShare(ActivityContentDetails.this, news);
             }
         });
 

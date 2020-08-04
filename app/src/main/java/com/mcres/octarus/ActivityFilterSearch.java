@@ -40,13 +40,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ActivitySearchFilter extends AppCompatActivity {
+public class ActivityFilterSearch extends AppCompatActivity {
 
     public static final int REQUEST_CODE = 500;
     public static final String RESULT_DATA = "RESULT_DATA";
 
     public static void navigate(Activity activity, SearchFilter searchFilter) {
-        Intent i = new Intent(activity, ActivitySearchFilter.class);
+        Intent i = new Intent(activity, ActivityFilterSearch.class);
         i.putExtra(RESULT_DATA, searchFilter);
         activity.startActivityForResult(i, REQUEST_CODE);
     }
@@ -335,7 +335,7 @@ public class ActivitySearchFilter extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(ActivitySearchFilter.this, R.string.failed_text, Toast.LENGTH_LONG).show();
+                        Toast.makeText(ActivityFilterSearch.this, R.string.failed_text, Toast.LENGTH_LONG).show();
                         dialog.dismiss();
                     }
                 }, 1000);

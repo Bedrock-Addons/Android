@@ -104,7 +104,7 @@ public class ActivitySettings extends AppCompatActivity {
         edit_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityRegisterProfile.navigate(ActivitySettings.this, user);
+                ActivityRegister.navigate(ActivitySettings.this, user);
             }
         });
 

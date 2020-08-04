@@ -75,7 +75,7 @@ public class AdapterTopic extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder vh;
         if (viewType == VIEW_ITEM) {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_topic, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category, parent, false);
             vh = new OriginalViewHolder(v);
         } else {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_loading, parent, false);

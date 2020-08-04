@@ -89,7 +89,7 @@ public class ActivityLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                ActivityRegisterProfile.navigate(ActivityLogin.this, null);
+                ActivityRegister.navigate(ActivityLogin.this, null);
             }
         });
 
