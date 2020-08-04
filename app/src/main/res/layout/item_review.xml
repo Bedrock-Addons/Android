@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:layout_marginBottom="2dp">
+            android:layout_marginBottom="5dp">
 
             <LinearLayout
                 android:id="@+id/rating"
@@ -76,8 +76,8 @@
 
                 <ImageView
                     android:id="@+id/image"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_centerInParent="true" />
 
             </RelativeLayout>
@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:text="Comment text will be here "
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-            android:textColor="@color/grey_40"
+            android:textColor="@color/grey_50"
             android:maxLines="3"/>
 
         <View

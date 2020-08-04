@@ -27,7 +27,7 @@
     <string name="login_email_warning">Enter your email</string>
     <string name="login_email_invalid">Invalid email</string>
     <string name="login_password_warning">Enter your password</string>
-    <string name="login_success_info">Login Successful!</string>
+    <string name="login_success_info">Login Successful</string>
     <string name="account_disabled">Account has been banned</string>
     <string name="invalid_email_password">Invalid email or password</string>
     <string name="email_not_registered">Email not registered</string>
@@ -50,7 +50,7 @@
     <string name="form_title_update">Update</string>
     <string name="form_title_register">Register</string>
     <string name="have_an_account">Already have an account?</string>
-    <string name="register_term_note">By creating an account, you agree with Octarus</string>
+    <string name="register_term_note">By creating an account, you agree with Octarus policies</string>
 
     <!-- Homepage Strings -->
     <string name="close_sidebar">Click transparent space to close the sidebar</string>
