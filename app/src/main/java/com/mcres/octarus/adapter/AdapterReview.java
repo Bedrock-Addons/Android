@@ -96,10 +96,10 @@ public class AdapterReview extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             if (c.status.equalsIgnoreCase("SHOW")) {
                 v_item.comment.setText(c.comment);
             } else {
-                v_item.comment.setText(ctx.getString(R.string.hide_comment_msg));
+                v_item.comment.setText(ctx.getString(R.string.hide_review_message));
                 v_item.image.setVisibility(View.GONE);
                 v_item.date.setVisibility(View.GONE);
-                v_item.name.setText(ctx.getString(R.string.hide_user_msg));
+                v_item.name.setText(ctx.getString(R.string.hide_user_message));
                 v_item.rating.setVisibility(View.VISIBLE);
             }
             v_item.date.setText(TimeAgo.get(ctx, c.created_at));

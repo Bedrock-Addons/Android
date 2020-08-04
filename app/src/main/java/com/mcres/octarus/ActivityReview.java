@@ -118,7 +118,7 @@ public class ActivityReview extends AppCompatActivity {
                 }
                 final String comment = et_comment.getText().toString().trim();
                 if (comment.trim().equals("")) {
-                    Toast.makeText(getApplicationContext(), R.string.comment_input_warning, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.review_input_warning, Toast.LENGTH_SHORT).show();
                     return;
                 }
                 loadingAddComment(true);
@@ -269,9 +269,9 @@ public class ActivityReview extends AppCompatActivity {
             if (resp == null) {
                 message = getString(R.string.failed_text);
             } else if (resp.code.equalsIgnoreCase("EXIST")) {
-                message = getString(R.string.comment_exist_warning);
+                message = getString(R.string.review_exist_warning);
             } else if (resp.code.equalsIgnoreCase("SUCCESS")) {
-                message = getString(R.string.comment_add_info);
+                message = getString(R.string.review_add_info);
                 et_comment.setText("");
                 resp.comment.name = user.name;
                 resp.comment.image = user.image;

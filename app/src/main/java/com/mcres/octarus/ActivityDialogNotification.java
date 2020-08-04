@@ -136,7 +136,7 @@ public class ActivityDialogNotification extends AppCompatActivity {
                 if (!from_notif && position != -1) {
                     dao.deleteNotification(notification.id);
                     ActivityNotification.getInstance().adapter.removeItem(position);
-                    Snackbar.make(ActivityNotification.getInstance().parent_view, R.string.delete_successfully, Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(ActivityNotification.getInstance().parent_view, "R.string.delete_successfully", Snackbar.LENGTH_SHORT).show();
                 }
             }
         });

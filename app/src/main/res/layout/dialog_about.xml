@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_xmiddle"
                 android:gravity="center"
-                android:text="@string/content_about"
+                android:text="The best Bedrock Maps and Bedrock Addons for Minecraft."
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/grey_40" />
 

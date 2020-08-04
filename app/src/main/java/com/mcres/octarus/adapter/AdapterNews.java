@@ -106,13 +106,13 @@ public class AdapterNews extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             v.featured.setVisibility(news.featured == 1 ? View.VISIBLE : View.GONE);
             v.total_view.setText(Tools.bigNumberFormat(news.total_view));
             if (news.type.equalsIgnoreCase("OTHER")) {
-                v.txt_type.setText(R.string.news_type_other);
+                v.txt_type.setText(R.string.content_type_other);
             } else if (news.type.equalsIgnoreCase("MCWORLD")) {
-                v.txt_type.setText(R.string.news_type_mcworld);
+                v.txt_type.setText(R.string.content_type_mcworld);
             } else if (news.type.equalsIgnoreCase("MCPACK")) {
-                v.txt_type.setText(R.string.news_type_mcpack);
+                v.txt_type.setText(R.string.content_type_mcpack);
             } else {
-                v.txt_type.setText(R.string.news_type_other);
+                v.txt_type.setText(R.string.content_type_other);
             }
             v.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override

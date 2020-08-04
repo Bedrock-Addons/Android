@@ -489,7 +489,7 @@ public class Tools {
                 return;
             }
             // string to share
-            String body = String.format(act.getString(R.string.share_text), news.title, act.getString(R.string.app_name));
+            String body = String.format(act.getString(R.string.app_name), news.title, act.getString(R.string.app_name));
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             sharingIntent.putExtra(Intent.EXTRA_SUBJECT, act.getString(R.string.app_name));

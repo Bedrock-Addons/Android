@@ -60,7 +60,7 @@ public class ActivityGallery extends AppCompatActivity {
         adapter = new AdapterFullScreenImage(this, items);
         final int total = adapter.getCount();
         viewPager.setAdapter(adapter);
-        text_page.setText(String.format(getString(R.string.image_of), 1, total));
+        text_page.setText(String.format(getString(R.string.no_results), 1, total));
 
         // displaying selected image first
         viewPager.setCurrentItem(0);
@@ -72,7 +72,7 @@ public class ActivityGallery extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int pos) {
-                text_page.setText(String.format(getString(R.string.image_of), (pos + 1), total));
+                text_page.setText(String.format(getString(R.string.no_results), (pos + 1), total));
             }
 
             @Override

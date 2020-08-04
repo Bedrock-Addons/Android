@@ -65,7 +65,7 @@
                 android:layout_height="@dimen/spacing_xmlarge"
                 android:layout_marginTop="@dimen/spacing_smlarge"
                 android:background="@drawable/edit_text_round"
-                android:hint="@string/hint_name"
+                android:hint="@string/hint_username"
                 android:inputType="text"
                 android:maxLength="15"
                 android:maxLines="1"
