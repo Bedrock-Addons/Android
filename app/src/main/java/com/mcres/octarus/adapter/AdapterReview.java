@@ -103,7 +103,7 @@ public class AdapterReview extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 v_item.rating.setVisibility(View.VISIBLE);
             }
             v_item.date.setText(TimeAgo.get(ctx, c.created_at));
-            Tools.displayImageCircle(ctx, v_item.image, Constant.getURLimgUser(c.image), 0.5f);
+            Tools.displayImageThumb(ctx, v_item.image, Constant.getURLimgUser(c.image), 0.5f);
             v_item.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

@@ -220,11 +220,6 @@ public class Tools {
         return newFormat.format(new Date(dateTime));
     }
 
-    public static String getFormattedUpdateSimple(Long dateTime) {
-        SimpleDateFormat newFormat = new SimpleDateFormat("MMMM dd");
-        return newFormat.format(new Date(dateTime));
-    }
-
     public static void displayImage(Context ctx, ImageView img, String url) {
         try {
             Glide.with(ctx.getApplicationContext()).load(url)
@@ -262,7 +257,7 @@ public class Tools {
             Glide.with(ctx.getApplicationContext()).load(url)
                     .transition(withCrossFade())
                     .diskCacheStrategy(new SharedPref(ctx).getImageCache() ? DiskCacheStrategy.ALL : DiskCacheStrategy.NONE)
-                    .apply(RequestOptions.circleCropTransform())
+                    //.apply(RequestOptions.circleCropTransform())
                     .thumbnail(thumb)
                     .into(img);
         } catch (Exception e) {
@@ -396,7 +391,6 @@ public class Tools {
     }
 
     private static final NavigableMap<Long, String> suffixes = new TreeMap<>();
-
     static {
         suffixes.put(1_000L, "K");
         suffixes.put(1_000_000L, "M");
@@ -405,10 +399,9 @@ public class Tools {
     }
 
     public static String bigNumberFormat(long value) {
-        //Long.MIN_VALUE == -Long.MIN_VALUE so we need an adjustment here
         if (value == Long.MIN_VALUE) return bigNumberFormat(Long.MIN_VALUE + 1);
         if (value < 0) return "0";
-        if (value < 1000) return Long.toString(value); //deal with easy case
+        if (value < 1000) return Long.toString(value);
 
         Map.Entry<Long, String> e = suffixes.floorEntry(value);
         Long divideBy = e.getKey();
@@ -419,6 +412,7 @@ public class Tools {
         return hasDecimal ? (truncated / 10d) + suffix : (truncated / 10) + suffix;
     }
 
+    // This controls the app links automatically for Google Play
     public static void rateAction(Activity activity) {
         Uri uri = Uri.parse("market://details?id=" + activity.getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
@@ -429,6 +423,7 @@ public class Tools {
         }
     }
 
+    // This code is not currently in use. Its here because its 2AM and I am going insane
     public static void discord(Activity activity) {
         Uri uri = Uri.parse("https://discord.gg/NAFjwbA");
         try {
@@ -496,7 +491,7 @@ public class Tools {
             sharingIntent.putExtra(Intent.EXTRA_TEXT, body);
             act.startActivity(Intent.createChooser(sharingIntent, "Share Using"));
         } catch (Exception e) {
-            Toast.makeText(act, "Failed when create share data", Toast.LENGTH_LONG).show();
+            Toast.makeText(act, "Failed to create share link", Toast.LENGTH_LONG).show();
         }
     }
 }

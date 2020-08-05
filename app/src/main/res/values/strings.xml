@@ -154,7 +154,6 @@
     <string-array name="themes">
         <item>Light Mode</item>
         <item>Dark Mode</item>
-        <item>Test Mode</item>
         <item>Auto</item>
     </string-array>
 

@@ -2,7 +2,7 @@ package com.mcres.octarus.data;
 
 public class AppConfig {
 
-    // if you not use ads you can set this to false
+    // if you dont use ads you can set this to false
     public static final boolean ENABLE_GDPR = true;
 
     // force rtl layout direction
@@ -17,8 +17,7 @@ public class AppConfig {
     // flag for open link in app browser
     public static final boolean OPEN_IN_APP_BROWSER = false;
 
-    // flag for display ads (change true & false ant the end only )
-
+    // if you want to display ads (change true & false ant the end only )
     public static final boolean ADS_MAIN_ALL = ADS_ENABLE && true;
     public static final boolean ADS_MAIN_BANNER = ADS_ENABLE && ADS_MAIN_ALL && true;
     public static final boolean ADS_MAIN_INTERS = ADS_ENABLE && ADS_MAIN_ALL && true;
