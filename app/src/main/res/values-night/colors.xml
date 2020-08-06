@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorBackground">#151515</color>
+    <color name="colorBackground">#121212</color>
     <color name="colorBackgroundDarker">#1B1B1B</color>
     <color name="colorTextAction">#D6D6D6</color>
     <color name="colorButton">#D6D6D6</color>
     <color name="colorSeparator">#182022</color>
     <color name="colorNews">#242424</color>
+    <color name="SystemBar">#121212</color>
 </resources>

@@ -26,7 +26,7 @@ public class AppConfig {
     public static final boolean ADS_DETAILS_ALL = ADS_ENABLE && true;
     public static final boolean ADS_DETAILS_BANNER = ADS_ENABLE && ADS_DETAILS_ALL && true;
     public static final boolean ADS_DETAILS_INTERS = ADS_ENABLE && ADS_DETAILS_ALL && true;
-    public static final int ADS_INTERS_DETAILS_FIRST_INTERVAL = 8; // in second
+    public static final int ADS_INTERS_DETAILS_FIRST_INTERVAL = 13; // in second
     public static final int ADS_INTERS_DETAILS_NEXT_INTERVAL = 10; // in second
 
     public static final boolean ADS_NOTIFICATION_PAGE = ADS_ENABLE && true;

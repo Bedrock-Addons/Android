@@ -91,11 +91,12 @@ public class Tools {
         return (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1);
     }
 
+    // If I am ever looking for the system bar stuff, here it is future Du!
     public static void setSmartSystemBar(Activity act) {
         if(isdarkTheme(act)){
-            setSystemBarColor(act, R.color.colorBackground);
+            setSystemBarColor(act, R.color.SystemBar);
         } else {
-            setSystemBarColor(act, R.color.colorBackground);
+            setSystemBarColor(act, R.color.SystemBar);
             setSystemBarLight(act);
         }
     }
@@ -146,10 +147,7 @@ public class Tools {
         }
     }
 
-
-    /**
-     * For device_name info parameters
-     */
+    // Gathers data on users device to be sent back through the API
     public static String getDeviceName() {
         String manufacturer = Build.MANUFACTURER;
         String model = Build.MODEL;
@@ -381,15 +379,18 @@ public class Tools {
         return str;
     }
 
+    // Checks if the email thats entered is valid
     public static boolean isEmailValid(String email) {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
+    // Set requirements for a strong password
     public static boolean isPasswordValid(String password) {
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+$");
         return pattern.matcher(password).matches();
     }
 
+    // BigNumberFormat display
     private static final NavigableMap<Long, String> suffixes = new TreeMap<>();
     static {
         suffixes.put(1_000L, "K");
@@ -398,6 +399,7 @@ public class Tools {
         suffixes.put(1_000_000_000_000L, "T");
     }
 
+    // This tells the numbers how to format and uses the code above to do so.
     public static String bigNumberFormat(long value) {
         if (value == Long.MIN_VALUE) return bigNumberFormat(Long.MIN_VALUE + 1);
         if (value < 0) return "0";
@@ -483,7 +485,7 @@ public class Tools {
             if (news.isDraft()) {
                 return;
             }
-            // string to share
+            // This code is not currently used, but I am sure you can find a use for it
             String body = String.format(act.getString(R.string.app_name), news.title, act.getString(R.string.app_name));
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");

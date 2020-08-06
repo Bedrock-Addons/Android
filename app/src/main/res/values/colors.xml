@@ -16,6 +16,7 @@
     <color name="colorSeparator">#eeeeee</color>
     <color name="colorReviewsSeparator">#e6e6e6</color>
     <color name="colorEditText">#eaecec</color>
+    <color name="SystemBar">#FFFFFF</color>
 
     <color name="grey_3">#f7f7f7</color>
     <color name="grey_5">#f2f2f2</color>

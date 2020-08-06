@@ -59,7 +59,7 @@
     <string name="title_menu_home">Bedrock Addons</string>
     <string name="title_menu_topic">Categories</string>
     <string name="title_menu_notif">Notifications</string>
-    <string name="title_menu_saved">Inventory</string>
+    <string name="title_menu_saved">Bookmarks</string>
     <string name="title_menu_more">Help</string>
     <string name="title_menu_discord">Join Discord</string>
     <string name="logout_confirmation_text">Are you sure you want to logout?</string>
@@ -69,8 +69,8 @@
     <string name="content_type_mcpack">McPack</string>
 
     <!-- Content Page Strings -->
-    <string name="remove_from_saved">Creation removed from inventory</string>
-    <string name="added_to_saved">Creation added to inventory</string>
+    <string name="remove_from_saved">Creation removed from bookmarks</string>
+    <string name="added_to_saved">Creation added to bookmarks</string>
     <string name="title_menu_refresh">Refresh</string>
     <string name="title_dialog_text_size">Text Size</string>
 
