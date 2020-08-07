@@ -84,8 +84,6 @@
     <string name="type_image">Image</string>
     <string name="type_normal">General</string>
 
-
-
     <!-- Search strings -->
     <string name="title_activity_search">Search</string>
     <string name="hint_topic">Category :\u0020</string>
