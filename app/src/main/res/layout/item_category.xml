@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:background="@color/colorNews">
+        android:background="@color/colorContent">
 
         <RelativeLayout
             android:layout_width="45dp"

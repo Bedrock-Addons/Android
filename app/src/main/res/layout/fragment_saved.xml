@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="2dp"
         android:padding='7dp'
-        android:background="@color/colorNews"
+        android:background="@color/colorContent"
         android:text="Your Inventory is where you can store content for later reading offline." />
 
     <RelativeLayout

@@ -48,8 +48,6 @@
     <color name="overlay_light_80">#CCFFFFFF</color>
     <color name="overlay_light_90">#E6FFFFFF</color>
 
-    <color name="colorBlue">#63b5c2</color>
-    <color name="colorTeel">#63c297</color>
-    <color name="colorNews">#EEEEEE</color>
+    <color name="colorContent">#EEEEEE</color>
 
 </resources>

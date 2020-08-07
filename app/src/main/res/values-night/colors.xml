@@ -5,6 +5,6 @@
     <color name="colorTextAction">#D6D6D6</color>
     <color name="colorButton">#D6D6D6</color>
     <color name="colorSeparator">#182022</color>
-    <color name="colorNews">#242424</color>
+    <color name="colorContent">#242424</color>
     <color name="SystemBar">#121212</color>
 </resources>
