@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="Addons.app" target="1.7" />
-      <module name="Bedrock-Addons.app" target="1.7" />
       <module name="Bedrock_Addons.app" target="1.7" />
-      <module name="Notch.app" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -18,7 +18,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public static AppDatabase getDb(Context context) {
         if (INSTANCE == null) {
             INSTANCE =
-                    Room.databaseBuilder(context, AppDatabase.class, "notch_database")
+                    Room.databaseBuilder(context, AppDatabase.class, "bedrock_addons_database")
                             .allowMainThreadQueries()
                             .fallbackToDestructiveMigration()
                             .build();
