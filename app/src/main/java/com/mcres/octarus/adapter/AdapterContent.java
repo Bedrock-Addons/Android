@@ -20,7 +20,7 @@ import com.mcres.octarus.utils.Tools;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterNews extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class AdapterContent extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final int VIEW_ITEM = 1;
     private final int VIEW_PROG = 0;
 
@@ -28,21 +28,21 @@ public class AdapterNews extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private int pagination = 0;
     private boolean loading;
-    private AdapterNews.OnLoadMoreListener onLoadMoreListener;
+    private AdapterContent.OnLoadMoreListener onLoadMoreListener;
 
     private Context ctx;
-    private AdapterNews.OnItemClickListener mOnItemClickListener;
+    private AdapterContent.OnItemClickListener mOnItemClickListener;
 
     public interface OnItemClickListener {
         void onItemClick(View view, News obj, int position);
     }
 
-    public void setOnItemClickListener(final AdapterNews.OnItemClickListener mItemClickListener) {
+    public void setOnItemClickListener(final AdapterContent.OnItemClickListener mItemClickListener) {
         this.mOnItemClickListener = mItemClickListener;
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public AdapterNews(Context context, RecyclerView view, int pagination) {
+    public AdapterContent(Context context, RecyclerView view, int pagination) {
         ctx = context;
         this.pagination = pagination;
         lastItemViewDetector(view);
@@ -86,10 +86,10 @@ public class AdapterNews extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         RecyclerView.ViewHolder vh;
         if (viewType == VIEW_ITEM) {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_content, parent, false);
-            vh = new AdapterNews.OriginalViewHolder(v);
+            vh = new AdapterContent.OriginalViewHolder(v);
         } else {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_loading, parent, false);
-            vh = new AdapterNews.ProgressViewHolder(v);
+            vh = new AdapterContent.ProgressViewHolder(v);
         }
         return vh;
     }
@@ -97,9 +97,9 @@ public class AdapterNews extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-        if (holder instanceof AdapterNews.OriginalViewHolder) {
+        if (holder instanceof AdapterContent.OriginalViewHolder) {
             final News news = items.get(position);
-            AdapterNews.OriginalViewHolder v = (AdapterNews.OriginalViewHolder) holder;
+            AdapterContent.OriginalViewHolder v = (AdapterContent.OriginalViewHolder) holder;
             v.title.setText(news.title);
             v.date.setText(TimeAgo.get(ctx, news.date));
             Tools.displayImage(ctx, v.image, Constant.getURLcontent(news.image));
@@ -123,7 +123,7 @@ public class AdapterNews extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 }
             });
         } else {
-            ((AdapterNews.ProgressViewHolder) holder).progressBar.setIndeterminate(true);
+            ((AdapterContent.ProgressViewHolder) holder).progressBar.setIndeterminate(true);
         }
     }
 
@@ -177,7 +177,7 @@ public class AdapterNews extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         notifyDataSetChanged();
     }
 
-    public void setOnLoadMoreListener(AdapterNews.OnLoadMoreListener onLoadMoreListener) {
+    public void setOnLoadMoreListener(AdapterContent.OnLoadMoreListener onLoadMoreListener) {
         this.onLoadMoreListener = onLoadMoreListener;
     }
 

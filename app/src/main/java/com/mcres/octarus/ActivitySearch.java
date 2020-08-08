@@ -19,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mcres.octarus.adapter.AdapterNews;
+import com.mcres.octarus.adapter.AdapterContent;
 import com.mcres.octarus.connection.API;
 import com.mcres.octarus.connection.RestAdapter;
 import com.mcres.octarus.connection.response.ResponseNews;
@@ -60,7 +60,7 @@ public class ActivitySearch extends AppCompatActivity {
     private AdView mAdView;
     private EditText et_search;
     private RecyclerView recyclerView;
-    private AdapterNews mAdapter;
+    private AdapterContent mAdapter;
     private ImageView btn_filter;
     private SearchFilter searchFilter = new SearchFilter();
     //private AdView mAdView;
@@ -107,9 +107,9 @@ public class ActivitySearch extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         //set data and list adapter
-        mAdapter = new AdapterNews(this, recyclerView, Constant.CONTENT_PER_REQUEST);
+        mAdapter = new AdapterContent(this, recyclerView, Constant.CONTENT_PER_REQUEST);
         recyclerView.setAdapter(mAdapter);
-        mAdapter.setOnItemClickListener(new AdapterNews.OnItemClickListener() {
+        mAdapter.setOnItemClickListener(new AdapterContent.OnItemClickListener() {
             @Override
             public void onItemClick(View v, News obj, int pos) {
                 ActivityContentDetails.navigate(ActivitySearch.this, obj);
@@ -117,7 +117,7 @@ public class ActivitySearch extends AppCompatActivity {
         });
 
         // detect when scroll reach bottom
-        mAdapter.setOnLoadMoreListener(new AdapterNews.OnLoadMoreListener() {
+        mAdapter.setOnLoadMoreListener(new AdapterContent.OnLoadMoreListener() {
             @Override
             public void onLoadMore(int current_page) {
                 if (post_total > mAdapter.getItemCount() && current_page != 0) {

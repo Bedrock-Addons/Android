@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.mcres.octarus.ActivityContentDetails;
 import com.mcres.octarus.R;
-import com.mcres.octarus.adapter.AdapterNews;
+import com.mcres.octarus.adapter.AdapterContent;
 import com.mcres.octarus.data.Constant;
 import com.mcres.octarus.data.ThisApp;
 import com.mcres.octarus.model.News;
@@ -31,7 +31,7 @@ public class FragmentSaved extends Fragment {
     private RecyclerView recycler_view;
     private DAO dao;
 
-    public AdapterNews adapter;
+    public AdapterContent adapter;
 
     public FragmentSaved() {
     }
@@ -51,10 +51,10 @@ public class FragmentSaved extends Fragment {
         recycler_view.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         //set data and list adapter
-        adapter = new AdapterNews(getActivity(), recycler_view, Constant.BOOKMARKS_PAGE);
+        adapter = new AdapterContent(getActivity(), recycler_view, Constant.BOOKMARKS_PAGE);
         recycler_view.setAdapter(adapter);
 
-        adapter.setOnItemClickListener(new AdapterNews.OnItemClickListener() {
+        adapter.setOnItemClickListener(new AdapterContent.OnItemClickListener() {
             @Override
             public void onItemClick(View view, News obj, int pos) {
                 obj.source_type = SourceType.SAVED;
@@ -72,7 +72,7 @@ public class FragmentSaved extends Fragment {
         showNoItemView();
         final int item_count = dao.getNewsCount();
         // detect when scroll reach bottom
-        adapter.setOnLoadMoreListener(new AdapterNews.OnLoadMoreListener() {
+        adapter.setOnLoadMoreListener(new AdapterContent.OnLoadMoreListener() {
             @Override
             public void onLoadMore(final int current_page) {
                 if (item_count > adapter.getItemCount() && current_page != 0) {
