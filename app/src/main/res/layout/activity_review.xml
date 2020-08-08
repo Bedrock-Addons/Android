@@ -127,7 +127,8 @@
         android:paddingLeft="@dimen/spacing_middle"
         android:paddingRight="@dimen/spacing_middle"
         android:paddingBottom="@dimen/spacing_large"
-        android:paddingTop="10dp">
+        android:paddingTop="10dp"
+        android:visibility="visible">
 
         <View
             android:layout_width="@dimen/spacing_large"
@@ -140,7 +141,7 @@
             android:layout_weight="1"
             android:background="@drawable/edit_text_round"
             android:imeOptions="actionDone"
-            android:maxLength="300"
+            android:maxLength="500"
             android:maxLines="5"
             android:minHeight="70dp"
             android:singleLine="true"

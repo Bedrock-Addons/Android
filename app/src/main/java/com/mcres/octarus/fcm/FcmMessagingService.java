@@ -91,7 +91,7 @@ public class FcmMessagingService extends FirebaseMessagingService {
     private void prepareImageNotification(final NotificationEntity notif) {
         String image_url = null;
         if (notif.type.equalsIgnoreCase(NotifType.NEWS.name())) {
-            image_url = Constant.getURLimgNews(notif.image);
+            image_url = Constant.getURLcontent(notif.image);
         } else if (notif.type.equalsIgnoreCase(NotifType.IMAGE.name())) {
             image_url = notif.image;
         }
@@ -106,7 +106,7 @@ public class FcmMessagingService extends FirebaseMessagingService {
                 @Override
                 public void onFailed(String string) {
                     Log.e("onFailed", string);
-                    if (retry_count <= Constant.LOAD_IMAGE_NOTIF_RETRY) {
+                    if (retry_count <= Constant.LOAD_IMAGE_RETRY) {
                         retry_count++;
                         prepareImageNotification(notif);
                     } else {

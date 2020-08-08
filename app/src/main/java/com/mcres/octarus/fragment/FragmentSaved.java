@@ -51,7 +51,7 @@ public class FragmentSaved extends Fragment {
         recycler_view.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         //set data and list adapter
-        adapter = new AdapterNews(getActivity(), recycler_view, Constant.SAVED_PAGE);
+        adapter = new AdapterNews(getActivity(), recycler_view, Constant.BOOKMARKS_PAGE);
         recycler_view.setAdapter(adapter);
 
         adapter.setOnItemClickListener(new AdapterNews.OnItemClickListener() {
@@ -67,7 +67,7 @@ public class FragmentSaved extends Fragment {
 
     private void startLoadMoreAdapter() {
         adapter.resetListData();
-        List<NewsEntity> items = dao.getAllNewsByPage(Constant.SAVED_PAGE, 0);
+        List<NewsEntity> items = dao.getAllNewsByPage(Constant.BOOKMARKS_PAGE, 0);
         adapter.insertEntityData(items);
         showNoItemView();
         final int item_count = dao.getNewsCount();
@@ -89,7 +89,7 @@ public class FragmentSaved extends Fragment {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                List<NewsEntity> items = dao.getAllNewsByPage(Constant.SAVED_PAGE, (next_page * Constant.SAVED_PAGE));
+                List<NewsEntity> items = dao.getAllNewsByPage(Constant.BOOKMARKS_PAGE, (next_page * Constant.BOOKMARKS_PAGE));
                 adapter.insertEntityData(items);
                 showNoItemView();
             }

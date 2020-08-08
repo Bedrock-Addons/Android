@@ -70,7 +70,7 @@ public class AdapterTopicHome extends RecyclerView.Adapter<RecyclerView.ViewHold
             OriginalViewHolder v = (OriginalViewHolder) holder;
             v.title.setText(p.name);
 
-            Tools.displayImage(ctx, v.icon, Constant.getURLimgTopic(p.icon));
+            Tools.displayImage(ctx, v.icon, Constant.getURLcategory(p.icon));
             v.lyt_color.setColorFilter(Color.parseColor(p.color), android.graphics.PorterDuff.Mode.SRC_IN);
             v.icon.setColorFilter(Color.WHITE, android.graphics.PorterDuff.Mode.SRC_IN);
             v.lyt_parent.setOnClickListener(new View.OnClickListener() {

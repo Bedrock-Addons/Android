@@ -316,7 +316,7 @@ public class ActivityContentDetails extends AppCompatActivity {
         }
         //------------------------
 
-        Tools.displayImage(this, image, Constant.getURLimgNews(news.image));
+        Tools.displayImage(this, image, Constant.getURLcontent(news.image));
 
         total_view.setText(Tools.bigNumberFormat(news.total_view));
 

@@ -107,7 +107,7 @@ public class ActivitySearch extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         //set data and list adapter
-        mAdapter = new AdapterNews(this, recyclerView, Constant.NEWS_PER_REQUEST);
+        mAdapter = new AdapterNews(this, recyclerView, Constant.CONTENT_PER_REQUEST);
         recyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(new AdapterNews.OnItemClickListener() {
             @Override
@@ -221,7 +221,7 @@ public class ActivitySearch extends AppCompatActivity {
 
     private void requestListNews(final int page_no) {
         API api = RestAdapter.createAPI();
-        SearchBody body = new SearchBody(page_no, Constant.NEWS_PER_REQUEST, query);
+        SearchBody body = new SearchBody(page_no, Constant.CONTENT_PER_REQUEST, query);
         body.topic_id = searchFilter.topic.id;
         body.col = searchFilter.sort_by.column;
         body.ord = searchFilter.sort_by.order;

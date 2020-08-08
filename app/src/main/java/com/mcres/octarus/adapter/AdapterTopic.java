@@ -92,7 +92,7 @@ public class AdapterTopic extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             OriginalViewHolder vItem = (OriginalViewHolder) holder;
             vItem.title.setText(p.name);
 
-            Tools.displayImage(ctx, vItem.icon, Constant.getURLimgTopic(p.icon));
+            Tools.displayImage(ctx, vItem.icon, Constant.getURLcategory(p.icon));
             vItem.lyt_color.setColorFilter(Color.parseColor(p.color), android.graphics.PorterDuff.Mode.SRC_IN);
             vItem.icon.setColorFilter(Color.WHITE, android.graphics.PorterDuff.Mode.SRC_IN);
             vItem.lyt_parent.setOnClickListener(new View.OnClickListener() {
@@ -164,7 +164,7 @@ public class AdapterTopic extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                     int lastPos = layoutManager.findLastVisibleItemPosition();
                     if (!loading && lastPos == getItemCount() - 1 && onLoadMoreListener != null) {
                         if (onLoadMoreListener != null) {
-                            int current_page = getItemCount() / Constant.TOPIC_PER_REQUEST;
+                            int current_page = getItemCount() / Constant.CATEGORY_PER_REQUEST;
                             onLoadMoreListener.onLoadMore(current_page);
                         }
                         loading = true;

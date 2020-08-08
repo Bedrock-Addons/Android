@@ -82,7 +82,7 @@ public class FragmentHome extends Fragment {
             public void onLoadMore() {
                 int item_count = mAdapter.getItemCount() - default_count;
                 if (count_total > item_count) {
-                    int next_page = (item_count / Constant.NEWS_PER_REQUEST) + 1;
+                    int next_page = (item_count / Constant.CONTENT_PER_REQUEST) + 1;
                     requestAction(next_page);
                 } else {
                     mAdapter.setLoaded();
@@ -155,7 +155,7 @@ public class FragmentHome extends Fragment {
                 }
             });
         } else {
-            SearchBody body = new SearchBody(page_no, Constant.NEWS_PER_REQUEST, 0);
+            SearchBody body = new SearchBody(page_no, Constant.CONTENT_PER_REQUEST, 0);
             callbackNews = api.getListNewsAdv(body);
             callbackNews.enqueue(new Callback<ResponseNews>() {
                 @Override

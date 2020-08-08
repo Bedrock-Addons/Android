@@ -15,27 +15,21 @@ public class Constant {
     public static String NEWS_PAGE = "http://addons.octarus.com/uploads/pages/news";
 
     // Limit requests to decrease server load
-    public static int NEWS_PER_REQUEST = 20;
-    public static int TOPIC_PER_REQUEST = 20;
-    public static int COMMENT_PER_REQUEST = 50;
-    public static int NOTIFICATION_PAGE = 20;
-    public static int SAVED_PAGE = 20;
+    public static int CONTENT_PER_REQUEST = 20;  //Default 20
+    public static int CATEGORY_PER_REQUEST = 20;  //Default 20
+    public static int COMMENT_PER_REQUEST = 50; //Default 50
+    public static int NOTIFICATION_PAGE = 30;  //Default 30
+    public static int BOOKMARKS_PAGE = 20;  //Default 20
+    public static int LOAD_IMAGE_RETRY = 3;  //Default 3
 
-    // Retry failed notification after time
-    public static int LOAD_IMAGE_NOTIF_RETRY = 3;
-
-    // Where images are stored on the server
-    public static String getURLimgNews(String file_name) {
+    // Data request locations
+    public static String getURLcontent(String file_name) {
         return SERVER + "uploads/news/" + file_name;
     }
-
-    // Where category data is stored on the server
-    public static String getURLimgTopic(String file_name) {
+    public static String getURLcategory(String file_name) {
         return SERVER + "uploads/topic/" + file_name;
     }
-
-    // Where user data is stored on the server
-    public static String getURLimgUser(String file_name) {
+    public static String getURLuser(String file_name) {
         return SERVER + "uploads/user/" + file_name;
     }
 

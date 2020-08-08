@@ -119,7 +119,7 @@ public class FragmentTopic extends Fragment {
 
     private void requestListTopic(final int page_no) {
         API api = RestAdapter.createAPI();
-        callbackTopic = api.getListTopic(page_no, Constant.TOPIC_PER_REQUEST, null);
+        callbackTopic = api.getListTopic(page_no, Constant.CATEGORY_PER_REQUEST, null);
         callbackTopic.enqueue(new Callback<ResponseTopic>() {
             @Override
             public void onResponse(Call<ResponseTopic> call, Response<ResponseTopic> response) {

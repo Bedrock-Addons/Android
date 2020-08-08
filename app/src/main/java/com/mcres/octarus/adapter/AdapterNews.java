@@ -102,7 +102,7 @@ public class AdapterNews extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             AdapterNews.OriginalViewHolder v = (AdapterNews.OriginalViewHolder) holder;
             v.title.setText(news.title);
             v.date.setText(TimeAgo.get(ctx, news.date));
-            Tools.displayImage(ctx, v.image, Constant.getURLimgNews(news.image));
+            Tools.displayImage(ctx, v.image, Constant.getURLcontent(news.image));
             v.featured.setVisibility(news.featured == 1 ? View.VISIBLE : View.GONE);
             v.total_view.setText(Tools.bigNumberFormat(news.total_view));
             if (news.type.equalsIgnoreCase("OTHER")) {

@@ -136,7 +136,7 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             ItemNewsViewHolder v = (ItemNewsViewHolder) holder;
             v.title.setText(news.title);
             v.date.setText(TimeAgo.get(ctx, news.date));
-            Tools.displayImageThumb(ctx, v.image, Constant.getURLimgNews(news.image), 0.5f);
+            Tools.displayImageThumb(ctx, v.image, Constant.getURLcontent(news.image), 0.5f);
             v.featured.setVisibility(news.featured == 1 ? View.VISIBLE : View.GONE);
             v.total_view.setText(Tools.bigNumberFormat(news.total_view) + " ");
             if (news.type.equalsIgnoreCase("MCPACK")) {

@@ -94,7 +94,7 @@ public class ActivityRegister extends AppCompatActivity {
             ((TextView) findViewById(R.id.page_title)).setText(R.string.form_title_update);
             et_name.setText(user.name);
             et_email.setText(user.email);
-            Tools.displayImageCircle(this, avatar, Constant.getURLimgUser(user.image));
+            Tools.displayImageCircle(this, avatar, Constant.getURLuser(user.image));
             old_password = user.password;
         } else {
             findViewById(R.id.lyt_term).setVisibility(View.INVISIBLE);

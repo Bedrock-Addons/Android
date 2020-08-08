@@ -79,7 +79,7 @@ public class ActivityDialogNotification extends AppCompatActivity {
         String type = notification.type;
         intent = new Intent(this, ActivitySplash.class);
         if (type.equalsIgnoreCase(NotifType.NEWS.name())) {
-            image_url = Constant.getURLimgNews(notification.image);
+            image_url = Constant.getURLcontent(notification.image);
             News news = new News(notification.obj_id, SourceType.NOTIFICATION);
             intent = ActivityContentDetails.navigateBase(this, news);
 
