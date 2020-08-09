@@ -8,13 +8,12 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="2dp"
         android:padding='7dp'
         android:background="@color/colorContent"
-        android:text="Your Inventory is where you can store content for later reading offline." />
+        android:text="Your bookmarks is where you can store content for later reading offline." />
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -51,7 +51,7 @@ public class FragmentTopic extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        root_view = inflater.inflate(R.layout.fragment_topic, container, false);
+        root_view = inflater.inflate(R.layout.fragment_categories, container, false);
         initComponent();
 
         requestAction(1);

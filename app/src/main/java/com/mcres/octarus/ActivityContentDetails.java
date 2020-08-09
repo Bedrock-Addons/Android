@@ -431,7 +431,7 @@ public class ActivityContentDetails extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_activity_news_details, menu);
+        getMenuInflater().inflate(R.menu.menu_activity_content_details, menu);
         MenuItem menu_saved = menu.findItem(R.id.action_saved);
         menu_refresh = menu.findItem(R.id.action_refresh);
 

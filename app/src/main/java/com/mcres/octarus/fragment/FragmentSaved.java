@@ -38,7 +38,7 @@ public class FragmentSaved extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        root_view = inflater.inflate(R.layout.fragment_saved, container, false);
+        root_view = inflater.inflate(R.layout.fragment_bookmarks, container, false);
         dao = AppDatabase.getDb(getActivity()).getDAO();
 
         ThisApp.get().saveClassLogEvent(getClass());

@@ -10,7 +10,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
 
 <item
     android:id="@+id/action_saved"
-    android:title="Save to Inventory"
+    android:title="Add to bookmarks"
     app:showAsAction="never" />
 
 </menu>
