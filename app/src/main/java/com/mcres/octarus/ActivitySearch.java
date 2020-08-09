@@ -197,7 +197,6 @@ public class ActivitySearch extends AppCompatActivity {
             // request action will be here
             requestAction(1);
         } else {
-            Toast.makeText(this, R.string.please_fill, Toast.LENGTH_SHORT).show();
             ((TextView) findViewById(R.id.failed_message)).setText("Type to search");
         }
     }

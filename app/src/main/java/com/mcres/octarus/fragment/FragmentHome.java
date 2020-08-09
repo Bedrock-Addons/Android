@@ -163,7 +163,7 @@ public class FragmentHome extends Fragment {
                     ResponseNews resp = response.body();
                     if (resp != null && resp.status.equals("success")) {
                         count_total = resp.count_total;
-                        displayNewsData(resp.news);
+                        displayContentData(resp.news);
                     } else {
                         onFailRequest(page_no);
                     }
@@ -226,19 +226,15 @@ public class FragmentHome extends Fragment {
     }
 
     private void displayData(ResponseHome resp) {
-        //mAdapter.addData(new Section(getString(R.string.section_topics)));
-        //mAdapter.addData(new TopicList(resp.topic));
-        //mAdapter.addData(new Section(getString(R.string.section_featured)));
         mAdapter.insertData(resp.featured);
-        //mAdapter.addData(new Section(getString(R.string.section_recent)));
         default_count = resp.featured.size();
         requestHomeData(1);
 
-        // save featured topic to global variable
+        // save featured categories to global variable
         ThisApp.get().setFeaturedTopic(resp.topic);
     }
 
-    private void displayNewsData(List<News> items) {
+    private void displayContentData(List<News> items) {
         mAdapter.insertData(items);
     }
 
