@@ -28,9 +28,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/title_activity_login"
+                android:text="Log In to your account"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-                android:textColor="@color/colorTextAction" />
+                android:textColor="@color/grey_50"
+                android:textStyle="bold"/>
 
             <View
                 android:layout_width="0dp"
