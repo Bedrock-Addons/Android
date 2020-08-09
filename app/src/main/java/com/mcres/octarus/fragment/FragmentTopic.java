@@ -155,7 +155,6 @@ public class FragmentTopic extends Fragment {
     private void showFailedView(boolean show, String message, @DrawableRes int icon) {
         View lyt_failed = root_view.findViewById(R.id.lyt_failed);
 
-        ((ImageView) root_view.findViewById(R.id.failed_icon)).setImageResource(icon);
         ((TextView) root_view.findViewById(R.id.failed_message)).setText(message);
         if (show) {
             recycler_view.setVisibility(View.INVISIBLE);
@@ -175,7 +174,6 @@ public class FragmentTopic extends Fragment {
     private void showNoItemView(boolean show) {
         View lyt_no_item = root_view.findViewById(R.id.lyt_failed);
         (root_view.findViewById(R.id.failed_retry)).setVisibility(View.GONE);
-        ((ImageView) root_view.findViewById(R.id.failed_icon)).setImageResource(R.drawable.img_no_item);
         ((TextView) root_view.findViewById(R.id.failed_message)).setText(getString(R.string.no_item));
         if (show) {
             lyt_no_item.setVisibility(View.VISIBLE);

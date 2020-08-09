@@ -99,7 +99,6 @@ public class FragmentSaved extends Fragment {
     private void showNoItemView() {
         View lyt_no_item = root_view.findViewById(R.id.lyt_failed);
         (root_view.findViewById(R.id.failed_retry)).setVisibility(View.GONE);
-        ((ImageView) root_view.findViewById(R.id.failed_icon)).setImageResource(R.drawable.img_no_item);
         ((TextView) root_view.findViewById(R.id.failed_message)).setText(R.string.no_item);
         if (adapter.getItemCount() == 0) {
             lyt_no_item.setVisibility(View.VISIBLE);

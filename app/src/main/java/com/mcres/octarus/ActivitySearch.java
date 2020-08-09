@@ -202,7 +202,6 @@ public class ActivitySearch extends AppCompatActivity {
     }
 
     private void requestAction(final int page_no) {
-        showFailedView(false, "", R.drawable.img_failed);
         showNoItemView(false);
         if (page_no == 1) {
             showProgress(true);
@@ -266,7 +265,6 @@ public class ActivitySearch extends AppCompatActivity {
 
     private void showFailedView(boolean show, String message, @DrawableRes int icon) {
         View lyt_failed = findViewById(R.id.lyt_failed);
-        ((ImageView) findViewById(R.id.failed_icon)).setImageResource(icon);
         ((TextView) findViewById(R.id.failed_message)).setText(message);
         if (show) {
             recyclerView.setVisibility(View.GONE);
@@ -287,7 +285,6 @@ public class ActivitySearch extends AppCompatActivity {
     private void showNoItemView(boolean show) {
         View lyt_no_item = findViewById(R.id.lyt_failed);
         (findViewById(R.id.failed_retry)).setVisibility(View.GONE);
-        ((ImageView) findViewById(R.id.failed_icon)).setVisibility(View.GONE);
         ((TextView) findViewById(R.id.failed_message)).setText(getString(R.string.no_results));
         if (show) {
             lyt_no_item.setVisibility(View.VISIBLE);

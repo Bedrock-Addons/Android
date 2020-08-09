@@ -186,7 +186,6 @@ public class ActivityNotification extends AppCompatActivity {
     private void showNoItemView() {
         View lyt_no_item = findViewById(R.id.lyt_failed);
         (findViewById(R.id.failed_retry)).setVisibility(View.GONE);
-        ((ImageView) findViewById(R.id.failed_icon)).setImageResource(R.drawable.img_no_item);
         ((TextView) findViewById(R.id.failed_message)).setText(R.string.no_notifications);
         if (adapter.getItemCount() == 0) {
             lyt_no_item.setVisibility(View.VISIBLE);

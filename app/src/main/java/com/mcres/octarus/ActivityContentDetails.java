@@ -397,7 +397,6 @@ public class ActivityContentDetails extends AppCompatActivity {
     private void showFailedView(boolean show, String message, @DrawableRes int icon) {
         View lyt_failed = findViewById(R.id.lyt_failed);
 
-        ((ImageView) findViewById(R.id.failed_icon)).setImageResource(icon);
         ((TextView) findViewById(R.id.failed_message)).setText(message);
         if (show) {
             lyt_main_content.setVisibility(View.INVISIBLE);

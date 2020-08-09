@@ -192,7 +192,6 @@ public class FragmentHome extends Fragment {
     private void showFailedView(boolean show, String message, @DrawableRes int icon) {
         View lyt_failed = root_view.findViewById(R.id.lyt_failed);
 
-        ((ImageView) root_view.findViewById(R.id.failed_icon)).setImageResource(icon);
         ((TextView) root_view.findViewById(R.id.failed_message)).setText(message);
         if (show) {
             recycler_view.setVisibility(View.INVISIBLE);
