@@ -20,7 +20,7 @@
             android:background="@color/colorBackground"
             android:fitsSystemWindows="true"
             android:theme="@style/ThemeOverlay.AppCompat.Light"
-            app:elevation="0dp">z
+            app:elevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
