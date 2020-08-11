@@ -184,7 +184,7 @@
             android:paddingLeft="32dp"
             android:paddingTop="@dimen/spacing_middle"
             android:paddingRight="32dp"
-            android:paddingBottom="@dimen/spacing_xlarge">
+            android:paddingBottom="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -204,13 +204,13 @@
                 <TextView
                     android:id="@+id/settings"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="9dp"
                     android:layout_marginBottom="5dp"
-                    android:clickable="true"
+                    android:layout_weight="1"
                     android:background="@drawable/download_button_open"
+                    android:clickable="true"
                     android:gravity="center"
                     android:paddingLeft="15dp"
                     android:paddingTop="6dp"
