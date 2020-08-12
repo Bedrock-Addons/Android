@@ -146,10 +146,13 @@ public class ActivitySettings extends AppCompatActivity {
                 Tools.rateAction(this);
                 break;
             case R.id.lyt_help:
-                Tools.openInAppBrowser(this, Constant.HELP_PAGE, false);
+                Tools.openInAppBrowser(this, Constant.HELP, false);
                 break;
             case R.id.lyt_news:
-                Tools.openInAppBrowser(this, Constant.NEWS_PAGE, false);
+                Tools.openInAppBrowser(this, Constant.NEWS, false);
+                break;
+            case R.id.lyt_github:
+                Tools.openInAppBrowser(this, Constant.GITHUB, false);
                 break;
             case R.id.lyt_theme:
                 showDialogTheme();

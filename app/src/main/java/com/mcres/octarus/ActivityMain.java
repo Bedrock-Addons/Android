@@ -167,7 +167,7 @@ public class ActivityMain extends AppCompatActivity {
                 title = getString(R.string.title_menu_saved);
                 break;
             case R.id.nav_menu_more_app:
-                Tools.openInAppBrowser(this, Constant.HELP_PAGE, false);
+                Tools.openInAppBrowser(this, Constant.HELP, false);
                 break;
             case R.id.lyt_rate_this:
                 Tools.rateAction(this);

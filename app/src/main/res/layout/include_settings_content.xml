@@ -576,14 +576,13 @@
 
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_large"
-            android:background="@color/colorBackgroundDarker" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="@dimen/spacing_middle">
@@ -592,15 +591,21 @@
                 android:id="@+id/build_version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:text="@string/setting_title_build"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                 android:textColor="@color/grey_40" />
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/lyt_github"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Based on the open source project Bedrock Addons"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_middle" />
+        </LinearLayout>
 
     </LinearLayout>
 

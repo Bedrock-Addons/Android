@@ -9,10 +9,13 @@ public class Constant {
     public static final String SECURITY_KEY = "";
 
     // The URL to use for the help page
-    public static String HELP_PAGE = "http://storage.octarus.com/files/How%20to%20download%20addons%20Jul%2018%2C%202020%207.25.31%20PM.mp4";
+    public static String HELP = "http://storage.octarus.com/files/How%20to%20download%20addons%20Jul%2018%2C%202020%207.25.31%20PM.mp4";
 
     // The URL to use for the news page
-    public static String NEWS_PAGE = "http://addons.octarus.com/uploads/pages/news";
+    public static String NEWS = "http://addons.octarus.com/uploads/pages/news";
+
+    // The URL to use for the github page
+    public static String GITHUB = "http://addons.octarus.com/uploads/pages/news";
 
     // Limit requests to decrease server load
     public static int CONTENT_PER_REQUEST = 20;  //Default 20

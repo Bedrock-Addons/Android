@@ -339,7 +339,7 @@ public class ActivityContentDetails extends AppCompatActivity {
         (findViewById(R.id.howto)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.HELP_PAGE));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.HELP));
                 startActivity(browserIntent);
             }
         });
