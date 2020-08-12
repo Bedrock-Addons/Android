@@ -34,8 +34,8 @@
     <string name="email_sent_info">Email has been sent!</string>
 
     <!-- Register strings -->
-    <string name="title_activity_register">Register</string>
-    <string name="REGISTER">REGISTER</string>
+    <string name="create_account_activity">Create an account</string>
+    <string name="create_account_button">Create Account</string>
     <string name="title_activity_profile">Account</string>
     <string name="profile_name_empty">Enter a username</string>
     <string name="profile_email_empty">Enter an email</string>

@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class SearchBody implements Serializable {
 
     public int page = 1;
-    public int count = 10;
+    public int count = 20;
     public String q = "";
     public String col = "id";
     public String ord = "DESC";
