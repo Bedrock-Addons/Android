@@ -99,8 +99,8 @@ public class ActivityRegister extends AppCompatActivity {
         } else {
             findViewById(R.id.lyt_term).setVisibility(View.INVISIBLE);
             findViewById(R.id.lyt_login).setVisibility(View.VISIBLE);
-            btn_register.setText(R.string.form_action_register);
-            ((TextView) findViewById(R.id.page_title)).setText(R.string.form_title_register);
+            btn_register.setText(R.string.form_action_create_account);
+            ((TextView) findViewById(R.id.page_title)).setText(R.string.form_title_create_account);
         }
 
         (findViewById(R.id.login)).setOnClickListener(new View.OnClickListener() {

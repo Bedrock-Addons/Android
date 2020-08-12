@@ -46,9 +46,9 @@
     <string name="email_in_use">Email already in use</string>
     <string name="account_not_found">Account not found or banned</string>
     <string name="form_action_update">UPDATE</string>
-    <string name="form_action_register">REGISTER</string>
-    <string name="form_title_update">Update</string>
-    <string name="form_title_register">Register</string>
+    <string name="form_action_create_account">JOIN</string>
+    <string name="form_title_update">Update your account</string>
+    <string name="form_title_create_account">Create a free account</string>
     <string name="have_an_account">Already have an account?</string>
     <string name="register_term_note">By creating an account, you agree with Octarus policies</string>
 
