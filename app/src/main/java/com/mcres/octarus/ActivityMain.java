@@ -111,7 +111,7 @@ public class ActivityMain extends AppCompatActivity {
             name.setText("Logged in as: " + user.name);
         } else {
             login_logout.setText(getString(R.string.title_activity_login));
-            name.setText("Log In");
+            name.setText("Create an Account");
         }
 
         login_logout.setOnClickListener(new View.OnClickListener() {
