@@ -13,8 +13,8 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@color/grey_10" />
+            android:layout_height="200dp"
+            android:background="@color/grey_20" />
 
         <View
             android:layout_width="0dp"
@@ -22,8 +22,8 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:background="@color/grey_10" />
+            android:layout_height="200dp"
+            android:background="@color/grey_20" />
 
     </LinearLayout>
 
@@ -36,7 +36,25 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
+            android:background="@color/grey_20" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/grey_20" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:background="@color/grey_10" />
 
         <View
@@ -45,7 +63,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="200dp"
             android:background="@color/grey_10" />
 
         <View
@@ -54,7 +72,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:background="@color/grey_10" />
 
     </LinearLayout>

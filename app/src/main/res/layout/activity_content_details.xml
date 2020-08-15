@@ -38,7 +38,7 @@
                 app:shimmer_auto_start="false"
                 app:shimmer_duration="800">
 
-                <include layout="@layout/loading_shimmer_news_details" />
+                <include layout="@layout/loading_shimmer_content_details" />
 
             </com.facebook.shimmer.ShimmerFrameLayout>
 

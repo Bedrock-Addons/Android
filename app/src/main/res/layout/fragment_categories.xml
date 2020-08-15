@@ -29,7 +29,7 @@
             app:shimmer_auto_start="false"
             app:shimmer_duration="800">
 
-            <include layout="@layout/loading_shimmer_topic" />
+            <include layout="@layout/loading_shimmer_category" />
 
         </com.facebook.shimmer.ShimmerFrameLayout>
 
