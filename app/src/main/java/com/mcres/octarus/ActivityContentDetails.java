@@ -286,18 +286,28 @@ public class ActivityContentDetails extends AppCompatActivity {
             how_to.setVisibility(View.GONE);
         }
 
+        // Removes the download button if there is no link
         if (news.url.equalsIgnoreCase("")) {
             download.setVisibility(View.GONE);
         }
 
+        // Detects if the link should open in Realms
         if (news.url.contains("realms.gg")) {
             download.setBackgroundResource(R.drawable.download_button_realms);
             download.setText("JOIN REALM");
         }
 
+        // Detects if the link should open in Minecraft
         if (news.url.contains("ExternalServer")) {
             download.setBackgroundResource(R.drawable.download_button_realms);
             download.setText("CONNECT TO SERVER");
+            total_view.setVisibility(View.GONE);
+        }
+
+        // Detects if the link is an Android app download
+        if (news.url.contains(".apk")) {
+            download.setBackgroundResource(R.drawable.button_green);
+            download.setText("Download app");
             total_view.setVisibility(View.GONE);
         }
 
