@@ -322,7 +322,7 @@ public class ActivityContentDetails extends AppCompatActivity {
             creator.setText("Naturally Generated");
 
         } else {
-            creator.setText("Unknown");
+            creator.setText("Unknown Creator");
         }
         //------------------------
 
