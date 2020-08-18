@@ -23,3 +23,6 @@ I have commented on some parts of the code, and in the Build Config file you can
 ## Releasing the server application
 The server application will be released in a month or so, but I have kept it closed up until now to prevent competition.
 Please know that the server application is not required to build and run this Android app, and it isn't required to use the layouts or any code in your own projects.
+
+## Major Updates
+This application is undergoing active development, and recieves daily security updates.
