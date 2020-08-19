@@ -320,7 +320,7 @@ public class ActivityMain extends AppCompatActivity {
     public void dialogOutDate() {
         dialog_version_show = true;
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.title_info);
+        builder.setTitle(R.string.update_message);
         builder.setMessage(R.string.msg_app_out_date);
         builder.setCancelable(false);
         builder.setPositiveButton(R.string.UPDATE, new DialogInterface.OnClickListener() {

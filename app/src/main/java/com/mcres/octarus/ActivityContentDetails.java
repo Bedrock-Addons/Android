@@ -307,7 +307,7 @@ public class ActivityContentDetails extends AppCompatActivity {
         // Detects if the link is an Android app download
         if (news.url.contains(".apk")) {
             download.setBackgroundResource(R.drawable.button_green);
-            download.setText("Download app");
+            download.setText("DOWNLOAD ANDROID APP");
             total_view.setVisibility(View.GONE);
         }
 

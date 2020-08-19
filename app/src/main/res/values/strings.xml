@@ -63,7 +63,7 @@
     <string name="title_menu_more">Help</string>
     <string name="title_menu_discord">Join Discord</string>
     <string name="logout_confirmation_text">Are you sure you want to logout?</string>
-    <string name="title_info">Info</string>
+    <string name="update_message">Update</string>
     <string name="content_type_other">Other</string>
     <string name="content_type_mcworld">McWorld</string>
     <string name="content_type_mcpack">McPack</string>
@@ -211,7 +211,7 @@
     <string name="no_item">Nothing saved</string>
     <string name="no_results">Nothing Found</string>
     <string name="no_notifications">Nothing New</string>
-    <string name="msg_app_out_date">Please update the app</string>
+    <string name="msg_app_out_date">A new update has been released</string>
     <string name="msg_no_internet">Please check your Internet connection and try again</string>
 
     <!--GDPR Property Strings-->
