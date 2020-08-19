@@ -196,7 +196,7 @@
                     android:id="@+id/settings"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+
                     android:layout_marginTop="9dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
@@ -209,7 +209,8 @@
                     android:paddingBottom="6dp"
                     android:text="@string/title_activity_settings"
                     android:textColor="@android:color/white"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/login_logout"
@@ -228,7 +229,8 @@
                     android:paddingBottom="6dp"
                     android:text="Login"
                     android:textColor="@android:color/white"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 

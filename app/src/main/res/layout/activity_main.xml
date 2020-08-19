@@ -57,7 +57,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="false">
 
-        <include layout="@layout/include_drawer_menu" />
+        <include layout="@layout/include_drawer_menu"/>
 
     </com.google.android.material.navigation.NavigationView>
 

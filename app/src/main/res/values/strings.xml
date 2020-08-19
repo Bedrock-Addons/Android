@@ -121,6 +121,7 @@
     <string name="developer_email">du@octarus.com</string>
     <string name="pref_title_contact_us">Contact Us</string>
     <string name="copyright">Copyright © 2020 Octarus Hosting. All right reserved</string>
+    <string name="license">This project is licensed under the MIT license</string>
     <string name="setting_group_profile">My Account</string>
     <string name="setting_group_notif">Notifications</string>
     <string name="setting_group_display">Display</string>
