@@ -9,7 +9,7 @@ public class Constant {
     public static final String SECURITY_KEY = "";
 
     // The URL to use for the help page
-    public static String HELP = "http://storage.octarus.com/files/How%20to%20download%20addons%20Jul%2018%2C%202020%207.25.31%20PM.mp4";
+    public static String HELP = "https://google.com/";
 
     // The URL to use for the news page
     public static String NEWS = "http://addons.octarus.com/uploads/pages/news";

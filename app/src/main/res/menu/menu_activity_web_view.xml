@@ -12,21 +12,25 @@
     <item
         android:id="@+id/action_browser"
         android:title="Open in browser"
-        app:showAsAction="never" />
+        app:showAsAction="never"
+        android:visible="false"/>
 
     <item
         android:id="@+id/action_copy_link"
         android:title="Copy link URL"
-        app:showAsAction="never" />
+        app:showAsAction="never"
+        android:visible="false"/>
 
     <item
         android:id="@+id/action_back"
+        android:icon="@drawable/arrow_back"
         android:title="Go back"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_forward"
+        android:icon="@drawable/arrow_forward"
         android:title="Go forward"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 
 </menu>
