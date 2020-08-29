@@ -25,4 +25,4 @@ The server application will be released in a month or so, but I have kept it clo
 Please know that the server application is not required to build and run this Android app, and it isn't required to use the layouts or any code in your own projects.
 
 ## Major Updates
-This application is undergoing active development, and recieves daily security updates.
+This application is undergoing active development, and recieves weekly security updates.
