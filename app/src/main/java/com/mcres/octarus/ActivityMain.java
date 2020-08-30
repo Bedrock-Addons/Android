@@ -88,6 +88,8 @@ public class ActivityMain extends AppCompatActivity {
         }
     }
 
+
+
     private void initToolbar() {
         toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_menu);

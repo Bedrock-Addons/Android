@@ -10,6 +10,7 @@
     <color name="colorBrown">#805a3e</color>
     <color name="colorLime">#7fd21c</color>
     <color name="colorLightGreen">#6ca928</color>
+    <color name="colorWarning">#FF5722</color>
     <color name="colorBackgroundDarker">#f7f7f7</color>
     <color name="colorTextAction">#37474F</color>
     <color name="colorButton">#000000</color>

@@ -12,7 +12,7 @@ public class AppConfig {
     public static final String NOTIFICATION_TOPIC = "ALL-DEVICE";
 
     // disable ads during development
-    private static final boolean ADS_ENABLE = true;
+    public static final boolean ADS_ENABLE = true;
 
     // flag for open link in app browser
     public static final boolean OPEN_IN_APP_BROWSER = false;
@@ -26,7 +26,7 @@ public class AppConfig {
     public static final boolean ADS_DETAILS_ALL = ADS_ENABLE && true;
     public static final boolean ADS_DETAILS_BANNER = ADS_ENABLE && ADS_DETAILS_ALL && true;
     public static final boolean ADS_DETAILS_INTERS = ADS_ENABLE && ADS_DETAILS_ALL && true;
-    public static final int ADS_INTERS_DETAILS_FIRST_INTERVAL = 13; // in second
+    public static final int ADS_INTERS_DETAILS_FIRST_INTERVAL = 10; // in second
     public static final int ADS_INTERS_DETAILS_NEXT_INTERVAL = 10; // in second
 
     public static final boolean ADS_NOTIFICATION_PAGE = ADS_ENABLE && true;
