@@ -26,3 +26,4 @@ Please know that the server application is not required to build and run this An
 
 ## Documentation
 You can read up on Bedrock Addons at the [Documentation Website](https://octarus.dev/project/bedrock-addons/).
+This project is on a hiatus while I work on projects that are more fun and less stressful. The Bedrock Addons servers will remain online.
