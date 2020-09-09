@@ -32,7 +32,7 @@ public interface API {
 
     String CACHE = "Cache-Control: max-age=0";
     String AGENT = "User-Agent: Vido";
-    String SECURITY = "Security: " + Constant.SECURITY_KEY;
+    String SECURITY = "Security: " + Constant.KEY;
 
     @Headers({CACHE, AGENT})
     @GET("services/info")

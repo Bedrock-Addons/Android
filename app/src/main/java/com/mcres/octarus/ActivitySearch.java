@@ -132,7 +132,6 @@ public class ActivitySearch extends AppCompatActivity {
         et_search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                    hideKeyboard();
                     searchAction();
                     return true;
                 }
@@ -194,7 +193,6 @@ public class ActivitySearch extends AppCompatActivity {
         query = et_search.getText().toString().trim();
         if (!query.equals("") || !searchFilter.isDefault()) {
             mAdapter.resetListData();
-            // request action will be here
             requestAction(1);
         } else {
             ((TextView) findViewById(R.id.failed_message)).setText("Type to search");

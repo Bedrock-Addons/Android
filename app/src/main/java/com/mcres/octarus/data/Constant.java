@@ -6,7 +6,7 @@ public class Constant {
     public static String SERVER = "http://addons.octarus.com/";
 
     // Leave this blank to make a general connection
-    public static final String SECURITY_KEY = "";
+    public static final String KEY = "";
 
     // The URL to use for the help page
     public static String HELP = "https://storage.octarus.dev/Bedrock-Addons/How%20To%20Download%20Addons.mp4";
