@@ -27,3 +27,8 @@ Please know that the server application is not required to build and run this An
 ## Documentation
 You can read up on Bedrock Addons at the [Documentation Website](https://octarus.dev/project/bedrock-addons/).
 This project is on a hiatus while I work on projects that are more fun and less stressful. The Bedrock Addons servers will remain online.
+
+ dP"Yb   dP""b8 888888    db    88""Yb 88   88 .dP"Y8     oP"Yb.  dP"Yb  oP"Yb.  dP"Yb  
+dP   Yb dP   `"   88     dPYb   88__dP 88   88 `Ybo."     "' dP' dP   Yb "' dP' dP   Yb 
+Yb   dP Yb        88    dP__Yb  88"Yb  Y8   8P o.`Y8b       dP'  Yb   dP   dP'  Yb   dP 
+ YbodP   YboodP   88   dP""""Yb 88  Yb `YbodP' 8bodP'     .d8888  YbodP  .d8888  YbodP  

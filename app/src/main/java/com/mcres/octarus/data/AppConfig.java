@@ -11,11 +11,11 @@ public class AppConfig {
     // notification topic for FCM
     public static final String NOTIFICATION_TOPIC = "ALL-DEVICE";
 
-    // disable ads during development
-    public static final boolean ADS_ENABLE = false;
-
     // flag for open link in app browser
     public static final boolean OPEN_IN_APP_BROWSER = false;
+
+    // disable ads during development
+    public static final boolean ADS_ENABLE = false;
 
     // if you want to display ads (change true & false ant the end only )
     public static final boolean ADS_MAIN_ALL = ADS_ENABLE && true;
