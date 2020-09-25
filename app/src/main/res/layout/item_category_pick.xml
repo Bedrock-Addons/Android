@@ -19,7 +19,7 @@
             android:layout_marginRight="@dimen/spacing_small"
             android:maxLines="2"
             android:padding="@dimen/spacing_large"
-            android:text="Donec sagittis semper"
+            android:text="Category"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@color/colorTextAction" />
 

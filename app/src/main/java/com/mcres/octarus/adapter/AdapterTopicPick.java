@@ -55,7 +55,7 @@ public class AdapterTopicPick extends RecyclerView.Adapter<RecyclerView.ViewHold
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder vh;
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_topic_pick, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category_pick, parent, false);
         vh = new ViewHolder(v);
         return vh;
     }

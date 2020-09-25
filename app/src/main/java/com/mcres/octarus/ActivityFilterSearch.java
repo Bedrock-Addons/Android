@@ -290,7 +290,7 @@ public class ActivityFilterSearch extends AppCompatActivity {
 
     private void showDialogTopic() {
         final Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.dialog_topic_pick);
+        dialog.setContentView(R.layout.dialog_category_pick);
         dialog.setCancelable(true);
 
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();

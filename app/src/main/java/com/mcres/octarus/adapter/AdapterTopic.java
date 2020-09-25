@@ -92,7 +92,6 @@ public class AdapterTopic extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             final Topic p = items.get(position);
             OriginalViewHolder vItem = (OriginalViewHolder) holder;
             vItem.title.setText(p.name);
-
             Tools.displayImage(ctx, vItem.icon, Constant.getURLcategory(p.icon));
             vItem.lyt_color.setColorFilter(Color.parseColor(p.color), android.graphics.PorterDuff.Mode.SRC_IN);
             vItem.lyt_parent.setOnClickListener(new View.OnClickListener() {

@@ -57,7 +57,7 @@ public class AdapterTopicHome extends RecyclerView.Adapter<RecyclerView.ViewHold
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder vh;
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_topic_home, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category_home, parent, false);
         vh = new OriginalViewHolder(v);
         return vh;
     }
