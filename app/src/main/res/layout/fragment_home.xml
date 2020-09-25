@@ -40,7 +40,7 @@
             android:paddingBottom="?attr/actionBarSize"
             android:visibility="gone">
 
-            <include layout="@layout/include_empty_state" />
+            <include layout="@layout/include_error_state" />
 
         </LinearLayout>
 

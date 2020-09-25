@@ -160,6 +160,11 @@ public class ActivityMain extends AppCompatActivity {
                 fragment = fragmentHome;
                 title = getString(R.string.title_menu_home);
                 break;
+            case R.id.nav_menu_categories:
+                if (fragmentTopic == null) fragmentTopic = new FragmentTopic();
+                fragment = fragmentTopic;
+                title = getString(R.string.title_menu_topic);
+                break;
             case R.id.nav_menu_notif:
                 ActivityNotification.navigate(this);
                 break;
@@ -329,7 +334,7 @@ public class ActivityMain extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 dialog_version_show = false;
                 dialog.dismiss();
-                Tools.rateAction(ActivityMain.this);
+                Tools.updateAction(ActivityMain.this);
                 finish();
             }
         });

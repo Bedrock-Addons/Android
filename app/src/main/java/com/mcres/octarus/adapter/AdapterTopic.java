@@ -59,6 +59,7 @@ public class AdapterTopic extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             icon = v.findViewById(R.id.icon);
             lyt_color = v.findViewById(R.id.lyt_color);
             lyt_parent = v.findViewById(R.id.lyt_parent);
+
         }
     }
 
@@ -94,7 +95,6 @@ public class AdapterTopic extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
             Tools.displayImage(ctx, vItem.icon, Constant.getURLcategory(p.icon));
             vItem.lyt_color.setColorFilter(Color.parseColor(p.color), android.graphics.PorterDuff.Mode.SRC_IN);
-            vItem.icon.setColorFilter(Color.WHITE, android.graphics.PorterDuff.Mode.SRC_IN);
             vItem.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

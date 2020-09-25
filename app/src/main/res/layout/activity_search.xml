@@ -98,7 +98,7 @@
                 android:paddingBottom="70dp"
                 android:visibility="visible">
 
-                <include layout="@layout/include_empty_state" />
+                <include layout="@layout/include_error_state" />
 
             </LinearLayout>
 

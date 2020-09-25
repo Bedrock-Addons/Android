@@ -45,7 +45,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="6dp"
                     android:textSize="15sp"
-                    android:text="addon.title"
+                    android:text="Addon Title"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     android:textColor="@color/colorTextAction"
                     android:textStyle="bold"
@@ -151,8 +151,6 @@
                     android:layout_width="5dp"
                     android:layout_height="2dp"
                     android:layout_weight="1"/>
-
-
 
                 <TextView
                     android:id="@+id/total_view"

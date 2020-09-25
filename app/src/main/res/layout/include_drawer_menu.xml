@@ -66,6 +66,28 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/nav_menu_categories"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:background="@drawable/selectable_bg_dark"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onDrawerMenuClick"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_xlarge"
+                android:paddingRight="@dimen/spacing_xlarge">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_40"
+                    app:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/nav_menu_notif"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_xmlarge"

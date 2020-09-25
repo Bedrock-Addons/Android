@@ -27,7 +27,7 @@
             android:clipToPadding="false"
             android:paddingTop="@dimen/spacing_medium"
             android:paddingBottom="@dimen/spacing_medium"
-            android:scrollbars="none"
+            android:scrollbars="vertical"
             android:scrollingCache="true" />
 
 
@@ -39,7 +39,7 @@
             android:paddingBottom="?attr/actionBarSize"
             android:visibility="gone">
 
-            <include layout="@layout/include_empty_state" />
+            <include layout="@layout/include_error_state" />
 
         </LinearLayout>
 

@@ -399,6 +399,14 @@ public class Tools {
         suffixes.put(1_000_000_000_000L, "T");
     }
 
+    // BigNumberFormat display (chinese)
+    private static final NavigableMap<Long, String> amounts = new TreeMap<>();
+    static {
+        amounts.put(10_000L, "w");
+        amounts.put(1_000_000_000L, "B");
+        amounts.put(1_000_000_000_000L, "T");
+    }
+
     // This tells the numbers how to format and uses the code above to do so.
     public static String bigNumberFormat(long value) {
         if (value == Long.MIN_VALUE) return bigNumberFormat(Long.MIN_VALUE + 1);
@@ -416,6 +424,17 @@ public class Tools {
 
     // This controls the app links automatically for Google Play
     public static void rateAction(Activity activity) {
+        Uri uri = Uri.parse("market://details?id=" + activity.getPackageName());
+        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+        try {
+            activity.startActivity(goToMarket);
+        } catch (ActivityNotFoundException e) {
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + activity.getPackageName())));
+        }
+    }
+
+    // This controls the app links automatically for requesting updates
+    public static void updateAction(Activity activity) {
         Uri uri = Uri.parse("market://details?id=" + activity.getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
         try {

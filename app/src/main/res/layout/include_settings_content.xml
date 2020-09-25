@@ -119,7 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_medium"
+                android:paddingLeft="20dp"
                 android:paddingRight="@dimen/spacing_medium"
                 android:paddingBottom="5dp"
                 android:layout_marginTop="5dp">
@@ -130,7 +130,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="2dp"
-                    android:layout_marginLeft="10dp"
                     android:background="@drawable/button_green"
                     android:clickable="true"
                     android:paddingLeft="10dp"
@@ -531,11 +530,6 @@
                     android:layout_marginBottom="5dp"/>
 
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/colorSeparator" />
 
             <View
                 android:layout_width="match_parent"
