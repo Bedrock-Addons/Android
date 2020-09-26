@@ -86,7 +86,7 @@
 
     <!-- Search strings -->
     <string name="title_activity_search">Search</string>
-    <string name="hint_topic">Category :\u0020</string>
+    <string name="hint_topic">search within: \u0020</string>
     <string name="hint_default">search</string>
     <string name="please_fill">Type something and hit enter</string>
 
