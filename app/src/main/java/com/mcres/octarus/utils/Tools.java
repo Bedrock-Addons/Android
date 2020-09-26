@@ -228,12 +228,11 @@ public class Tools {
         }
     }
 
-    public static void displayImageCircle(Context ctx, ImageView img, Bitmap bmp) {
+    public static void displayImageBitmap(Context ctx, ImageView img, Bitmap bmp) {
         try {
             Glide.with(ctx.getApplicationContext()).load(bmp)
                     .transition(withCrossFade())
                     .diskCacheStrategy(new SharedPref(ctx).getImageCache() ? DiskCacheStrategy.ALL : DiskCacheStrategy.NONE)
-                    .apply(RequestOptions.circleCropTransform())
                     .into(img);
         } catch (Exception e) {
         }

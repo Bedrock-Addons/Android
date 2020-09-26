@@ -156,7 +156,7 @@ public class ActivityRegister extends AppCompatActivity {
             Uri image_uri = data.getData();
             bitmap = AvatarUtils.getBitmapFormUri(this, image_uri);
             if (bitmap != null) {
-                Tools.displayImageCircle(this, avatar, bitmap);
+                Tools.displayImageBitmap(this, avatar, bitmap);
             }
         }
     }

@@ -39,12 +39,14 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/spacing_mlarge" />
 
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
                 android:id="@+id/lyt_avatar"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@drawable/avatar_placeholder_click"
                 android:clickable="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
                 android:padding="@dimen/spacing_medium">
 
                 <ImageView
@@ -57,9 +59,11 @@
                 <ImageView
                     android:id="@+id/avatar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:background="@drawable/avatar_placeholder_click"
+                    android:scaleType="centerCrop"/>
 
-            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
             <EditText
                 android:id="@+id/et_name"
