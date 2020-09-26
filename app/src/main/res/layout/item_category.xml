@@ -10,15 +10,18 @@
     android:paddingRight="10dp"
     android:paddingBottom="4dp">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/content_tile"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/content_tile"
             android:layout_weight="0"
             android:orientation="vertical">
 
@@ -71,7 +74,7 @@
                     android:paddingTop="6dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="6dp"
-                    android:text="More"
+                    android:text="View"
                     android:drawableRight="@drawable/arrow_more"
                     android:drawablePadding="5dp"
                     android:textColor="@android:color/white"
@@ -167,6 +170,6 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </com.balysv.materialripple.MaterialRippleLayout>

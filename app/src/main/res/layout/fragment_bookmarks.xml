@@ -12,7 +12,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:padding='7dp'
-        android:background="@color/colorContent"
+        android:background="@drawable/content_tile"
         android:text="Your bookmarks is where you can store content for later reading offline." />
 
     <RelativeLayout

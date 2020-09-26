@@ -15,88 +15,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="@dimen/spacing_mlarge"
-            android:paddingTop="@dimen/spacing_middle"
-            android:paddingRight="@dimen/spacing_mlarge"
-            android:paddingBottom="@dimen/spacing_middle">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:text="Notification Title"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/colorTextAction"
-                    app:fontFamily="sans-serif-medium" />
-
-                <ImageView
-                    android:id="@+id/read"
-                    android:layout_width="@dimen/spacing_xmedium"
-                    android:layout_height="@dimen/spacing_xmedium"
-                    android:layout_marginLeft="@dimen/spacing_large"
-                    android:layout_marginTop="@dimen/spacing_xsmall"
-                    android:layout_marginRight="@dimen/spacing_large"
-                    android:gravity="center"
-                    android:src="@drawable/badge_shape"
-                    android:tint="@color/grey_20" />
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:id="@+id/type"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/shape_round_type"
-                    android:paddingLeft="@dimen/spacing_middle"
-                    android:paddingTop="1dp"
-                    android:paddingRight="@dimen/spacing_middle"
-                    android:paddingBottom="2dp"
-                    android:text="New Content"
-                    android:textColor="@android:color/white"
-                    android:textSize="10sp" />
-
-                <View
-                    android:layout_width="5dp"
-                    android:layout_height="0dp" />
-
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/shape_round_date"
-                    android:paddingLeft="@dimen/spacing_middle"
-                    android:paddingTop="1dp"
-                    android:paddingRight="@dimen/spacing_middle"
-                    android:paddingBottom="2dp"
-                    android:text="23 Mar 02"
-                    android:textColor="@android:color/white"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/content"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:maxLines="2"
-                    android:text="Notification Content Goes Here"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                    android:textColor="@color/grey_40" />
 
                 <View
                     android:layout_width="0dp"
@@ -104,16 +31,153 @@
                     android:layout_weight="1" />
 
             </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/content_tile"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/content_tile"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="7dp">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="3"
+                            android:text="Notification Title"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                            android:textColor="@color/colorTextAction"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/download_button"
+                            android:gravity="center"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="6dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="6dp"
+                            android:text="Open"
+                            android:drawableRight="@drawable/ic_open"
+                            android:drawablePadding="5dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+                        android:maxLines="5"
+                        android:text="Notification content goes here"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="10dp"
+                            android:layout_height="1dp"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_type"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:tint="@color/grey_40" />
+
+                        <TextView
+                            android:id="@+id/type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/shape_round_type"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="1dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="2dp"
+                            android:text="Category"
+                            android:textColor="@android:color/white"
+                            android:textSize="10.7sp" />
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/flexbox_tags"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="1dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="2dp"
+                            android:text="23 Mar 2002"
+                            android:textColor="@android:color/white"
+                            android:textSize="10.7sp" />
+
+                        <TextView
+                            android:id="@+id/read"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/flexbox_tags"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="1dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="2dp"
+                            android:text="Unread"
+                            android:textColor="@android:color/white"
+                            android:textSize="10.7sp" />
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:orientation="horizontal"></LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
     </com.balysv.materialripple.MaterialRippleLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="@dimen/spacing_mlarge"
-        android:layout_marginRight="@dimen/spacing_mlarge"
-        android:background="@color/colorSeparator" />
 
 </LinearLayout>

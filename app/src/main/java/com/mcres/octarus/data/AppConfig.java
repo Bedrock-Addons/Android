@@ -15,7 +15,7 @@ public class AppConfig {
     public static final boolean OPEN_IN_APP_BROWSER = false;
 
     // disable ads during development
-    public static final boolean ADS_ENABLE = false;
+    public static final boolean ADS_ENABLE = true;
 
     // if you want to display ads (change true & false ant the end only )
     public static final boolean ADS_MAIN_ALL = ADS_ENABLE && true;

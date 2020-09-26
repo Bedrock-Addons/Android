@@ -2,10 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_margin="10dp"
     android:layout_height="fill_parent"
     app:cardBackgroundColor="@color/colorPrimary"
-    app:cardCornerRadius="@dimen/spacing_small"
+    app:cardCornerRadius="8dp"
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true">
 
@@ -23,33 +22,42 @@
             android:orientation="vertical"
             android:padding="@dimen/spacing_large">
 
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/logo" />
-
-            <View
+            <androidx.cardview.widget.CardView
+                android:id="@+id/update"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="@dimen/spacing_large"
-                android:layout_marginRight="@dimen/spacing_large"
-                android:layout_marginTop="@dimen/spacing_xmiddle"
-                android:background="@color/overlay_dark_20" />
+                android:layout_height="match_parent"
+                android:background="@drawable/content_tile"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/update"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="7dp">
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_xmiddle"
-                android:gravity="center"
-                android:text="The best Bedrock Maps and Bedrock Addons for Minecraft."
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/grey_40" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_xmiddle"
-                android:text="Based on the open source Android project Bedrock Addons."
+                android:text="You are using Version 18, The Interface Update.\n\nIn this update, the corners have been rounded, and the rest of the user interface has been improved for big devices.\n\nYou can now search through specific categories by opening the sidebar, then selecting categories, then clicking the orange 'view' button"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/grey_40" />
 
@@ -59,8 +67,8 @@
             android:id="@+id/btn_close"
             android:layout_width="@dimen/spacing_xlarge"
             android:layout_height="@dimen/spacing_xlarge"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_margin="@dimen/spacing_large"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"

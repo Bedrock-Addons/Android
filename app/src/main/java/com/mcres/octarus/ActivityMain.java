@@ -106,6 +106,7 @@ public class ActivityMain extends AppCompatActivity {
         NavigationView nav_view = findViewById(R.id.nav_view);
         drawer = findViewById(R.id.drawer_layout);
         TextView name = nav_view.findViewById(R.id.name);
+        View update = nav_view.findViewById(R.id.update);
         TextView login_logout = nav_view.findViewById(R.id.login_logout);
         TextView settings = nav_view.findViewById(R.id.settings);
         if (is_login) {
@@ -138,6 +139,17 @@ public class ActivityMain extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ActivitySettings.navigate(ActivityMain.this);
+            }
+        });
+
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (is_login) {
+                    Tools.showDialogAbout(ActivityMain.this);
+                } else {
+                    ActivityLogin.navigate(ActivityMain.this);
+                }
             }
         });
 

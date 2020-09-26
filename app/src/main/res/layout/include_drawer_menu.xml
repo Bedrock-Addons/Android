@@ -55,10 +55,16 @@
                 android:paddingLeft="@dimen/spacing_xlarge"
                 android:paddingRight="@dimen/spacing_xlarge">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/ic_explore"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Explore Content"
+                    android:text="Explore"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                     android:textColor="@color/grey_40"
                     app:fontFamily="sans-serif-medium" />
@@ -76,6 +82,12 @@
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/spacing_xlarge"
                 android:paddingRight="@dimen/spacing_xlarge">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/ic_categories"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -99,6 +111,12 @@
                 android:paddingLeft="@dimen/spacing_xlarge"
                 android:paddingRight="@dimen/spacing_xlarge">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/ic_notifications"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -120,6 +138,12 @@
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/spacing_xlarge"
                 android:paddingRight="@dimen/spacing_xlarge">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/ic_bookmarks"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -159,6 +183,12 @@
                 android:paddingLeft="@dimen/spacing_xlarge"
                 android:paddingRight="@dimen/spacing_xlarge">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/ic_help"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -181,6 +211,12 @@
                 android:paddingLeft="@dimen/spacing_xlarge"
                 android:paddingRight="@dimen/spacing_xlarge">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/ic_review"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -199,6 +235,7 @@
                 android:layout_weight="1"/>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/update"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/content_tile"

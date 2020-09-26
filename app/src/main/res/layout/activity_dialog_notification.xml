@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
+        android:background="@drawable/content_tile"
         android:orientation="vertical">
 
         <LinearLayout
@@ -69,7 +69,7 @@
             android:layout_marginRight="@dimen/spacing_large"
             android:layout_marginBottom="@dimen/spacing_large"
             app:cardBackgroundColor="@color/overlay_dark_20"
-            app:cardCornerRadius="4dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
             app:cardPreventCornerOverlap="true"
             app:cardUseCompatPadding="false">
@@ -105,22 +105,23 @@
                     android:paddingTop="1dp"
                     android:paddingRight="@dimen/spacing_xmedium"
                     android:paddingBottom="2dp"
-                    android:text="IMAGE"
+                    android:layout_marginRight="5dp"
+                    android:text="Image"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                     android:textColor="@android:color/white" />
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="06 Aug 2016"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@color/grey_20" />
+                    android:background="@drawable/flexbox_tags"
+                    android:paddingLeft="@dimen/spacing_xmedium"
+                    android:paddingTop="1dp"
+                    android:paddingRight="@dimen/spacing_xmedium"
+                    android:paddingBottom="2dp"
+                    android:text="03 Mar 2002"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@android:color/white" />
 
             </LinearLayout>
 
@@ -156,28 +157,42 @@
                 <TextView
                     android:id="@+id/bt_delete"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/spacing_xlarge"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/download_button_open"
                     android:gravity="center"
-                    android:paddingLeft="@dimen/spacing_middle"
-                    android:paddingRight="@dimen/spacing_middle"
-                    android:text="@string/DELETE"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/grey_40" />
+                    android:paddingLeft="15dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="6dp"
+                    android:text="Delete"
+                    android:drawableRight="@drawable/ic_delete_outline"
+                    android:drawablePadding="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/bt_open"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/spacing_xlarge"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/download_button"
                     android:gravity="center"
-                    android:paddingLeft="@dimen/spacing_middle"
-                    android:paddingRight="@dimen/spacing_middle"
-                    android:text="@string/OPEN"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/grey_80" />
+                    android:paddingLeft="15dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="6dp"
+                    android:text="Open Link"
+                    android:drawableRight="@drawable/ic_open"
+                    android:drawablePadding="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
