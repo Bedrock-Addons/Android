@@ -67,7 +67,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="9dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="8dp"
                     android:background="@drawable/download_button"
                     android:gravity="center"
                     android:paddingLeft="15dp"
@@ -78,7 +78,8 @@
                     android:drawableRight="@drawable/arrow_more"
                     android:drawablePadding="5dp"
                     android:textColor="@android:color/white"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:elevation="3dp"/>
 
             </LinearLayout>
 

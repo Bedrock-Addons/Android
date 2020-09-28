@@ -281,7 +281,6 @@ public class ActivityContentDetails extends AppCompatActivity {
 
         } else {
             type.setText("Other");
-            download.setText("Unable to Download");
             download.setVisibility(View.GONE);
             how_to.setVisibility(View.GONE);
         }

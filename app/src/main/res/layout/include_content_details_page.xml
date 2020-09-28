@@ -154,7 +154,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     android:textColor="@color/colorTextAction"
                     android:textStyle="bold"
-                    android:layout_weight="3"/>
+                    android:layout_weight="3" />
 
                 <TextView
                     android:id="@+id/action_saved"
@@ -163,6 +163,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/bookmarks_button"
                     android:gravity="center_horizontal"
                     android:onClick="saved"
@@ -174,7 +175,8 @@
                     android:drawableRight="@drawable/bookmark_none"
                     android:drawablePadding="5dp"
                     android:textColor="@android:color/white"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:elevation="5dp"/>
 
             </LinearLayout>
 
@@ -191,7 +193,8 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textColor="@color/colorTextAction"
                 android:textSize="12sp"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:visibility="gone"/>
 
 
             <LinearLayout
@@ -303,7 +306,8 @@
             android:paddingBottom="7dp"
             android:text="DOWNLOAD (addon.type)"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:elevation="8dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -336,7 +340,8 @@
                 android:paddingBottom="7dp"
                 android:text="How to install this addon"
                 android:textColor="@android:color/white"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:elevation="8dp"/>
 
         </LinearLayout>
 
