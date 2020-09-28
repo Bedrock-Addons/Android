@@ -4,7 +4,7 @@
     <item
         android:id="@+id/action_notification"
         android:icon="@drawable/ic_notifications"
-        android:orderInCategory="100"
+        android:orderInCategory="200"
         android:title="@string/title_activity_notification"
         android:visible="false"
         app:actionLayout="@layout/menu_toolbar_notification"

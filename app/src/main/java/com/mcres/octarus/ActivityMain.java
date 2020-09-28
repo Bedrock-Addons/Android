@@ -145,11 +145,7 @@ public class ActivityMain extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (is_login) {
-                    Tools.showDialogAbout(ActivityMain.this);
-                } else {
-                    ActivityLogin.navigate(ActivityMain.this);
-                }
+                Tools.showDialogAbout(ActivityMain.this);
             }
         });
 

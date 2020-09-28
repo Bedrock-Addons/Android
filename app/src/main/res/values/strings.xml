@@ -75,7 +75,7 @@
     <string name="title_dialog_text_size">Text Size</string>
 
     <!-- Notification Strings -->
-    <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_notification">Notifications</string>
     <string name="notification_channel_server">Default</string>
     <string name="msg_notif_empty">No new notifications</string>
     <string name="type_news">New Content</string>
