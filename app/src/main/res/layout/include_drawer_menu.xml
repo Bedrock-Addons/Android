@@ -172,7 +172,7 @@
             android:paddingBottom="@dimen/spacing_middle">
 
             <LinearLayout
-                android:id="@+id/nav_menu_more_app"
+                android:id="@+id/nav_menu_help"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_xmlarge"
                 android:background="@drawable/selectable_bg_dark"
@@ -242,7 +242,7 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
                 android:orientation="horizontal"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginHorizontal="10dp">
 
@@ -253,6 +253,37 @@
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
                     android:src="@drawable/update"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="7dp">
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/discord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/content_tile"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/discord_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/discord"
                     android:scaleType="fitCenter" />
 
                 <LinearLayout
@@ -313,7 +344,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="9dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginRight="10dp"

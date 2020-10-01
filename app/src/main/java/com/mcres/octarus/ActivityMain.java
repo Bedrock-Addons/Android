@@ -107,6 +107,7 @@ public class ActivityMain extends AppCompatActivity {
         drawer = findViewById(R.id.drawer_layout);
         TextView name = nav_view.findViewById(R.id.name);
         View update = nav_view.findViewById(R.id.update);
+        View discord = nav_view.findViewById(R.id.discord);
         TextView login_logout = nav_view.findViewById(R.id.login_logout);
         TextView settings = nav_view.findViewById(R.id.settings);
         if (is_login) {
@@ -149,6 +150,13 @@ public class ActivityMain extends AppCompatActivity {
             }
         });
 
+        discord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.discord(ActivityMain.this);
+            }
+        });
+
         drawer.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             @Override
             public void onDrawerOpened(View drawerView) {
@@ -181,7 +189,7 @@ public class ActivityMain extends AppCompatActivity {
                 fragment = fragmentSaved;
                 title = getString(R.string.title_menu_saved);
                 break;
-            case R.id.nav_menu_more_app:
+            case R.id.nav_menu_help:
                 Tools.openInAppBrowser(this, Constant.HELP, false);
                 break;
             case R.id.lyt_rate_this:

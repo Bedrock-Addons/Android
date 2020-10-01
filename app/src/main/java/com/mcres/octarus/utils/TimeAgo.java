@@ -1,15 +1,14 @@
 package com.mcres.octarus.utils;
 
 import android.content.Context;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
 
 import com.mcres.octarus.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-/**
- * source : https://medium.com/@shaktisinh/time-a-go-in-android-8bad8b171f87
- */
 
 public class TimeAgo {
 
@@ -18,6 +17,7 @@ public class TimeAgo {
     private static final int HOUR_MILLIS = 60 * MINUTE_MILLIS;
     private static final int DAY_MILLIS = 24 * HOUR_MILLIS;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public static String get(Context ctx, long time) {
 
         if (time < 1000000000000L) {
@@ -44,7 +44,7 @@ public class TimeAgo {
         } else if (diff < 48 * HOUR_MILLIS) {
             return ctx.getString(R.string.yesterday);
         } else {
-            if(diff / DAY_MILLIS >= 6){
+            if(diff / DAY_MILLIS >= 7){
                 SimpleDateFormat newFormat = new SimpleDateFormat("dd MMMM, YYYY");
                 return newFormat.format(new Date(time));
             } else {

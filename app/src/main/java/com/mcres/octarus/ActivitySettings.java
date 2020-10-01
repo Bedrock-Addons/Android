@@ -73,7 +73,7 @@ public class ActivitySettings extends AppCompatActivity {
         parent_view = findViewById(R.id.parent_view);
         switch_push_notif = findViewById(R.id.switch_push_notif);
         switch_image_cache = findViewById(R.id.switch_image_cache);
-        ((TextView) findViewById(R.id.build_version)).setText(Tools.getVersionName(this));
+        ((TextView) findViewById(R.id.build_version)).setText(Tools.getVersionNumber(this));
         TextView name = findViewById(R.id.name);
         TextView email = findViewById(R.id.email);
         TextView login_logout = findViewById(R.id.login_logout);

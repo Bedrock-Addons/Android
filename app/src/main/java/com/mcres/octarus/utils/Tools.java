@@ -172,6 +172,15 @@ public class Tools {
         }
     }
 
+    public static String getVersionNumber(Context ctx) {
+        try {
+            PackageManager manager = ctx.getPackageManager();
+            PackageInfo info = manager.getPackageInfo(ctx.getPackageName(), 0);
+            return ctx.getString(R.string.app_version) + " " + info.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            return ctx.getString(R.string.version_unknown);
+        }
+    }
 
     public static String getVersionName(Context ctx) {
         try {
@@ -445,11 +454,11 @@ public class Tools {
 
     // This code is not currently in use. Its here because its 2AM and I am going insane
     public static void discord(Activity activity) {
-        Uri uri = Uri.parse("https://discord.gg/NAFjwbA");
+        Uri uri = Uri.parse("https://discord.gg/NbtJFR8");
         try {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/NAFjwbA")));
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/NbtJFR8")));
         } catch (ActivityNotFoundException e) {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/NAFjwbA")));
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/NbtJFR8")));
         }
     }
 
