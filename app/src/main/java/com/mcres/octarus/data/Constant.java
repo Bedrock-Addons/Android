@@ -9,10 +9,10 @@ public class Constant {
     public static final String KEY = "";
 
     // The URL to use for the help page
-    public static String HELP = "https://storage.octarus.dev/Bedrock-Addons/How%20To%20Download%20Addons.mp4";
+    public static String HELP = "https://tenwan.octarus.dev/bedrock-addons/How%20To%20Download%20Addons.mp4";
 
     // The URL to use for the news page
-    public static String NEWS = "https://storage.octarus.dev/Bedrock-Addons/News.html";
+    public static String NEWS = "https://tenwan.octarus.dev/bedrock-addons/News.html";
 
     // The URL to use for the github page
     public static String GITHUB = "http://addons.octarus.com/uploads/pages/news";

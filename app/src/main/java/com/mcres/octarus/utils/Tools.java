@@ -462,7 +462,8 @@ public class Tools {
         }
     }
 
-    public static void showDialogAbout(Context ctx) {
+    // Shows the latest features of the app in a popup window
+    public static void showDialogUpdate(Context ctx) {
         final Dialog dialog = new Dialog(ctx);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
         dialog.setContentView(R.layout.dialog_about);

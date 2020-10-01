@@ -67,6 +67,7 @@
     <string name="content_type_other">Other</string>
     <string name="content_type_mcworld">McWorld</string>
     <string name="content_type_mcpack">McPack</string>
+    <string name="update_info">You are using Version 20, The Minification Quickfix Update. In this update, app minification was disabled to fix the issue that was causing the app to be unable to communicate with the servers.</string>
 
     <!-- Content Page Strings -->
     <string name="remove_from_saved">Creation removed from bookmarks</string>

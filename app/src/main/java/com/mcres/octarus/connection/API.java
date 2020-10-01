@@ -31,7 +31,7 @@ import retrofit2.http.Query;
 public interface API {
 
     String CACHE = "Cache-Control: max-age=0";
-    String AGENT = "User-Agent: Vido";
+    String AGENT = "User-Agent: Test";
     String SECURITY = "Security: " + Constant.KEY;
 
     @Headers({CACHE, AGENT})

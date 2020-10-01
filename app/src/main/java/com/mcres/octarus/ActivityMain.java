@@ -146,7 +146,7 @@ public class ActivityMain extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.showDialogAbout(ActivityMain.this);
+                Tools.showDialogUpdate(ActivityMain.this);
             }
         });
 

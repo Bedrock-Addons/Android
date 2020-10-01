@@ -13,13 +13,13 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled false // Do not set this to true, will break the app!
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
 
-// Project dependancies are listed here
+// Project dependencies are listed here
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.0'
