@@ -54,6 +54,7 @@ public class AdapterNotification extends RecyclerView.Adapter<RecyclerView.ViewH
         public TextView date;
         public TextView type;
         public View read;
+        public View unread;
         public MaterialRippleLayout lyt_parent;
 
         public OriginalViewHolder(View v) {
@@ -63,6 +64,7 @@ public class AdapterNotification extends RecyclerView.Adapter<RecyclerView.ViewH
             date = (TextView) v.findViewById(R.id.date);
             type = (TextView) v.findViewById(R.id.type);
             read = (View) v.findViewById(R.id.read);
+            unread = (View) v.findViewById(R.id.unread);
             lyt_parent = (MaterialRippleLayout) v.findViewById(R.id.lyt_parent);
         }
     }
@@ -107,9 +109,11 @@ public class AdapterNotification extends RecyclerView.Adapter<RecyclerView.ViewH
                 vItem.type.setVisibility(View.VISIBLE);
             }
             if (!n.read) {
-                vItem.read.setVisibility(View.VISIBLE);
-            } else {
                 vItem.read.setVisibility(View.GONE);
+                vItem.unread.setVisibility(View.VISIBLE);
+            } else {
+                vItem.read.setVisibility(View.VISIBLE);
+                vItem.unread.setVisibility(View.GONE);
             }
             vItem.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -392,7 +392,7 @@ public class ActivityContentDetails extends AppCompatActivity {
             text.setText(t);
             text.setTextColor(getResources().getColor(R.color.textColorPrimary));
             text.setTextSize(11);
-            text.setBackgroundDrawable(getResources().getDrawable(R.drawable.flexbox_tags));
+            text.setBackgroundDrawable(getResources().getDrawable(R.drawable.tag_blue));
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             int margin = Tools.dpToPx(this, 2);
             int padding = Tools.dpToPx(this, 1);

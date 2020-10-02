@@ -55,7 +55,7 @@
                 android:id="@+id/updated"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/updated_tag"
+                android:background="@drawable/tag_light_blue"
                 android:paddingLeft="4dp"
                 android:paddingTop="1dp"
                 android:paddingRight="4dp"

@@ -137,7 +137,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="3dp"
-                            android:background="@drawable/flexbox_tags"
+                            android:background="@drawable/tag_blue"
                             android:paddingLeft="4dp"
                             android:paddingTop="1dp"
                             android:paddingRight="4dp"
@@ -147,16 +147,30 @@
                             android:textSize="10.7sp" />
 
                         <TextView
-                            android:id="@+id/read"
+                            android:id="@+id/unread"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="3dp"
-                            android:background="@drawable/flexbox_tags"
+                            android:background="@drawable/tag_light_blue"
                             android:paddingLeft="4dp"
                             android:paddingTop="1dp"
                             android:paddingRight="4dp"
                             android:paddingBottom="2dp"
                             android:text="Unread"
+                            android:textColor="@android:color/white"
+                            android:textSize="10.7sp" />
+
+                        <TextView
+                            android:id="@+id/read"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/tag_green"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="1dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="2dp"
+                            android:text="Read"
                             android:textColor="@android:color/white"
                             android:textSize="10.7sp" />
 

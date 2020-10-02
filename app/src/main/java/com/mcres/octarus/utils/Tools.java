@@ -513,15 +513,15 @@ public class Tools {
             if (news.isDraft()) {
                 return;
             }
-            // This code is not currently used, but I am sure you can find a use for it
-            String body = String.format(act.getString(R.string.app_name), news.title, act.getString(R.string.app_name));
+            // string to share
+            String body = String.format(act.getString(R.string.share_text), news.title, act.getString(R.string.app_name));
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             sharingIntent.putExtra(Intent.EXTRA_SUBJECT, act.getString(R.string.app_name));
             sharingIntent.putExtra(Intent.EXTRA_TEXT, body);
             act.startActivity(Intent.createChooser(sharingIntent, "Share Using"));
         } catch (Exception e) {
-            Toast.makeText(act, "Failed to create share link", Toast.LENGTH_LONG).show();
+            Toast.makeText(act, "Failed when create share data", Toast.LENGTH_LONG).show();
         }
     }
 }
