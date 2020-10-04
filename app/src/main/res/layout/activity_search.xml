@@ -24,45 +24,81 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:layout_scrollFlags="scroll|enterAlways">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/btn_close"
-                    android:layout_width="?attr/actionBarSize"
-                    android:layout_height="?attr/actionBarSize"
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
                     android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
                     android:tint="@color/colorTextAction"
                     app:srcCompat="@drawable/ic_arrow_back" />
 
-                <EditText
-                    android:id="@+id/et_search"
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/spacing_xmedium"
-                    android:layout_marginBottom="@dimen/spacing_xmedium"
+                    android:layout_height="@dimen/spacing_xmlarge"
                     android:layout_weight="1"
-                    android:background="@drawable/search_box"
-                    android:imeOptions="actionSearch"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/colorTextAction"
-                    android:textColorHighlight="#5A9C5D"
-                    android:textColorHint="@color/grey_40">
+                    app:cardBackgroundColor="@color/grey_5"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false">
 
-                    <requestFocus />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
-                </EditText>
+                        <ImageView
+                            android:layout_width="@dimen/spacing_mxlarge"
+                            android:layout_height="@dimen/spacing_mxlarge"
+                            android:layout_marginLeft="@dimen/spacing_middle"
+                            android:layout_marginRight="@dimen/spacing_middle"
+                            android:tint="@color/grey_20"
+                            app:srcCompat="@drawable/ic_search" />
 
-                <ImageButton
-                    android:id="@+id/btn_filter"
-                    android:layout_width="?attr/actionBarSize"
-                    android:layout_height="?attr/actionBarSize"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:tint="@color/colorTextAction"
-                    app:srcCompat="@drawable/ic_filter" />
+                        <EditText
+                            android:id="@+id/et_search"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:hint="search"
+                            android:imeOptions="actionSearch"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead">
+
+                           <requestFocus />
+
+                        </EditText>
+
+                        <ImageView
+                            android:id="@+id/btn_filter"
+                            android:layout_width="@dimen/spacing_mxlarge"
+                            android:layout_height="@dimen/spacing_mxlarge"
+                            android:layout_marginLeft="@dimen/spacing_middle"
+                            android:layout_marginRight="@dimen/spacing_middle"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:tint="@color/grey_40"
+                            app:srcCompat="@drawable/ic_filter" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -85,7 +121,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
-                android:paddingTop="@dimen/spacing_medium"
                 android:paddingBottom="@dimen/spacing_large"
                 android:scrollbars="none"
                 android:scrollingCache="true" />

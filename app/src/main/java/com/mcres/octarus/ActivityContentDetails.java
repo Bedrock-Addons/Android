@@ -238,7 +238,7 @@ public class ActivityContentDetails extends AppCompatActivity {
 
         String html_data = "<style>img{max-width:100%;height:auto;} iframe{width:100%;}</style> ";
         if (new SharedPref(this).getSelectedTheme() == 1) {
-            html_data += "<style>body{color: #f2f2f2;}</style> ";
+            html_data += "<style>body{color: #ffffff;}</style> ";
         }
         html_data += news.content;
         web_view.getSettings().setJavaScriptEnabled(true);
