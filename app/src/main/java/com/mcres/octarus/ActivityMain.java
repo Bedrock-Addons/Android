@@ -104,7 +104,6 @@ public class ActivityMain extends AppCompatActivity {
         NavigationView nav_view = findViewById(R.id.nav_view);
         drawer = findViewById(R.id.drawer_layout);
         TextView name = nav_view.findViewById(R.id.name);
-        ((TextView) findViewById(R.id.version)).setText(Tools.getVersionNumber(this));
         View update = nav_view.findViewById(R.id.update);
         View discord = nav_view.findViewById(R.id.discord);
         TextView login_logout = nav_view.findViewById(R.id.login_logout);

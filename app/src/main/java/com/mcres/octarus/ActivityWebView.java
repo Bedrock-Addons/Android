@@ -106,7 +106,7 @@ public class ActivityWebView extends AppCompatActivity {
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
                 actionBar.setTitle(null);
-                actionBar.setSubtitle(Tools.getHostName(url));
+                actionBar.setSubtitle("Miniapp Viewer");
                 progressBar.setVisibility(View.VISIBLE);
             }
 
