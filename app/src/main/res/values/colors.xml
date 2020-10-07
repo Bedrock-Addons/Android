@@ -52,5 +52,6 @@
     <color name="overlay_light_90">#E6FFFFFF</color>
 
     <color name="colorContent">#EEEEEE</color>
+    <color name="search">#f2f2f2</color>
 
 </resources>

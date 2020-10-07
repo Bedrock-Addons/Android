@@ -7,4 +7,5 @@
     <color name="colorSeparator">#182022</color>
     <color name="colorContent">#242424</color>
     <color name="SystemBar">#121212</color>
+    <color name="search">#2e2e2e</color>
 </resources>

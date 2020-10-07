@@ -50,7 +50,7 @@
                     android:layout_width="0dp"
                     android:layout_height="@dimen/spacing_xmlarge"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="@color/grey_5"
+                    app:cardBackgroundColor="@color/search"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="0dp"
                     app:cardUseCompatPadding="false">
