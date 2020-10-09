@@ -3,7 +3,7 @@ package com.mcres.octarus.data;
 public class Constant {
 
     // The server that you want to connect to
-    public static String SERVER = "http://addons.octarus.com/";
+    public static String SERVER = "http://167.71.157.159/";
 
     // Leave this blank to make a general connection
     public static final String KEY = "";
