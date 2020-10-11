@@ -183,7 +183,7 @@ public class ActivitySearch extends AppCompatActivity {
         if (searchFilter.isDefault()) {
             btn_filter.setColorFilter(getResources().getColor(R.color.grey_40), PorterDuff.Mode.SRC_ATOP);
         } else {
-            btn_filter.setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+            btn_filter.setColorFilter(getResources().getColor(R.color.grey_60), PorterDuff.Mode.SRC_ATOP);
         }
         searchAction();
     }

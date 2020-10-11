@@ -142,7 +142,7 @@
                     android:textSize="10.7sp" />
 
                 <TextView
-                    android:id="@+id/featured"
+                    android:id="@+id/featured_category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"

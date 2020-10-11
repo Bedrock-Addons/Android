@@ -369,6 +369,7 @@ public class Tools {
         }
     }
 
+    // Pulls the original link of of YouTube video IDs
     public static String extractYoutubeVideoId(String url) {
         String video_id = null;
         String pattern = "(?<=watch\\?v=|/videos/|embed\\/)[^#\\&\\?]*";

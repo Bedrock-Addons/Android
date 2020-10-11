@@ -67,7 +67,7 @@
     <string name="content_type_other">Other</string>
     <string name="content_type_mcworld">McWorld</string>
     <string name="content_type_mcpack">McPack</string>
-    <string name="update_info">You are using Version 20, The Minification Quickfix Update. In this update, app minification was disabled to fix the issue that was causing the app to be unable to communicate with the servers.</string>
+    <string name="update_info">You are using Version 21, The Simplicity Update. This update makes major changes to infrastructure which will be useful to those utilizing the Addons API, among other improvements.</string>
 
     <!-- Content Page Strings -->
     <string name="remove_from_saved">Creation removed from bookmarks</string>
@@ -87,7 +87,7 @@
 
     <!-- Search strings -->
     <string name="title_activity_search">Search</string>
-    <string name="hint_topic">search within: \u0020</string>
+    <string name="hint_topic">search :\u0020</string>
     <string name="hint_default">search</string>
     <string name="please_fill">Type something and hit enter</string>
 

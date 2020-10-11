@@ -283,6 +283,7 @@ public class ActivityContentDetails extends AppCompatActivity {
             type.setText("Other");
             download.setVisibility(View.GONE);
             how_to.setVisibility(View.GONE);
+            total_view.setVisibility(View.GONE); // remove because download is not possible on other contents
         }
 
         // Removes the download button if there is no link
