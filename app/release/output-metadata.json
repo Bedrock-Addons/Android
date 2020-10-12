@@ -4,14 +4,14 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.mcres.octarus",
+  "applicationId": "com.download.mcpeaddons",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 21,
-      "versionName": "1.18.1",
+      "versionCode": 9,
+      "versionName": "1.8",
       "outputFile": "app-release.apk"
     }
   ]

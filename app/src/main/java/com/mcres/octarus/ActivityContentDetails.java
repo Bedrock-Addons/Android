@@ -308,7 +308,6 @@ public class ActivityContentDetails extends AppCompatActivity {
         if (news.url.contains(".apk")) {
             download.setBackgroundResource(R.drawable.button_dark_green);
             download.setText("DOWNLOAD ANDROID APP");
-            total_view.setVisibility(View.GONE);
         }
 
         //--------------------------
