@@ -49,6 +49,9 @@ public class ActivityNotification extends AppCompatActivity {
     private RecyclerView recyclerView;
     private DAO dao;
     private SharedPref sharedPref;
+    private ActionBar actionBar;
+    private Toolbar toolbar;
+    private TextView toolbar_title;
 
     public AdapterNotification adapter;
     static ActivityNotification activityNotification;
@@ -74,14 +77,15 @@ public class ActivityNotification extends AppCompatActivity {
     }
 
     private void initToolbar() {
-        ActionBar actionBar;
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
+        toolbar_title = findViewById(R.id.toolbar_title);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.colorTextAction), PorterDuff.Mode.SRC_ATOP);
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle(R.string.title_activity_notification);
+        getSupportActionBar().setTitle(null);
+        toolbar_title.setText(R.string.title_activity_notification);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Tools.changeOverflowMenuIconColor(toolbar, getResources().getColor(R.color.colorTextAction));
         Tools.setSmartSystemBar(this);
     }

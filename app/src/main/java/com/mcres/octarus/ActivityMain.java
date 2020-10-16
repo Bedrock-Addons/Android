@@ -45,6 +45,7 @@ public class ActivityMain extends AppCompatActivity {
 
     private ActionBar actionBar;
     private Toolbar toolbar;
+    private TextView toolbar_title;
     private DrawerLayout drawer;
     private View notif_badge = null, notif_badge_menu = null;
     private int notification_count = -1;
@@ -76,7 +77,7 @@ public class ActivityMain extends AppCompatActivity {
         initDrawerMenu();
         prepareAds();
 
-        actionBar.setTitle(getString(R.string.title_menu_home));
+        actionBar.setTitle("");
         loadFragment(new FragmentHome());
         checkAppVersion();
         Tools.RTLMode(getWindow());
@@ -90,11 +91,13 @@ public class ActivityMain extends AppCompatActivity {
 
     private void initToolbar() {
         toolbar = findViewById(R.id.toolbar);
+        toolbar_title = findViewById(R.id.toolbar_title);
         toolbar.setNavigationIcon(R.drawable.ic_menu);
         toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.colorTextAction), PorterDuff.Mode.SRC_ATOP);
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
-        actionBar.setTitle(R.string.app_name);
+        getSupportActionBar().setTitle(null);
+        toolbar_title.setText(R.string.title_menu_home);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Tools.changeOverflowMenuIconColor(toolbar, getResources().getColor(R.color.colorTextAction));
         Tools.setSmartSystemBar(this);
@@ -172,12 +175,12 @@ public class ActivityMain extends AppCompatActivity {
             case R.id.nav_menu_home:
                 if (fragmentHome == null) fragmentHome = new FragmentHome();
                 fragment = fragmentHome;
-                title = getString(R.string.title_menu_home);
+                toolbar_title.setText(R.string.title_menu_home);
                 break;
             case R.id.nav_menu_categories:
                 if (fragmentTopic == null) fragmentTopic = new FragmentTopic();
                 fragment = fragmentTopic;
-                title = getString(R.string.title_menu_topic);
+                toolbar_title.setText(R.string.title_menu_topic);
                 break;
             case R.id.nav_menu_notif:
                 ActivityNotification.navigate(this);
@@ -185,7 +188,7 @@ public class ActivityMain extends AppCompatActivity {
             case R.id.nav_menu_saved:
                 if (fragmentSaved == null) fragmentSaved = new FragmentSaved();
                 fragment = fragmentSaved;
-                title = getString(R.string.title_menu_saved);
+                toolbar_title.setText(R.string.title_menu_saved);
                 break;
             case R.id.nav_menu_help:
                 Tools.openInAppBrowser(this, Constant.HELP, false);

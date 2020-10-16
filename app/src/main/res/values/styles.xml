@@ -23,7 +23,7 @@
 
     <style name="AppTheme.Dialog.NoActionBar" parent="Theme.AppCompat.Light.Dialog">
         <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
+        <item name="windowActionBar">true</item>
     </style>
 
     <style name="Button.Primary.Borderless" parent="@style/Widget.AppCompat.Button.Borderless.Colored">
@@ -54,18 +54,18 @@
     </style>
 
     <style name="AppThemeSetting.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="background">@color/colorLightGreen</item>
+        <item name="background">@color/SystemBar</item>
         <item name="titleTextStyle">@style/AppThemeSetting.ActionBar.Title</item>
     </style>
 
     <style name="AppThemeSetting.ActionBar.Title" parent="@style/TextAppearance.AppCompat.Medium">
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorLightGreen</item>
     </style>
 
     <style name="RippleStyleWhite">
         <item name="mrl_rippleOverlay">true</item>
         <item name="mrl_rippleColor">#80FFFFFF</item>
-        <item name="mrl_rippleHover">true</item>
+        <item name="mrl_rippleHover">false</item>
         <item name="mrl_rippleAlpha">0.2</item>
     </style>
 

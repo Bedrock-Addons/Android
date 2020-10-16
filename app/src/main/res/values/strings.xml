@@ -7,10 +7,10 @@
     <string name="game_version">1.12.20.5 +</string>
 
     <!-- Review string data -->
-    <string name="review_input_warning">Write review to send</string>
-    <string name="review_exist_warning">Please no spamming reviews</string>
-    <string name="review_add_info">Review added!</string>
-    <string name="hide_review_message">Review removed by admin.</string>
+    <string name="review_input_warning">Write a message to send</string>
+    <string name="review_exist_warning">Please no spamming messages</string>
+    <string name="review_add_info">Message added!</string>
+    <string name="hide_review_message">Messages removed by admin.</string>
     <string name="hide_user_message">User Removed</string>
     <string name="hide_review_date">Removed</string>
 
@@ -87,7 +87,7 @@
 
     <!-- Search strings -->
     <string name="title_activity_search">Search</string>
-    <string name="hint_topic">search :\u0020</string>
+    <string name="hint_topic">search:\u0020</string>
     <string name="hint_default">search</string>
     <string name="please_fill">Type something and hit enter</string>
 
@@ -150,7 +150,6 @@
     <string name="setting_title_rate">Rate Addons</string>
     <string name="setting_title_more_apps">Help</string>
     <string name="setting_title_intro">Introduction</string>
-    <string name="setting_title_news">Addons</string>
     <string name="version_unknown">Unknown</string>
     <string name="email_copied">Email Copied to Clipboard</string>
     <string name="dialog_confirm_title">Confirmation</string>
