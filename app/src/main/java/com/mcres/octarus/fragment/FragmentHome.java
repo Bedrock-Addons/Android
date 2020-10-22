@@ -70,7 +70,7 @@ public class FragmentHome extends Fragment {
         swipe_refresh = root_view.findViewById(R.id.swipe_refresh);
         shimmer = root_view.findViewById(R.id.shimmer_home);
         recycler_view.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recycler_view.setHasFixedSize(true);
+        recycler_view.setHasFixedSize(true);  // Normally True
 
         //set data and list adapter
         mAdapter = new AdapterHome(getActivity(), recycler_view);
