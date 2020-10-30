@@ -213,7 +213,7 @@ public class ActivityReview extends AppCompatActivity {
     private void showNoItemView(boolean show) {
         View lyt_no_item = findViewById(R.id.lyt_failed);
         (findViewById(R.id.failed_retry)).setVisibility(View.GONE);
-        ((TextView) findViewById(R.id.failed_message)).setText("No Comments");
+        ((TextView) findViewById(R.id.failed_message)).setText("No Reviews");
         if (show) {
             lyt_no_item.setVisibility(View.VISIBLE);
         } else {

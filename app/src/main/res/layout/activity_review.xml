@@ -144,7 +144,7 @@
             android:maxLines="5"
             android:minHeight="70dp"
             android:singleLine="false"
-            android:hint="@string/messagebox_hint"
+            android:hint="Write a review..."
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/grey_40"
             android:textColorHint="@color/grey_40" />

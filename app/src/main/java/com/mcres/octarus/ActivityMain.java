@@ -112,17 +112,21 @@ public class ActivityMain extends AppCompatActivity {
         TextView login_logout = nav_view.findViewById(R.id.login_logout);
         TextView settings = nav_view.findViewById(R.id.settings);
         if (is_login) {
-            login_logout.setText(getString(R.string.logout_title));
+            login_logout.setText("Update Account");
             name.setText("Logged in as: " + user.name);
         } else {
-            login_logout.setText(getString(R.string.title_activity_login));
+            login_logout.setText("Create Account");
             name.setText("Create an Account");
         }
 
         login_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginLogout();
+                if (is_login) {
+                    ActivityRegister.navigate(ActivityMain.this, user);
+                } else {
+                    ActivityRegister.navigate(ActivityMain.this, user);
+                }
             }
         });
 
@@ -132,7 +136,7 @@ public class ActivityMain extends AppCompatActivity {
                 if (is_login) {
                     ActivityRegister.navigate(ActivityMain.this, user);
                 } else {
-                    ActivityLogin.navigate(ActivityMain.this);
+                    ActivityRegister.navigate(ActivityMain.this, user);
                 }
             }
         });

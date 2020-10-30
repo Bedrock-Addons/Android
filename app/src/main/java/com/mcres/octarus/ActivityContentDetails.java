@@ -374,13 +374,6 @@ public class ActivityContentDetails extends AppCompatActivity {
                 showDialogTextSize();
             }
         });
-
-        (findViewById(R.id.action_saved)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                is_saved = true;
-            }
-        });
     }
 
 
