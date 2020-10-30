@@ -126,7 +126,7 @@
     <!-- Settings strings -->
     <string name="title_activity_settings">Settings</string>
     <string name="app_version">Version</string>
-    <string name="developer_email">du@octarus.dev</string>
+    <string name="developer_email">du@octarus.org</string>
     <string name="pref_title_contact_us">Contact</string>
     <string name="copyright">© 2020 Octarus Hosting. All right reserved</string>
     <string name="license">This project is licensed under the MIT license</string>
