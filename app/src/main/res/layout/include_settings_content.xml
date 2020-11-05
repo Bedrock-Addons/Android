@@ -607,15 +607,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                 android:textColor="@color/grey_40" />
 
-            <TextView
-                android:id="@+id/lyt_github"
-                android:clickable="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Based on the open source project Bedrock Addons"
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                android:textColor="@color/grey_40" />
-
         </LinearLayout>
 
     </LinearLayout>

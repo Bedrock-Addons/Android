@@ -156,9 +156,6 @@ public class ActivitySettings extends AppCompatActivity {
             case R.id.lyt_news:
                 Tools.openInAppBrowser(this, Constant.NEWS, false);
                 break;
-            case R.id.lyt_github:
-                Tools.openInAppBrowser(this, Constant.GITHUB, false);
-                break;
             case R.id.lyt_theme:
                 showDialogTheme();
                 break;

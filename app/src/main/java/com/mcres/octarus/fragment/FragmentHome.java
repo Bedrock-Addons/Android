@@ -28,6 +28,7 @@ import com.mcres.octarus.model.News;
 import com.mcres.octarus.model.SearchBody;
 import com.mcres.octarus.model.SearchFilter;
 import com.mcres.octarus.model.Topic;
+import com.mcres.octarus.model.TopicList;
 import com.mcres.octarus.utils.NetworkCheck;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
@@ -226,9 +227,9 @@ public class FragmentHome extends Fragment {
 
     private void displayData(ResponseHome resp) {
         mAdapter.insertData(resp.featured);
+        mAdapter.addData(new TopicList(resp.topic));
         default_count = resp.featured.size();
         requestHomeData(1);
-
         // save featured categories to global variable
         ThisApp.get().setFeaturedTopic(resp.topic);
     }

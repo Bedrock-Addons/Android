@@ -42,14 +42,12 @@ public class AdapterTopicHome extends RecyclerView.Adapter<RecyclerView.ViewHold
         // each data item is just a string in this case
         public TextView title;
         public ImageView icon;
-        public ImageView lyt_color;
         public View lyt_parent;
 
         public OriginalViewHolder(View v) {
             super(v);
             title = v.findViewById(R.id.title);
             icon = v.findViewById(R.id.icon);
-            lyt_color = v.findViewById(R.id.lyt_color);
             lyt_parent = v.findViewById(R.id.lyt_parent);
         }
     }
@@ -69,10 +67,7 @@ public class AdapterTopicHome extends RecyclerView.Adapter<RecyclerView.ViewHold
             final Topic p = items.get(position);
             OriginalViewHolder v = (OriginalViewHolder) holder;
             v.title.setText(p.name);
-
             Tools.displayImage(ctx, v.icon, Constant.getURLcategory(p.icon));
-            v.lyt_color.setColorFilter(Color.parseColor(p.color), android.graphics.PorterDuff.Mode.SRC_IN);
-            v.icon.setColorFilter(Color.WHITE, android.graphics.PorterDuff.Mode.SRC_IN);
             v.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

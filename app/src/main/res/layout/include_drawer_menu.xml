@@ -275,7 +275,8 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="10dp"
-                android:layout_marginHorizontal="10dp">
+                android:layout_marginHorizontal="10dp"
+                android:visibility="gone">
 
                 <ImageView
                     android:id="@+id/discord_action"
@@ -354,7 +355,7 @@
                     android:paddingTop="6dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="6dp"
-                    android:text="Login"
+                    android:text="Create Account"
                     android:textColor="@android:color/white"
                     android:textSize="13sp"
                     android:textStyle="bold"

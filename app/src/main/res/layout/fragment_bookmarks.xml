@@ -11,9 +11,9 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
-        android:padding='7dp'
+        android:padding='10dp'
         android:background="@drawable/content_tile"
-        android:text="Your bookmarks is where you can store content for later reading offline." />
+        android:text="Bookmark content to download it and enjoy it offline." />
 
     <RelativeLayout
         android:layout_width="match_parent"

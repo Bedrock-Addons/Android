@@ -9,10 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
-        android:paddingLeft="@dimen/spacing_middle"
-        android:paddingTop="@dimen/spacing_medium"
-        android:paddingRight="@dimen/spacing_middle"
-        android:paddingBottom="@dimen/spacing_medium"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:scrollbars="none" />
 
 </LinearLayout>
