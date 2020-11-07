@@ -18,6 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -109,13 +110,13 @@ public class ActivityMain extends AppCompatActivity {
         TextView name = nav_view.findViewById(R.id.name);
         View update = nav_view.findViewById(R.id.update);
         View discord = nav_view.findViewById(R.id.discord);
-        TextView login_logout = nav_view.findViewById(R.id.login_logout);
-        TextView settings = nav_view.findViewById(R.id.settings);
+        ImageView avatar = nav_view.findViewById(R.id.avatar);
+        View login_logout = nav_view.findViewById(R.id.login_logout);
+        View settings = nav_view.findViewById(R.id.settings);
         if (is_login) {
-            login_logout.setText("Update Account");
-            name.setText("Logged in as: " + user.name);
+            name.setText(user.name);
+            Tools.displayImage(this, avatar, Constant.getURLuser(user.image));
         } else {
-            login_logout.setText("Create Account");
             name.setText("Create an Account");
         }
 

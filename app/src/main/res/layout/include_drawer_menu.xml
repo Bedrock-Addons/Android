@@ -16,217 +16,443 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/login_logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorBackground"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="@dimen/spacing_mxlarge">
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
 
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_name_bg"
-                android:gravity="center"
-                android:text="Log in to leave reviews"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colorTextAction"
-                app:fontFamily="sans-serif-medium" />
+                android:layout_marginHorizontal="@dimen/spacing_large"
+                android:layout_marginVertical="@dimen/spacing_large"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/avatar_placeholder_click"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="@dimen/spacing_large"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Du Cheng"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="du@octarus.org"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/arrow_forward"
+                    app:tint="@color/grey_40" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/nav_menu_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:onClick="onDrawerMenuClick"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_large">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_explore" />
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Explore"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/arrow_forward"
+                            app:tint="@color/grey_40" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="@dimen/spacing_large"
+                        android:background="@color/grey_5" />
+
+                    <LinearLayout
+                        android:id="@+id/nav_menu_categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:onClick="onDrawerMenuClick"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_large">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_categories" />
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Categories"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/arrow_forward"
+                            app:tint="@color/grey_40" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="@dimen/spacing_large"
+                        android:background="@color/grey_5" />
+
+                    <LinearLayout
+                        android:id="@+id/nav_menu_notif"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:onClick="onDrawerMenuClick"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_large">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_notifications" />
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notifications"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/arrow_forward"
+                            app:tint="@color/grey_40" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="@dimen/spacing_large"
+                        android:background="@color/grey_5" />
+
+                    <LinearLayout
+                        android:id="@+id/nav_menu_saved"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="onDrawerMenuClick"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_large">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_bookmarks" />
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bookmarks"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/arrow_forward"
+                            app:tint="@color/grey_40" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/nav_menu_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:onClick="onDrawerMenuClick"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_large">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_help" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Help"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/arrow_forward"
+                        app:tint="@color/grey_40" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/spacing_large"
+                    android:background="@color/grey_5" />
+
+                <LinearLayout
+                    android:id="@+id/lyt_rate_this"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:onClick="onDrawerMenuClick"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_large">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_review" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rate This App"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/arrow_forward"
+                        app:tint="@color/grey_40" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_large">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_settings"
+                        app:tint="@color/grey_40" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Setting"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/arrow_forward"
+                        app:tint="@color/grey_40" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="@dimen/spacing_middle"
             android:paddingBottom="@dimen/spacing_middle">
-
-            <LinearLayout
-                android:id="@+id/nav_menu_home"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/selectable_bg_dark"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:onClick="onDrawerMenuClick"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_xlarge"
-                android:paddingRight="@dimen/spacing_xlarge">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    app:srcCompat="@drawable/ic_explore"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Explore"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/grey_40"
-                    app:fontFamily="sans-serif-medium" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/nav_menu_categories"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/selectable_bg_dark"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:onClick="onDrawerMenuClick"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_xlarge"
-                android:paddingRight="@dimen/spacing_xlarge">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    app:srcCompat="@drawable/ic_categories"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Categories"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/grey_40"
-                    app:fontFamily="sans-serif-medium" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/nav_menu_notif"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/selectable_bg_dark"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:onClick="onDrawerMenuClick"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_xlarge"
-                android:paddingRight="@dimen/spacing_xlarge">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    app:srcCompat="@drawable/ic_notifications"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_menu_notif"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/grey_40"
-                    app:fontFamily="sans-serif-medium" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/nav_menu_saved"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/selectable_bg_dark"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:onClick="onDrawerMenuClick"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_xlarge"
-                android:paddingRight="@dimen/spacing_xlarge">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    app:srcCompat="@drawable/ic_bookmarks"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_menu_saved"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/grey_40"
-                    app:fontFamily="sans-serif-medium" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="@dimen/spacing_xlarge"
-            android:layout_marginLeft="@dimen/spacing_xlarge"
-            android:background="@color/colorSeparator" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="@dimen/spacing_middle"
-            android:paddingBottom="@dimen/spacing_middle">
-
-            <LinearLayout
-                android:id="@+id/nav_menu_help"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/selectable_bg_dark"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:onClick="onDrawerMenuClick"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_xlarge"
-                android:paddingRight="@dimen/spacing_xlarge">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    app:srcCompat="@drawable/ic_help"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_menu_more"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/grey_40"
-                    app:fontFamily="sans-serif-medium" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lyt_rate_this"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/spacing_xmlarge"
-                android:background="@drawable/selectable_bg_dark"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:onClick="onDrawerMenuClick"
-                android:orientation="horizontal"
-                android:paddingLeft="@dimen/spacing_xlarge"
-                android:paddingRight="@dimen/spacing_xlarge">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    app:srcCompat="@drawable/ic_review"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rate This App"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/grey_40"
-                    app:fontFamily="sans-serif-medium"
-                    android:textStyle="bold"/>
-
-            </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -242,7 +468,6 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginHorizontal="10dp">
 
@@ -298,72 +523,6 @@
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorBackground"
-            android:paddingLeft="32dp"
-            android:paddingTop="@dimen/spacing_middle"
-            android:paddingRight="32dp"
-            android:paddingBottom="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/settings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="9dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/download_button_open"
-                    android:drawableStart="@drawable/ic_settings"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="6dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="6dp"
-                    android:textColor="@android:color/white"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:elevation="2dp"/>
-
-                <TextView
-                    android:id="@+id/login_logout"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="9dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginRight="10dp"
-                    android:clickable="true"
-                    android:background="@drawable/download_button"
-                    android:gravity="center"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="6dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="6dp"
-                    android:text="Create Account"
-                    android:textColor="@android:color/white"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:elevation="2dp" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
 
     </LinearLayout>
 
