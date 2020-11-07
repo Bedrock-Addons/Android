@@ -19,6 +19,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mcres.octarus.data.Constant;
@@ -83,10 +84,12 @@ public class ActivitySettings extends AppCompatActivity {
         TextView email = findViewById(R.id.email);
         TextView login_logout = findViewById(R.id.login_logout);
         View edit_profile = findViewById(R.id.edit_profile);
+        ImageView avatar = findViewById(R.id.avatar);
         if (is_login) {
             login_logout.setText(R.string.logout_title);
             name.setText(user.name);
             email.setText(user.email);
+            Tools.displayImage(this, avatar, Constant.getURLuser(user.image));
         } else {
             login_logout.setText(R.string.login_title);
         }
