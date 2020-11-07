@@ -82,7 +82,7 @@ public class ActivitySettings extends AppCompatActivity {
         TextView name = findViewById(R.id.name);
         TextView email = findViewById(R.id.email);
         TextView login_logout = findViewById(R.id.login_logout);
-        TextView edit_profile = findViewById(R.id.edit_profile);
+        View edit_profile = findViewById(R.id.edit_profile);
         if (is_login) {
             login_logout.setText(R.string.logout_title);
             name.setText(user.name);
