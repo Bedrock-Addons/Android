@@ -17,7 +17,10 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.core.widget.NestedScrollView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -32,6 +35,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mcres.octarus.adapter.AdapterHome;
 import com.mcres.octarus.connection.API;
 import com.mcres.octarus.connection.RestAdapter;
 import com.mcres.octarus.connection.response.ResponseNewsDetails;
@@ -230,7 +234,7 @@ public class ActivityContentDetails extends AppCompatActivity {
         });
     }
 
-    @SuppressLint("ClickableViewAccessibility")
+    @SuppressLint({"ClickableViewAccessibility", "SetTextI18n"})
     private void displayNewsData() {
         ((TextView) findViewById(R.id.title)).setText(news.title);
         header_intent = header_intent = ActivityWebView.navigateBase(this, news.url, false);
@@ -311,17 +315,10 @@ public class ActivityContentDetails extends AppCompatActivity {
         }
 
         //--------------------------
-        if (news.title.contains("SG")) {
-            creator.setText("SkyGames");
-
-        } else if (news.content.contains("Endercraft")) {
-            creator.setText("Endercraft");
-
-        } else if (news.title.contains("Seed")) {
-            creator.setText("Naturally Generated");
-
-        } else {
+        if (news.creator.equalsIgnoreCase("")) {
             creator.setText("Unknown Creator");
+        } else {
+            creator.setText("By: " + news.creator);
         }
         //------------------------
 
@@ -559,6 +556,20 @@ public class ActivityContentDetails extends AppCompatActivity {
         sharedPref.setTextSize(value);
         if(textView != null) textView.setText(sharedPref.getTextSize() + "");
         web_view.getSettings().setDefaultFontSize(sharedPref.getTextSize());
+    }
+
+    private static final int VIEW_ITEM_TOPIC = 200;
+
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        RecyclerView.ViewHolder vh;
+        if (viewType == VIEW_ITEM_TOPIC) {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_section_topic_home, parent, false);
+            vh = new AdapterHome.ItemTopicViewHolder(v);
+        } else {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_loading, parent, false);
+            vh = new AdapterHome.ProgressViewHolder(v);
+        }
+        return vh;
     }
 
     private int cur_text_size;

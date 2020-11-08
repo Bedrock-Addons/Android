@@ -92,14 +92,17 @@ public class ActivityRegister extends AppCompatActivity {
             findViewById(R.id.lyt_login).setVisibility(View.INVISIBLE);
             btn_register.setText(R.string.form_action_update);
             ((TextView) findViewById(R.id.page_title)).setText(R.string.form_title_update);
+            ((TextView) findViewById(R.id.welcome)).setText("Hello, " + user.name);
+            ((TextView) findViewById(R.id.welcome_subheading)).setText("Here you can update your info.");
+
             et_name.setText(user.name);
             et_email.setText(user.email);
-            Tools.displayImageCircle(this, avatar, Constant.getURLuser(user.image));
+            Tools.displayImage(this, avatar, Constant.getURLuser(user.image));
             old_password = user.password;
         } else {
             findViewById(R.id.lyt_term).setVisibility(View.INVISIBLE);
             findViewById(R.id.lyt_login).setVisibility(View.VISIBLE);
-            btn_register.setText(R.string.form_action_create_account);
+            btn_register.setText("Create Account");
             ((TextView) findViewById(R.id.page_title)).setText(R.string.form_title_create_account);
         }
 
@@ -131,13 +134,6 @@ public class ActivityRegister extends AppCompatActivity {
                     et_password.setTransformationMethod(new PasswordTransformationMethod());
                 }
                 et_password.setSelection(et_password.getText().length());
-            }
-        });
-
-        (findViewById(R.id.lyt_term_policies)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Tools.openInAppBrowser(ActivityRegister.this, getString(R.string.privacy_policy_url), false);
             }
         });
 

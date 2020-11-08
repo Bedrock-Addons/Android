@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
 
     <application
-        android:name="com.mcres.octarus.data.ThisApp"
+        android:name=".data.ThisApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,14 +21,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.mcres.octarus.ActivityIntro"></activity>
+        <activity android:name=".ActivityIntro" />
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
         <activity
-            android:name="com.mcres.octarus.ActivitySplash"
+            android:name=".ActivitySplash"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -38,53 +38,53 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mcres.octarus.ActivityMain"
+            android:name=".ActivityMain"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mcres.octarus.ActivityRegister"
+            android:name=".ActivityRegister"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.mcres.octarus.ActivityLogin"
+            android:name=".ActivityLogin"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.mcres.octarus.ActivityFilterSearch"
+            android:name=".ActivityFilterSearch"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mcres.octarus.ActivityWebView"
+            android:name=".ActivityWebView"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.mcres.octarus.ActivityGallery"
+            android:name=".ActivityGallery"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mcres.octarus.ActivitySearch"
+            android:name=".ActivitySearch"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mcres.octarus.ActivityContentDetails"
+            android:name=".ActivityContentDetails"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mcres.octarus.ActivityNotification"
+            android:name=".ActivityNotification"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mcres.octarus.ActivityDialogNotification"
+            android:name=".ActivityDialogNotification"
             android:theme="@style/AppTheme.Dialog.NoActionBar" />
         <activity
-            android:name="com.mcres.octarus.ActivitySettings"
+            android:name=".ActivitySettings"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mcres.octarus.ActivityReview"
+            android:name=".ActivityReview"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" /> <!-- admob data -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_app_id" /> <!-- firebase service -->
-        <service android:name="com.mcres.octarus.fcm.FcmMessagingService">
+        <service android:name=".fcm.FcmMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

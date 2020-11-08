@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -15,6 +17,11 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -108,6 +115,7 @@ public class ActivityMain extends AppCompatActivity {
         NavigationView nav_view = findViewById(R.id.nav_view);
         drawer = findViewById(R.id.drawer_layout);
         TextView name = nav_view.findViewById(R.id.name);
+        TextView email = nav_view.findViewById(R.id.email);
         View update = nav_view.findViewById(R.id.update);
         View discord = nav_view.findViewById(R.id.discord);
         ImageView avatar = nav_view.findViewById(R.id.avatar);
@@ -115,9 +123,12 @@ public class ActivityMain extends AppCompatActivity {
         View settings = nav_view.findViewById(R.id.settings);
         if (is_login) {
             name.setText(user.name);
+            email.setVisibility(View.VISIBLE);
+            email.setText(user.email);
             Tools.displayImage(this, avatar, Constant.getURLuser(user.image));
         } else {
             name.setText("Create an Account");
+            //email.setVisibility(View.GONE);
         }
 
         login_logout.setOnClickListener(new View.OnClickListener() {

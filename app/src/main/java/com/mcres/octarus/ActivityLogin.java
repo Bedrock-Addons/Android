@@ -93,12 +93,12 @@ public class ActivityLogin extends AppCompatActivity {
             }
         });
 
-        (findViewById(R.id.forgot_password)).setOnClickListener(new View.OnClickListener() {
+        /*(findViewById(R.id.forgot_password)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialogForgotPassword();
             }
-        });
+        });*/
     }
 
     private void validateValue(final String email, final String password) {

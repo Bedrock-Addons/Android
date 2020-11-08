@@ -36,6 +36,10 @@ dependencies {
     implementation 'com.google.android.ads.consent:consent-library:1.0.7'
 
     implementation 'androidx.room:room-runtime:2.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.1'
+    implementation 'androidx.navigation:navigation-ui:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     annotationProcessor 'androidx.room:room-compiler:2.0.0'
 
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'

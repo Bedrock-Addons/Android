@@ -30,6 +30,7 @@ import com.mcres.octarus.model.User;
 import com.mcres.octarus.utils.NetworkCheck;
 import com.mcres.octarus.utils.Tools;
 
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -115,7 +116,7 @@ public class ActivityReview extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!is_login) {
-                    ActivityLogin.navigate(ActivityReview.this);
+                    ActivityRegister.navigate(ActivityReview.this, user);
                     return;
                 }
                 final String comment = et_comment.getText().toString().trim();

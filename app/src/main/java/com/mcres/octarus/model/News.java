@@ -9,6 +9,7 @@ public class News implements Serializable {
     public long id = -1;
     public String title = "";
     public String content = "";
+    public String creator = "";
     public String image = "";
     public String url = "";
     public String type = "";
