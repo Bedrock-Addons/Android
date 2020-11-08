@@ -314,13 +314,14 @@ public class ActivityContentDetails extends AppCompatActivity {
             download.setText("DOWNLOAD ANDROID APP");
         }
 
-        //--------------------------
+        // Creator Handler
         if (news.creator.equalsIgnoreCase("")) {
             creator.setText("Unknown Creator");
-        } else {
+        } else if (news.creator != null) {
             creator.setText("By: " + news.creator);
+        } else {
+            creator.setText("Unknown Creator");
         }
-        //------------------------
 
         Tools.displayImage(this, image, Constant.getURLcontent(news.image));
 

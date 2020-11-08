@@ -50,6 +50,7 @@ public class AdapterReview extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         public ImageView image;   //Profile picture of the commenter
         public View lyt_parent;   //Entire comment
         public View rating;   //Commenter rating
+        public TextView banned;
 
         public OriginalViewHolder(View v) {
             super(v);
@@ -59,6 +60,7 @@ public class AdapterReview extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             image = v.findViewById(R.id.image);
             lyt_parent = v.findViewById(R.id.lyt_parent);
             rating = v.findViewById(R.id.rating);
+            banned = v.findViewById(R.id.banned);
         }
     }
 
@@ -98,9 +100,10 @@ public class AdapterReview extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             } else {
                 v_item.comment.setText(ctx.getString(R.string.hide_review_message));
                 v_item.image.setVisibility(View.GONE);
-                v_item.date.setVisibility(View.GONE);
+                v_item.name.setVisibility(View.GONE);
                 v_item.name.setText(ctx.getString(R.string.hide_user_message));
-                v_item.rating.setVisibility(View.VISIBLE);
+                v_item.rating.setVisibility(View.GONE);
+                v_item.banned.setVisibility(View.VISIBLE);
             }
             v_item.date.setText(TimeAgo.get(ctx, c.created_at));
             Tools.displayImageThumb(ctx, v_item.image, Constant.getURLuser(c.image), 1f);

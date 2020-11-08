@@ -76,6 +76,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
+                android:background="@color/colorBackgroundDarker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
@@ -140,8 +141,8 @@
             android:layout_weight="1"
             android:background="@drawable/edit_text_round"
             android:imeOptions="actionDone"
-            android:maxLength="500"
-            android:maxLines="5"
+            android:maxLength="5000"
+            android:maxLines="50"
             android:minHeight="70dp"
             android:singleLine="false"
             android:hint="Write a review..."
