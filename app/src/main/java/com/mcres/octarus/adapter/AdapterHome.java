@@ -28,6 +28,7 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int VIEW_ITEM_NEWS = 100;
     private static final int VIEW_ITEM_TOPIC = 200;
     private static final int VIEW_ITEM_SECTION = 300;
+    private static final int VIEW_ITEM_AD = 300;
 
     private List items = new ArrayList<>();
 
@@ -106,6 +107,15 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
+    public static class ItemAdViewHolder extends RecyclerView.ViewHolder {
+        public TextView title;
+
+        public ItemAdViewHolder(View v) {
+            super(v);
+            title = v.findViewById(R.id.title);
+        }
+    }
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder vh;
@@ -115,6 +125,9 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         } else if (viewType == VIEW_ITEM_TOPIC) {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_section_topic_home, parent, false);
             vh = new ItemTopicViewHolder(v);
+        } else if (viewType == VIEW_ITEM_AD) {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_advertisment, parent, false);
+            vh = new ItemAdViewHolder(v);
         } else if (viewType == VIEW_ITEM_SECTION) {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_section_title, parent, false);
             vh = new ItemSectionViewHolder(v);
@@ -207,6 +220,8 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             return VIEW_ITEM_TOPIC;
         } else if (obj instanceof Section) {
             return VIEW_ITEM_SECTION;
+        } else if (obj instanceof Section) {
+            return VIEW_ITEM_AD;
         } else {
             return VIEW_PROGRESS;
         }

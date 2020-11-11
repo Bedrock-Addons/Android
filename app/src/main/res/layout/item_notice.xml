@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="1dp"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="1dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#2577EB"
+                android:scaleType="fitXY"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/spacing_large"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/shape_round" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    app:tint="#4BCEBC"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_delete" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_weight="6"
+                android:layout_marginLeft="15dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get your $50"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textColor="@color/colorBackground"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                    android:text="Invite friend to shop on\nMystore and get rewarded"
+                    android:textColor="@color/grey_10"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:rotation="-90"
+                    app:tint="#4BCEBC"
+                    app:srcCompat="@drawable/arrow_more" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

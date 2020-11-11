@@ -52,6 +52,7 @@ public class AdapterContent extends RecyclerView.Adapter<RecyclerView.ViewHolder
         // each data item is just a string in this case
         public TextView title;
         public TextView date;
+        public TextView update;
         public TextView featured;
         public ImageView image;
         public ImageView img_type;
@@ -63,6 +64,7 @@ public class AdapterContent extends RecyclerView.Adapter<RecyclerView.ViewHolder
             super(v);
             title = v.findViewById(R.id.title);
             date = v.findViewById(R.id.date);
+            update = v.findViewById(R.id.updated);
             featured = v.findViewById(R.id.featured);
             image = v.findViewById(R.id.image);
             img_type = v.findViewById(R.id.img_type);
@@ -122,6 +124,13 @@ public class AdapterContent extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     }
                 }
             });
+
+            if (news.date != news.last_update) {
+                v.update.setVisibility(View.VISIBLE);
+            } else {
+                v.update.setVisibility(View.GONE);
+            }
+
         } else {
             ((AdapterContent.ProgressViewHolder) holder).progressBar.setIndeterminate(true);
         }

@@ -54,7 +54,7 @@ public class ActivityReview extends AppCompatActivity {
     private long comment_count = 0;
 
     private EditText et_comment;
-    private TextView total_comment;
+    private TextView total_messages;
     private View btn_add_comment, progress_bar;
     private RecyclerView recycler_view;
 
@@ -85,7 +85,7 @@ public class ActivityReview extends AppCompatActivity {
     }
 
     private void initComponent() {
-        total_comment = findViewById(R.id.total_comment);
+        total_messages = findViewById(R.id.total_messages);
         et_comment = findViewById(R.id.et_comment);
         btn_add_comment = findViewById(R.id.btn_add_comment);
         progress_bar = findViewById(R.id.progress_bar);
@@ -143,7 +143,7 @@ public class ActivityReview extends AppCompatActivity {
     }
 
     private void setCommentCount() {
-        total_comment.setText(Tools.bigNumberFormat(comment_count));
+        total_messages.setText(Tools.bigNumberFormat(comment_count));
     }
 
     private void requestAction(final int page_no) {
@@ -228,7 +228,7 @@ public class ActivityReview extends AppCompatActivity {
     }
 
     private void displayApiResult(final List<Comment> items, int page_no) {
-        total_comment.setText(Tools.bigNumberFormat(count_total));
+        total_messages.setText(Tools.bigNumberFormat(count_total));
         mAdapter.hideLoadMore();
         mAdapter.insertData(items);
         if (count_total > mAdapter.getItemCount()) {

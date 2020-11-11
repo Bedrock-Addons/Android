@@ -51,7 +51,6 @@ import com.mcres.octarus.room.DAO;
 import com.mcres.octarus.room.table.NewsEntity;
 import com.mcres.octarus.utils.NetworkCheck;
 import com.mcres.octarus.utils.Tools;
-import com.mcres.octarus.utils.ViewAnimation;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.flexbox.FlexboxLayout;
@@ -100,11 +99,11 @@ public class ActivityContentDetails extends AppCompatActivity {
     private NestedScrollView nested_scroll_view;
     private View parent_view;
     private ShimmerFrameLayout shimmer;
-    private ImageView image;
+    private ImageView image, how_to;
     private TextView total_comment;
     private View lyt_main_content, lyt_bottom_bar, lyt_toolbar;
     private WebView web_view = null;
-    private TextView top_title, type, total_view, download, update, creator, how_to;
+    private TextView top_title, type, total_view, download, update, creator, stat_download, stat_message;
     private MenuItem menu_refresh;
     private boolean is_running;
     private boolean is_activity_active = false;
@@ -161,6 +160,8 @@ public class ActivityContentDetails extends AppCompatActivity {
         creator = findViewById(R.id.creator);
         how_to = findViewById(R.id.howto);
         total_comment = findViewById(R.id.total_comment);
+        stat_download = findViewById(R.id.stat_download);
+        stat_message = findViewById(R.id.stat_message);
 
         parent_view = findViewById(android.R.id.content);
         lyt_main_content = findViewById(R.id.lyt_main_content);
@@ -169,20 +170,20 @@ public class ActivityContentDetails extends AppCompatActivity {
         top_title.setText("");
         type.setText("");
 
-        nested_scroll_view.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+        /*nested_scroll_view.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
             @Override
             public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
                 if (scrollY >= oldScrollY) { // down
                     if (lyt_navigation_hide) return;
                     ViewAnimation.hideBottomBar(lyt_bottom_bar);
-                    lyt_navigation_hide = true;
+                    lyt_navigation_hide = false;
                 } else {
                     if (!lyt_navigation_hide) return;
                     ViewAnimation.showBottomBar(lyt_bottom_bar);
                     lyt_navigation_hide = false;
                 }
             }
-        });
+        });*/
     }
 
     private void requestAction() {
@@ -240,7 +241,7 @@ public class ActivityContentDetails extends AppCompatActivity {
         header_intent = header_intent = ActivityWebView.navigateBase(this, news.url, false);
         web_view = findViewById(R.id.web_view);
 
-        String html_data = "<style>img{max-width:100%;height:auto;} iframe{width:100%;}</style> ";
+        String html_data = "<style>img{max-width:100%;height:auto;} video{max-width:100%;height:auto;} iframe{width:100%;}</style> ";
         if (new SharedPref(this).getSelectedTheme() == 1) {
             html_data += "<style>body{color: #ffffff;}</style> ";
         }
@@ -326,7 +327,8 @@ public class ActivityContentDetails extends AppCompatActivity {
         Tools.displayImage(this, image, Constant.getURLcontent(news.image));
 
         total_view.setText(Tools.bigNumberFormat(news.total_view));
-
+        stat_download.setText(Tools.bigNumberFormat(news.total_view));
+        stat_message.setText(Tools.bigNumberFormat(news.total_comment));
         total_comment.setText(Tools.bigNumberFormat(news.total_comment));
 
         if (news.created_at != news.last_update) {
@@ -346,12 +348,11 @@ public class ActivityContentDetails extends AppCompatActivity {
         (findViewById(R.id.howto)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.HELP));
-                startActivity(browserIntent);
+                Tools.openInAppBrowser(ActivityContentDetails.this, Constant.HELP, false);
             }
         });
 
-        (findViewById(R.id.lyt_review)).setOnClickListener(new View.OnClickListener() {
+        (findViewById(R.id.lyt_message)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ActivityReview.navigate(ActivityContentDetails.this, news);

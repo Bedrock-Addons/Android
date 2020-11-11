@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@android:color/white"
+        android:background="@color/colorBackground"
         android:fitsSystemWindows="true">
 
         <RelativeLayout
@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/account"/>
+                app:srcCompat="@drawable/background1"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@android:color/white">
+                android:background="@color/colorBackground">
 
                 <View
                     android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Username or email"
+                    android:text="Email"
                     android:textColor="@color/grey_40"
                     android:layout_marginHorizontal="@dimen/spacing_large"/>
 

@@ -109,7 +109,7 @@
             android:layout_gravity="bottom|end"
             android:background="@color/colorBackground"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <View
                 android:layout_width="match_parent"
@@ -122,10 +122,59 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <View
-                    android:layout_width="@dimen/spacing_medium"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/message_main"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="@color/search"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:hint="Write a message..."
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                        <ImageView
+                            android:id="@+id/btn_add_comment"
+                            android:layout_width="@dimen/spacing_mxlarge"
+                            android:layout_height="@dimen/spacing_mxlarge"
+                            android:layout_marginLeft="@dimen/spacing_middle"
+                            android:layout_marginRight="@dimen/spacing_middle"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:tint="@color/colorLightGreen"
+                            app:srcCompat="@drawable/ic_send" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/howto"
+                    android:layout_width="@dimen/spacing_xxlarge"
+                    android:layout_height="@dimen/spacing_xxlarge"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:padding="@dimen/spacing_large"
+                    android:tint="@color/colorTextAction"
+                    app:srcCompat="@drawable/ic_help" />
 
                 <ImageView
                     android:id="@+id/btn_font"
@@ -137,11 +186,6 @@
                     android:tint="@color/colorTextAction"
                     app:srcCompat="@drawable/ic_font_size" />
 
-                <View
-                    android:layout_width="@dimen/spacing_large"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
                 <ImageView
                     android:id="@+id/btn_share"
                     android:layout_width="@dimen/spacing_xxlarge"
@@ -151,11 +195,6 @@
                     android:padding="@dimen/spacing_large"
                     android:tint="@color/colorTextAction"
                     app:srcCompat="@drawable/ic_share" />
-
-                <View
-                    android:layout_width="@dimen/spacing_medium"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
 
             </LinearLayout>
 
