@@ -100,7 +100,7 @@ public class FragmentHome extends Fragment {
             @Override
             public void onItemTopicClick(View view, Topic obj, int position) {
                 SearchFilter sf = new SearchFilter(obj);
-                ActivitySearch.navigate(getActivity(), sf, getString(R.string.hint_topic) + obj.name);
+                ActivitySearch.navigate(getActivity(), sf, getString(R.string.hint_topic) + " " + obj.name);
             }
         });
 

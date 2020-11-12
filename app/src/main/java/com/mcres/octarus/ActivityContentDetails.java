@@ -348,11 +348,18 @@ public class ActivityContentDetails extends AppCompatActivity {
         (findViewById(R.id.howto)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.openInAppBrowser(ActivityContentDetails.this, Constant.HELP, false);
+                Tools.openInAppBrowser(ActivityContentDetails.this, Constant.TEXT_HELP, false);
             }
         });
 
         (findViewById(R.id.lyt_message)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityReview.navigate(ActivityContentDetails.this, news);
+            }
+        });
+
+        (findViewById(R.id.lyt_message_main)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ActivityReview.navigate(ActivityContentDetails.this, news);
@@ -374,7 +381,6 @@ public class ActivityContentDetails extends AppCompatActivity {
             }
         });
     }
-
 
     private void displayTopicData() {
         FlexboxLayout tags_flex_box = findViewById(R.id.topic_flex_box);

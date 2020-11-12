@@ -123,7 +123,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/message_main"
+                    android:id="@+id/lyt_message_main"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/spacing_xmlarge"
                     android:layout_weight="1"
@@ -152,13 +152,10 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
                         <ImageView
-                            android:id="@+id/btn_add_comment"
                             android:layout_width="@dimen/spacing_mxlarge"
                             android:layout_height="@dimen/spacing_mxlarge"
                             android:layout_marginLeft="@dimen/spacing_middle"
                             android:layout_marginRight="@dimen/spacing_middle"
-                            android:background="?attr/selectableItemBackgroundBorderless"
-                            android:clickable="true"
                             android:tint="@color/colorLightGreen"
                             app:srcCompat="@drawable/ic_send" />
 
@@ -170,9 +167,8 @@
                     android:id="@+id/howto"
                     android:layout_width="@dimen/spacing_xxlarge"
                     android:layout_height="@dimen/spacing_xxlarge"
-                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
-                    android:padding="@dimen/spacing_large"
+                    android:padding="13dp"
                     android:tint="@color/colorTextAction"
                     app:srcCompat="@drawable/ic_help" />
 
@@ -180,9 +176,8 @@
                     android:id="@+id/btn_font"
                     android:layout_width="@dimen/spacing_xxlarge"
                     android:layout_height="@dimen/spacing_xxlarge"
-                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
-                    android:padding="@dimen/spacing_large"
+                    android:padding="11dp"
                     android:tint="@color/colorTextAction"
                     app:srcCompat="@drawable/ic_font_size" />
 
@@ -190,9 +185,8 @@
                     android:id="@+id/btn_share"
                     android:layout_width="@dimen/spacing_xxlarge"
                     android:layout_height="@dimen/spacing_xxlarge"
-                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
-                    android:padding="@dimen/spacing_large"
+                    android:padding="11dp"
                     android:tint="@color/colorTextAction"
                     app:srcCompat="@drawable/ic_share" />
 

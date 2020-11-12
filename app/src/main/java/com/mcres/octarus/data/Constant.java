@@ -11,6 +11,9 @@ public class Constant {
     // The URL to use for the help page
     public static String HELP = "https://tenwan.octarus.dev/bedrock-addons/How%20To%20Download%20Addons.mp4";
 
+
+    public static String TEXT_HELP = "http://167.71.157.159/uploads/pages/install-mcfile/";
+
     // The URL to use for the news page
     public static String NEWS = "https://tenwan.octarus.dev/bedrock-addons/News.html";
 
