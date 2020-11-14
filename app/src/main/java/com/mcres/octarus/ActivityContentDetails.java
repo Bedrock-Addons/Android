@@ -241,7 +241,7 @@ public class ActivityContentDetails extends AppCompatActivity {
         header_intent = header_intent = ActivityWebView.navigateBase(this, news.url, false);
         web_view = findViewById(R.id.web_view);
 
-        String html_data = "<style>img{max-width:100%;height:auto;} video{max-width:100%;height:auto;} iframe{width:100%;}</style> ";
+        String html_data = "<style>img{max-width:100%;height:auto;border-radius:8px;margin-bottom:-10px;} video{max-width:100%;height:auto;border-radius:8px;margin-bottom:-10px;background:#000000;} iframe{width:100%;}</style> ";
         if (new SharedPref(this).getSelectedTheme() == 1) {
             html_data += "<style>body{color: #ffffff;}</style> ";
         }
@@ -592,6 +592,14 @@ public class ActivityContentDetails extends AppCompatActivity {
         tv_size.setText(sharedPref.getTextSize() + "");
         cur_text_size = sharedPref.getTextSize();
 
+        (dialog.findViewById(R.id.bt_default)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cur_text_size = 14;
+                refreshFontSize(tv_size, cur_text_size);
+            }
+        });
+
         (dialog.findViewById(R.id.btn_plus)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -606,14 +614,6 @@ public class ActivityContentDetails extends AppCompatActivity {
             public void onClick(View v) {
                 if(cur_text_size <= AppConfig.TEXT_SIZE_MIN) return;
                 cur_text_size = cur_text_size - AppConfig.TEXT_SIZE_INCREMENT;
-                refreshFontSize(tv_size, cur_text_size);
-            }
-        });
-
-        (dialog.findViewById(R.id.bt_default)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cur_text_size = 14;
                 refreshFontSize(tv_size, cur_text_size);
             }
         });

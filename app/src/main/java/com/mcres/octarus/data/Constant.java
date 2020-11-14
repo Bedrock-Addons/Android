@@ -23,7 +23,7 @@ public class Constant {
     // Limit requests to decrease server load
     public static int CONTENT_PER_REQUEST = 20;  //Default 20
     public static int CATEGORY_PER_REQUEST = 20;  //Default 20
-    public static int COMMENT_PER_REQUEST = 25; //Default 25
+    public static int COMMENT_PER_REQUEST = 20; //Default 20
     public static int NOTIFICATION_PAGE = 30;  //Default 30
     public static int BOOKMARKS_PAGE = 20;  //Default 20
     public static int LOAD_IMAGE_RETRY = 3;  //Default 3
