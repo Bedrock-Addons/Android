@@ -235,6 +235,7 @@ public class ActivityContentDetails extends AppCompatActivity {
         });
     }
 
+
     @SuppressLint({"ClickableViewAccessibility", "SetTextI18n"})
     private void displayNewsData() {
         ((TextView) findViewById(R.id.title)).setText(news.title);
