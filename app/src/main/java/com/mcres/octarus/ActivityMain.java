@@ -1,8 +1,10 @@
 package com.mcres.octarus;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -25,6 +27,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -353,7 +356,7 @@ public class ActivityMain extends AppCompatActivity {
         if (dialog_version_show) return;
         Info info = ThisApp.get().getInfo();
         if (info != null && !info.active) {
-            dialogOutDate();
+            showDialogUpdate();
         }
     }
 
@@ -365,7 +368,7 @@ public class ActivityMain extends AppCompatActivity {
         builder.setCancelable(false);
         builder.setPositiveButton(R.string.UPDATE, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                dialog_version_show = false;
+                dialog_version_show = true;
                 dialog.dismiss();
                 Tools.updateAction(ActivityMain.this);
                 finish();
@@ -378,6 +381,29 @@ public class ActivityMain extends AppCompatActivity {
             }
         });
         builder.show();
+    }
+
+    private void showDialogUpdate() {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
+        dialog.setContentView(R.layout.dialog_update);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        dialog.setCancelable(false);
+
+        (dialog.findViewById(R.id.bt_update)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.updateAction(ActivityMain.this);
+            }
+        });
+
+        (dialog.findViewById(R.id.bt_close)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     private void prepareAds() {

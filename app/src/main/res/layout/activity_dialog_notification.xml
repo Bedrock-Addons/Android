@@ -55,8 +55,8 @@
                     android:layout_width="?attr/actionBarSize"
                     android:layout_height="?attr/actionBarSize"
                     android:padding="@dimen/spacing_large"
-                    android:tint="@color/grey_80"
-                    app:srcCompat="@drawable/ic_close" />
+                    app:srcCompat="@drawable/ic_close"
+                    app:tint="@color/grey_80" />
 
             </com.balysv.materialripple.MaterialRippleLayout>
         </LinearLayout>

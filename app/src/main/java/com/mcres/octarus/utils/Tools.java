@@ -37,6 +37,7 @@ import com.mcres.octarus.ActivityMain;
 import com.mcres.octarus.ActivityWebView;
 import com.mcres.octarus.R;
 import com.mcres.octarus.data.AppConfig;
+import com.mcres.octarus.data.Constant;
 import com.mcres.octarus.data.SharedPref;
 import com.mcres.octarus.model.DeviceInfo;
 import com.mcres.octarus.model.News;
@@ -447,9 +448,9 @@ public class Tools {
         Uri uri = Uri.parse("market://details?id=" + activity.getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
         try {
-            activity.startActivity(goToMarket);
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://tenwan.octarus.dev/software/bedrock-addons/app-release.apk")));
         } catch (ActivityNotFoundException e) {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + activity.getPackageName())));
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://tenwan.octarus.dev/software/bedrock-addons/app-release.apk")));
         }
     }
 
