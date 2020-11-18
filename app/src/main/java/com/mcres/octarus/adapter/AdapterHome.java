@@ -1,5 +1,6 @@
 package com.mcres.octarus.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +22,7 @@ import com.mcres.octarus.utils.Tools;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -119,9 +121,13 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder vh;
+
         if (viewType == VIEW_ITEM_NEWS) {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_content, parent, false);
             vh = new ItemNewsViewHolder(v);
+        /*} else if ((viewType == VIEW_ITEM_NEWS) && (Math.random() >= 1)) {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_content_two, parent, false);
+            vh = new ItemNewsViewHolder(v);*/
         } else if (viewType == VIEW_ITEM_TOPIC) {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_section_topic_home, parent, false);
             vh = new ItemTopicViewHolder(v);

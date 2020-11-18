@@ -104,7 +104,7 @@ public class ActivityContentDetails extends AppCompatActivity {
     private View lyt_main_content, lyt_bottom_bar, lyt_toolbar;
     private WebView web_view = null;
     private TextView top_title, type, total_view, download, update, creator, stat_download, stat_message;
-    private MenuItem menu_refresh;
+    private MenuItem menu_search_related;
     private boolean is_running;
     private boolean is_activity_active = false;
     private Intent header_intent = null;
@@ -242,7 +242,7 @@ public class ActivityContentDetails extends AppCompatActivity {
         header_intent = header_intent = ActivityWebView.navigateBase(this, news.url, false);
         web_view = findViewById(R.id.web_view);
 
-        String html_data = "<style>img{max-width:100%;height:auto;border-radius:8px;margin-bottom:-10px;} video{max-width:100%;height:auto;border-radius:8px;margin-bottom:-10px;background:#000000;} iframe{width:100%;}</style> ";
+        String html_data = "<style>img{max-width:100%;height:auto;border-radius:8px;margin-bottom:-10px;} video{max-width:100%;height:auto;border-radius:8px;margin-bottom:-10px;background:#000000;} iframe{width:100%;allowfullscreen:false;}</style> ";
         if (new SharedPref(this).getSelectedTheme() == 1) {
             html_data += "<style>body{color: #ffffff;}</style> ";
         }
@@ -423,7 +423,7 @@ public class ActivityContentDetails extends AppCompatActivity {
 
     private void showLoading(final boolean show) {
         is_running = show;
-        if (menu_refresh != null) menu_refresh.setVisible(!show);
+        if (menu_search_related != null) menu_search_related.setVisible(!show);
         if (!show) {
             shimmer.setVisibility(View.GONE);
             shimmer.stopShimmer();
@@ -440,7 +440,7 @@ public class ActivityContentDetails extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_activity_content_details, menu);
         MenuItem menu_saved = menu.findItem(R.id.action_saved);
-        menu_refresh = menu.findItem(R.id.action_refresh);
+        menu_search_related = menu.findItem(R.id.action_search_related);
 
         NewsEntity ns = dao.getNews(news.id);
         is_saved = ns != null;
@@ -463,8 +463,8 @@ public class ActivityContentDetails extends AppCompatActivity {
         int item_id = item.getItemId();
         if (item_id == android.R.id.home) {
             finish();
-        } else if (item_id == R.id.action_refresh) {
-            requestAction();
+        } else if (item_id == R.id.action_search) {
+            ActivitySearch.navigate(this, null, null);
         } else if (item_id == R.id.action_saved) {
             if (news.isDraft()) return true;
             String str;

@@ -239,4 +239,20 @@
     <string name="notifications">Notifications</string>
     <string name="bookmarks">Bookmarks</string>
 
+    <!--FAQ Strings -->
+    <string name="faq1">How do I download addons?</string>
+    <string name="answer1">Please refer to the video or text tutorials </string>
+    <string name="faq2">How To?</string>
+    <string name="answer2">Testing</string>
+    <string name="faq3">How To?</string>
+    <string name="answer3">Testing</string>
+    <string name="faq4">How To?</string>
+    <string name="answer4">Testing</string>
+    <string name="faq5">How To?</string>
+    <string name="answer5">Testing</string>
+    <string name="faq6">How To?</string>
+    <string name="answer6">Testing</string>
+    <string name="faq7">How To?</string>
+    <string name="answer7">Testing</string>
+
 </resources>

@@ -204,6 +204,9 @@ public class ActivityMain extends AppCompatActivity {
             case R.id.nav_menu_notif:
                 ActivityNotification.navigate(this);
                 break;
+            case R.id.nav_menu_faq:
+                ActivityFaq.navigate(this);
+                break;
             case R.id.nav_menu_saved:
                 if (fragmentSaved == null) fragmentSaved = new FragmentSaved();
                 fragment = fragmentSaved;

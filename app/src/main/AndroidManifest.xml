@@ -42,6 +42,10 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ActivityFaq"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ActivityRegister"
             android:windowSoftInputMode="adjustResize" />
         <activity
