@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+// Hello there, if you are reading this, you might know whats going on...
+
 android {
     compileSdkVersion 30
     defaultConfig {
