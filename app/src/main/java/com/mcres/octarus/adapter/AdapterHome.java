@@ -70,6 +70,7 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         public TextView date;
         public TextView update;
         public TextView featured;
+        public TextView creator;
         public ImageView image;
         public TextView txt_type;
         public View lyt_parent;
@@ -82,6 +83,7 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             date = v.findViewById(R.id.date);
             update = v.findViewById(R.id.updated);
             featured = v.findViewById(R.id.featured);
+            creator = v.findViewById(R.id.creator);
             image = v.findViewById(R.id.image);
             txt_type = v.findViewById(R.id.txt_type);
             lyt_parent = v.findViewById(R.id.lyt_parent);
@@ -155,6 +157,14 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             ItemNewsViewHolder v = (ItemNewsViewHolder) holder;
             v.title.setText(news.title);
             v.date.setText(TimeAgo.get(ctx, news.date));
+            v.creator.setText(news.creator);
+            if (news.creator.equalsIgnoreCase("")) {
+                v.creator.setText("Unknown Creator");
+            } else if (news.creator != null) {
+                v.creator.setText("By: " + news.creator);
+            } else if (news.creator.equalsIgnoreCase(null)) {
+                v.creator.setText("Unknown Creator");
+            }
             Tools.displayImageThumb(ctx, v.image, Constant.getURLcontent(news.image), 0.5f);
             v.featured.setVisibility(news.featured == 1 ? View.VISIBLE : View.GONE);
             v.total_view.setText(Tools.bigNumberFormat(news.total_view) + " ");
@@ -178,7 +188,7 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 }
             });
 
-            if (news.date != news.last_update) {
+            if (news.created_at != news.last_update) {
                 v.update.setVisibility(View.VISIBLE);
             } else {
                 v.update.setVisibility(View.GONE);

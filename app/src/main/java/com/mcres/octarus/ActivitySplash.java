@@ -56,7 +56,7 @@ public class ActivitySplash extends AppCompatActivity {
                 finish(); // kill current activity
             }
         };
-        new Timer().schedule(task, 1500);
+        new Timer().schedule(task, 150); // How long the splash screen displays for
     }
 
     @Override

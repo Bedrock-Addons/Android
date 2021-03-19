@@ -336,6 +336,14 @@ public class Tools {
         ActivityWebView.navigate(activity, url, from_notif);
     }
 
+    public static void openInAppBrowserOriginal(Activity activity, String url) {
+        if (!URLUtil.isValidUrl(url)) {
+            Toast.makeText(activity, "Cannot open url", Toast.LENGTH_LONG).show();
+            return;
+        }
+        ActivityWebView.navigate(activity, url, false);
+    }
+
     public static String getHostName(String url) {
         try {
             URI uri = new URI(url);

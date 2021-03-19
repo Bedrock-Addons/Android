@@ -500,15 +500,15 @@
                             app:srcCompat="@drawable/ic_arrow_drop_down"
                             app:tint="@color/grey_60" />
 
+
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/textfaq7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/spacing_middle"
-                        android:layout_marginTop="@dimen/spacing_medium"
-                        android:layout_marginRight="@dimen/spacing_large"
+                        android:layout_marginHorizontal="@dimen/spacing_large"
+                        android:layout_marginBottom="@dimen/spacing_large"
                         android:text="@string/answer7"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                         android:textColor="@color/grey_60" />

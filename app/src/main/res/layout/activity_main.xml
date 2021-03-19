@@ -27,15 +27,107 @@
                 android:theme="@style/ThemeOverlay.AppCompat.Light"
                 app:elevation="0dp">
 
-                <include layout="@layout/toolbar" />
+                <include layout="@layout/toolbar"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackground"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="0dp" />
+
+                        <Button
+                            android:id="@+id/nav_menu_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@drawable/tab_rounded"
+                            android:drawableEnd="@drawable/ic_home"
+                            android:onClick="onDrawerMenuClick"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="For you  "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/colorTextAction"
+                            app:drawableTint="@color/colorTextAction" />
+
+                        <Button
+                            android:id="@+id/nav_menu_categories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@drawable/tab_rounded"
+                            android:drawableEnd="@drawable/ic_categories"
+                            android:drawableRight="@drawable/ic_categories"
+                            android:onClick="onDrawerMenuClick"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="Categories  "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/colorTextAction"
+                            app:drawableTint="@color/colorTextAction" />
+
+                        <Button
+                            android:id="@+id/nav_menu_saved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@drawable/tab_rounded"
+                            android:drawableEnd="@drawable/ic_bookmarks"
+                            android:onClick="onDrawerMenuClick"
+                            app:drawableTint="@color/colorTextAction"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="Bookmarks  "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/colorTextAction" />
+
+                        <Button
+                            android:id="@+id/nav_menu_streams"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@drawable/tab_rounded"
+                            android:drawableEnd="@drawable/ic_play_arrow"
+                            android:drawableRight="@drawable/ic_play_arrow"
+                            android:onClick="onDrawerMenuClick"
+                            app:drawableTint="@color/grey_50"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="Livestreams  "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_50" />
+
+                        <Button
+                            android:id="@+id/nav_menu_help"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@drawable/tab_rounded"
+                            android:drawableEnd="@drawable/ic_help"
+                            android:drawableRight="@drawable/ic_help"
+                            android:onClick="onDrawerMenuClick"
+                            app:drawableTint="@color/grey_50"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="Help  "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_50" />
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
 
             </com.google.android.material.appbar.AppBarLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorSeparator"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
             <FrameLayout
                 android:id="@+id/frame_container"
@@ -57,9 +149,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="3dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="6dp"
+                android:layout_marginBottom="3dp"
                 android:textSize="16sp"
                 android:text="This is a development version. Turn ads on afterwards."
                 android:layout_gravity="center"

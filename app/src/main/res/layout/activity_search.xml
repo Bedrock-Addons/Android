@@ -39,8 +39,8 @@
                     android:layout_height="@dimen/spacing_mxlarge"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
-                    android:tint="@color/colorTextAction"
-                    app:srcCompat="@drawable/ic_arrow_back" />
+                    app:srcCompat="@drawable/ic_arrow_back"
+                    app:tint="@color/colorTextAction" />
 
                 <View
                     android:layout_width="@dimen/spacing_middle"
@@ -66,8 +66,8 @@
                             android:layout_height="@dimen/spacing_mxlarge"
                             android:layout_marginLeft="@dimen/spacing_middle"
                             android:layout_marginRight="@dimen/spacing_middle"
-                            android:tint="@color/grey_20"
-                            app:srcCompat="@drawable/ic_search" />
+                            app:srcCompat="@drawable/ic_search"
+                            app:tint="@color/grey_20" />
 
                         <EditText
                             android:id="@+id/et_search"
@@ -85,7 +85,7 @@
 
                         </EditText>
 
-                        <ImageView
+                        <!--<ImageView
                             android:id="@+id/btn_filter"
                             android:layout_width="@dimen/spacing_mxlarge"
                             android:layout_height="@dimen/spacing_mxlarge"
@@ -93,14 +93,83 @@
                             android:layout_marginRight="@dimen/spacing_middle"
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:clickable="true"
-                            android:tint="@color/grey_40"
-                            app:srcCompat="@drawable/ic_filter" />
+                            app:srcCompat="@drawable/ic_filter"
+                            app:tint="@color/grey_40" />-->
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="0dp" />
+
+                    <Button
+                        android:id="@+id/btn_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tab_rounded"
+                        android:drawableEnd="@drawable/ic_filter"
+                        android:drawableRight="@drawable/ic_filter"
+                        android:onClick="onSearchTabClick"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Filter Results  "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_50"
+                        app:drawableTint="@color/grey_50" />
+
+                    <Button
+                        android:id="@+id/search_faq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tab_rounded"
+                        android:drawableEnd="@drawable/ic_download"
+                        android:drawableRight="@drawable/ic_download"
+                        app:drawableTint="@color/grey_50"
+                        android:onClick="onSearchTabClick"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Frequently Asked Questions  "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_50" />
+
+                    <Button
+                        android:id="@+id/search_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@drawable/tab_rounded"
+                        android:drawableEnd="@drawable/ic_help"
+                        android:drawableRight="@drawable/ic_help"
+                        app:drawableTint="@color/grey_50"
+                        android:onClick="onSearchTabClick"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Help  "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_50" />
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
 
             <View
                 android:layout_width="match_parent"
@@ -124,6 +193,16 @@
                 android:paddingBottom="@dimen/spacing_large"
                 android:scrollbars="none"
                 android:scrollingCache="true" />
+
+            <LinearLayout
+                android:id="@+id/lyt_search_suggestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <include layout="@layout/include_search_suggestions" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/lyt_failed"

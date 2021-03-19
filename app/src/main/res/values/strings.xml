@@ -240,19 +240,21 @@
     <string name="bookmarks">Bookmarks</string>
 
     <!--FAQ Strings -->
-    <string name="faq1">How do I download addons?</string>
-    <string name="answer1">Please refer to the video or text tutorials </string>
-    <string name="faq2">How To?</string>
-    <string name="answer2">Testing</string>
-    <string name="faq3">How To?</string>
+    <string name="faq1">How does this app work?</string>
+    <string name="answer1">This app allows you to download game content in a safe, quick, and enjoyable way. On the main feed, click on some content that you would like to download, then press the download button. Easy.</string>
+    <string name="faq2">How do I download addons?</string>
+    <string name="answer2">Please refer to the video or text tutorials for help.</string>
+    <string name="faq3">How To?</string> m
     <string name="answer3">Testing</string>
     <string name="faq4">How To?</string>
     <string name="answer4">Testing</string>
     <string name="faq5">How To?</string>
     <string name="answer5">Testing</string>
-    <string name="faq6">How To?</string>
-    <string name="answer6">Testing</string>
-    <string name="faq7">How To?</string>
-    <string name="answer7">Testing</string>
+    <string name="faq6">Info for Android developers</string>
+    <string name="answer6">The Android app is open-source, so you can make your own apps from it. You can also use the APIs, and gain access to a huge content library all for free.</string>
+    <string name="faq7">Who can I contact regarding this application?</string>
+    <string name="answer7">Please contact du@octarus.org</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

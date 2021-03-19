@@ -14,6 +14,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -61,7 +62,7 @@ public class ActivitySearch extends AppCompatActivity {
     private EditText et_search;
     private RecyclerView recyclerView;
     private AdapterContent mAdapter;
-    private ImageView btn_filter;
+    private Button btn_filter, search_faq, search_help;
     private SearchFilter searchFilter = new SearchFilter();
     //private AdView mAdView;
     private SharedPref sharedPref;
@@ -101,6 +102,8 @@ public class ActivitySearch extends AppCompatActivity {
     private void initComponent() {
         et_search = findViewById(R.id.et_search);
         btn_filter = findViewById(R.id.btn_filter);
+        search_faq = findViewById(R.id.search_faq);
+        search_help = findViewById(R.id.search_help);
         recyclerView = findViewById(R.id.recyclerView);
 
         et_search.setHint(Html.fromHtml(hint));
@@ -146,6 +149,13 @@ public class ActivitySearch extends AppCompatActivity {
             }
         });
 
+        search_faq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityFaq.navigate(ActivitySearch.this);
+            }
+        });
+
         (findViewById(R.id.btn_close)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -181,9 +191,9 @@ public class ActivitySearch extends AppCompatActivity {
     private void checkFilterIsActive() {
         if (searchFilter == null) return;
         if (searchFilter.isDefault()) {
-            btn_filter.setColorFilter(getResources().getColor(R.color.grey_40), PorterDuff.Mode.SRC_ATOP);
+            btn_filter.setTextColor(getResources().getColor(R.color.grey_40));
         } else {
-            btn_filter.setColorFilter(getResources().getColor(R.color.grey_60), PorterDuff.Mode.SRC_ATOP);
+            btn_filter.setTextColor(getResources().getColor(R.color.colorGreen));
         }
         searchAction();
     }

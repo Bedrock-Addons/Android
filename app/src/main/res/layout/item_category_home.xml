@@ -50,11 +50,10 @@
                     android:text="McPack"
                     android:textStyle="bold"
                     android:textColor="@android:color/white"
-                    android:textSize="10.7sp" />
+                    android:textSize="11sp" />
             </LinearLayout>
 
         </RelativeLayout>
-
 
     </androidx.cardview.widget.CardView>
 

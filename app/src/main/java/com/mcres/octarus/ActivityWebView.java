@@ -97,7 +97,7 @@ public class ActivityWebView extends AppCompatActivity {
 
     private void loadWebFromUrl() {
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setBuiltInZoomControls(false);
         webView.getSettings().setDisplayZoomControls(false);
         webView.getSettings().setDefaultTextEncodingName("utf-8");
         webView.setBackgroundColor(Color.TRANSPARENT);
@@ -106,7 +106,6 @@ public class ActivityWebView extends AppCompatActivity {
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
                 actionBar.setTitle(null);
-                actionBar.setSubtitle("Miniapp Viewer");
                 progressBar.setVisibility(View.VISIBLE);
             }
 

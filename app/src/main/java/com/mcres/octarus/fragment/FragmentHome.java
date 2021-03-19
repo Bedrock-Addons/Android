@@ -232,6 +232,7 @@ public class FragmentHome extends Fragment {
         requestHomeData(1);
         // save featured categories to global variable
         ThisApp.get().setFeaturedTopic(resp.topic);
+
     }
 
     private void displayContentData(List<News> items) {

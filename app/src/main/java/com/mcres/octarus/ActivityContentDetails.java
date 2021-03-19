@@ -32,8 +32,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.mcres.octarus.adapter.AdapterHome;
 import com.mcres.octarus.connection.API;
@@ -234,7 +236,6 @@ public class ActivityContentDetails extends AppCompatActivity {
             }
         });
     }
-
 
     @SuppressLint({"ClickableViewAccessibility", "SetTextI18n"})
     private void displayNewsData() {

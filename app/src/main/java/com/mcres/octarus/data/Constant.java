@@ -3,14 +3,14 @@ package com.mcres.octarus.data;
 public class Constant {
 
     // The server that you want to connect to
-    public static String SERVER = "http://167.71.157.159/";
+    public static String SERVER = "http://311310.com/";
 
     // Leave this blank to make a general connection
     public static final String KEY = "";
-
     // The URL to use for the help page
     public static String HELP = "https://tenwan.octarus.dev/bedrock-addons/How%20To%20Download%20Addons.mp4";
 
+    public static String STREAMS = "http://311310.com/uploads/pages/streams/";
 
     public static String TEXT_HELP = "http://167.71.157.159/uploads/pages/install-mcfile/";
 

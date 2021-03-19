@@ -8,7 +8,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -19,15 +18,12 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -61,9 +57,12 @@ public class ActivityMain extends AppCompatActivity {
     private View notif_badge = null, notif_badge_menu = null;
     private int notification_count = -1;
 
+    private Button btn_filter, search_scroll_to_top, search_faq, search_help;
+
     private FragmentHome fragmentHome;
     private FragmentTopic fragmentTopic;
     private FragmentSaved fragmentSaved;
+
 
     private InterstitialAd mInterstitialAd;
     private AdView mAdView;
@@ -212,6 +211,9 @@ public class ActivityMain extends AppCompatActivity {
                 fragment = fragmentSaved;
                 toolbar_title.setText(R.string.title_menu_saved);
                 break;
+            case R.id.nav_menu_streams:
+                Tools.openInAppBrowser(this, Constant.STREAMS, false);
+                break;
             case R.id.nav_menu_help:
                 Tools.openInAppBrowser(this, Constant.HELP, false);
                 break;
@@ -284,7 +286,7 @@ public class ActivityMain extends AppCompatActivity {
         if (!drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.openDrawer(GravityCompat.START);
         } else {
-            doExitApp();
+            drawer.closeDrawer(GravityCompat.START);
         }
     }
 

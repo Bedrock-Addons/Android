@@ -147,7 +147,7 @@
                             android:layout_marginLeft="@dimen/spacing_middle"
                             android:layout_marginRight="@dimen/spacing_middle"
                             app:srcCompat="@drawable/ic_send"
-                            app:tint="@color/colorLightGreen" />
+                            android:tint="@color/colorLightGreen" />
 
                     </LinearLayout>
 
