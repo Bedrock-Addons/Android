@@ -12,6 +12,8 @@ public class Constant {
 
     public static String STREAMS = "http://311310.com/uploads/pages/streams/";
 
+    public static String COMMUNITY = "https://ctznry.com/addons@ctzn.one";
+
     public static String TEXT_HELP = "http://167.71.157.159/uploads/pages/install-mcfile/";
 
     // The URL to use for the news page

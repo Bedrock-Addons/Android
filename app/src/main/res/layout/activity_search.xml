@@ -125,28 +125,27 @@
                         android:background="@drawable/tab_rounded"
                         android:drawableEnd="@drawable/ic_filter"
                         android:drawableRight="@drawable/ic_filter"
-                        android:onClick="onSearchTabClick"
+                        android:onClick="onDrawerMenuClick"
+                        app:drawableTint="@color/colorTextAction"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:text="Filter Results  "
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                        android:textColor="@color/grey_50"
-                        app:drawableTint="@color/grey_50" />
+                        android:textColor="@color/colorTextAction" />
 
                     <Button
                         android:id="@+id/search_faq"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:background="@drawable/tab_rounded"
-                        android:drawableEnd="@drawable/ic_download"
-                        android:drawableRight="@drawable/ic_download"
-                        app:drawableTint="@color/grey_50"
-                        android:onClick="onSearchTabClick"
+                        android:drawableEnd="@drawable/ic_bookmarks"
+                        android:onClick="onDrawerMenuClick"
+                        app:drawableTint="@color/colorTextAction"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
-                        android:text="Frequently Asked Questions  "
+                        android:text="Search FAQ  "
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                        android:textColor="@color/grey_50" />
+                        android:textColor="@color/colorTextAction" />
 
                     <Button
                         android:id="@+id/search_help"
@@ -155,13 +154,13 @@
                         android:background="@drawable/tab_rounded"
                         android:drawableEnd="@drawable/ic_help"
                         android:drawableRight="@drawable/ic_help"
-                        app:drawableTint="@color/grey_50"
-                        android:onClick="onSearchTabClick"
+                        android:onClick="onDrawerMenuClick"
+                        app:drawableTint="@color/colorTextAction"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
-                        android:text="Help  "
+                        android:text="Search Help  "
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                        android:textColor="@color/grey_50" />
+                        android:textColor="@color/colorTextAction" />
 
                     <View
                         android:layout_width="8dp"

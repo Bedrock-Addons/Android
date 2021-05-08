@@ -4,7 +4,7 @@
     <string name="app_name">Addons</string>
 
     <!-- Game Version String -->
-    <string name="game_version">1.12.20.5 +</string>
+    <string name="game_version">1.16.20.5 +</string>
 
     <!-- Review string data -->
     <string name="review_input_warning">Write a message to send</string>
@@ -128,8 +128,9 @@
     <string name="app_version">Version</string>
     <string name="developer_email">du@octarus.org</string>
     <string name="pref_title_contact_us">Contact</string>
-    <string name="copyright">© 2020 Octarus Hosting. All right reserved</string>
-    <string name="license">This project is licensed under the MIT license</string>
+    <string name="copyright">Bedrock Addons © 2021 Du Cheng. All right reserved</string>
+    <string name="license">This project code is licensed under the MIT license</string>
+    <string name="community">CTZN is an alpha product, please be kind</string>
     <string name="setting_group_profile">My Account</string>
     <string name="setting_group_notif">Notifications</string>
     <string name="setting_group_display">Display</string>

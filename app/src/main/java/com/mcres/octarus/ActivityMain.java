@@ -214,10 +214,13 @@ public class ActivityMain extends AppCompatActivity {
             case R.id.nav_menu_streams:
                 Tools.openInAppBrowser(this, Constant.STREAMS, false);
                 break;
+            case R.id.nav_menu_community:
+                Tools.openInAppBrowser(this, Constant.COMMUNITY, false);
+                break;
             case R.id.nav_menu_help:
                 Tools.openInAppBrowser(this, Constant.HELP, false);
                 break;
-            case R.id.lyt_rate_this:
+            case R.id.nav_menu_rate:
                 Tools.rateAction(this);
                 break;
         }

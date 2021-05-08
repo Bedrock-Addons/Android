@@ -150,7 +150,7 @@ public class ActivitySettings extends AppCompatActivity {
                 clipboard.setPrimaryClip(clip);
                 Snackbar.make(parent_view, R.string.email_copied, Snackbar.LENGTH_SHORT).show();
                 break;
-            case R.id.lyt_rate_this:
+            case R.id.nav_menu_rate:
                 Tools.rateAction(this);
                 break;
             case R.id.lyt_help:

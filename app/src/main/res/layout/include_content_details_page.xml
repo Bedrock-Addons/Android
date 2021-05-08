@@ -86,7 +86,8 @@
                 android:text="Version 1.16.3"
                 android:textColor="@android:color/white"
                 android:layout_gravity="center_vertical"
-                android:textSize="11sp" />
+                android:textSize="11sp"
+                android:visibility="gone"/>
 
         </LinearLayout>
 
@@ -298,7 +299,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <View
                     android:layout_width="5dp"

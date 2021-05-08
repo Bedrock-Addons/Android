@@ -156,6 +156,13 @@ public class ActivitySearch extends AppCompatActivity {
             }
         });
 
+        search_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.openInAppBrowser(ActivitySearch.this, Constant.HELP, false);
+            }
+        });
+
         (findViewById(R.id.btn_close)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
