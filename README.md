@@ -23,12 +23,3 @@ I have commented on some parts of the code, and in the Build Config file you can
 ## Releasing the server application
 The server application will be released in a month or so, but I have kept it closed up until now to prevent competition.
 Please know that the server application is not required to build and run this Android app, and it isn't required to use the layouts or any code in your own projects.
-
-## Documentation
-You can read up on Bedrock Addons at the [Documentation Website](https://octarus.dev/project/bedrock-addons/).
-This project is on a hiatus while I work on projects that are more fun and less stressful. The Bedrock Addons servers will remain online.
-
- dP"Yb    dP""b8  888888    db     88""Yb  88   88  .dP"Y8
-dP   Yb  dP   `"    88     dPYb    88__dP  88   88  `Ybo."
-Yb   dP  Yb         88    dP__Yb   88"Yb   Y8   8P  o.`Y8b
- YbodP    YboodP    88   dP""""Yb  88  Yb  `YbodP'  8bodP'
