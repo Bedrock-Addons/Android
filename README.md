@@ -20,6 +20,6 @@ All layouts have been designed in a way that's easy to find what code came from 
 ## What does what?
 I have commented on some parts of the code, and in the Build Config file you can change multiple properties of the app eaily. I will continue to add comments where helpful to show what does what, why, and how.
 
-## Releasing the server application
-The server application will be released in a month or so, but I have kept it closed up until now to prevent competition.
-Please know that the server application is not required to build and run this Android app, and it isn't required to use the layouts or any code in your own projects.
+## Download the backend (server-side) application
+You can download the backend [here](https://github.com/Bedrock-Addons/Server), and run your own Bedrock Addons!
+It requires some configuration, and is release as-is but I will do my best to fix any security vulnerabilities that are reported.
