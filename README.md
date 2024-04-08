@@ -1,3 +1,5 @@
+# NOTICE: This code is unmaintained and has known Java vulnerabilities.
+
 # Bedrock Addons
 Official Bedrock Addons repository for the app on [Google Play](https://play.google.com/store/apps/details?id=com.mcres.octarus). We're on track to becoming the biggest Minecraft Android apps platform! With over 17 known clones up on Google Play mirroring the original API.
 
