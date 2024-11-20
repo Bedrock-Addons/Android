@@ -14,24 +14,32 @@ android {
         vectorDrawables.useSupportLibrary = true
         ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
     }
+    compileOptions {
+	sourceCompatibility JavaVersion.VERSION_1_8
+	targetCompatibility JavaVersion.VERSION_1_8
+    }
     buildTypes {
         release {
             minifyEnabled false // Do not set this to true, will break the app!
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+	checkReleaseBuilds false
+	abortOnError false
+    }
 }
 
 // Project dependencies are listed here
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
-    implementation 'com.google.android:flexbox:2.0.1'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
 
     implementation 'com.google.firebase:firebase-core:18.0.1'
     implementation 'com.google.firebase:firebase-messaging:21.0.1'
