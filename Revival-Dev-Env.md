@@ -28,3 +28,5 @@ if it loads 100%, you're good!
 6] If you're on Linux, make sure you have the android studio snap package (NOT the flatpak). If you're on Windows or Mac, you're on your own.
 
 It should come back to life with these changes.
+
+This could also be turned into a GitHub Action to save a lot of time lol
