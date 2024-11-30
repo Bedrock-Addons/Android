@@ -10,6 +10,8 @@ public class Constant {
     // The URL to use for the help page
     public static String HELP = "https://tenwan.octarus.dev/bedrock-addons/How%20To%20Download%20Addons.mp4";
 
+    public static String PRIVACY_URL = "https://docs.google.com/document/d/1WrdDLyLxE5DQUb0WyrF1JTlcyUt5W7zGweoaPGnvW6I/edit?usp=sharing";
+
     public static String STREAMS = "http://311310.com/uploads/pages/streams/";
 
     public static String COMMUNITY = "https://ctznry.com/addons@ctzn.one";

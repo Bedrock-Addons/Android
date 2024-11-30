@@ -151,6 +151,8 @@ public class ActivitySettings extends AppCompatActivity {
             Tools.rateAction(this);
         } else if (id == R.id.lyt_help) {
             Tools.openInAppBrowser(this, Constant.HELP, false);
+        } else if (id == R.id.lyt_news_privacy_policy) {
+            Tools.openInAppBrowser(this, Constant.PRIVACY_URL, false);
         } else if (id == R.id.lyt_news) {
             Tools.openInAppBrowser(this, Constant.NEWS, false);
         } else if (id == R.id.lyt_theme) {
