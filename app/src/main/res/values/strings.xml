@@ -48,7 +48,7 @@
     <string name="form_action_update">UPDATE</string>
     <string name="form_action_create_account">JOIN</string>
     <string name="form_title_update">Update your account</string>
-    <string name="form_title_create_account">Create a free account</string>
+    <string name="form_title_create_account">Registration has been disabled</string>
     <string name="have_an_account">Already have an account?</string>
     <string name="register_term_note">By creating an account, you agree with Octarus policies</string>
 
@@ -130,7 +130,7 @@
     <string name="pref_title_contact_us">Contact</string>
     <string name="copyright">Bedrock Addons © 2024 11pm Labs. All right reserved</string>
     <string name="license">This project code is licensed under the MIT license</string>
-    <string name="community">CTZN is an alpha product, please be kind</string>
+    <string name="community">Bedrock Addons</string>
     <string name="setting_group_profile">My Account</string>
     <string name="setting_group_notif">Notifications</string>
     <string name="setting_group_display">Display</string>

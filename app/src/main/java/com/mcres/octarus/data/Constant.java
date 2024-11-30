@@ -8,21 +8,21 @@ public class Constant {
     // Leave this blank to make a general connection
     public static final String KEY = "";
     // The URL to use for the help page
-    public static String HELP = "https://tenwan.octarus.dev/bedrock-addons/How%20To%20Download%20Addons.mp4";
+    public static String HELP = "https://example.com";
 
     public static String PRIVACY_URL = "https://docs.google.com/document/d/1WrdDLyLxE5DQUb0WyrF1JTlcyUt5W7zGweoaPGnvW6I/edit?usp=sharing";
 
-    public static String STREAMS = "http://311310.com/uploads/pages/streams/";
+    public static String STREAMS = "https://example.com";
 
-    public static String COMMUNITY = "https://ctznry.com/addons@ctzn.one";
+    public static String COMMUNITY = "https://example.com";
 
-    public static String TEXT_HELP = "http://167.71.157.159/uploads/pages/install-mcfile/";
+    public static String TEXT_HELP = "https://example.com";
 
     // The URL to use for the news page
-    public static String NEWS = "https://tenwan.octarus.dev/bedrock-addons/News.html";
+    public static String NEWS = "https://example.com";
 
     // The URL to use for the github page
-    public static String GITHUB = "http://addons.octarus.com/uploads/pages/news";
+    public static String GITHUB = "https://example.com";
 
     // Limit requests to decrease server load
     public static int CONTENT_PER_REQUEST = 20;  //Default 20

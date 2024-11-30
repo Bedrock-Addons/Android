@@ -145,7 +145,8 @@
                         android:paddingRight="15dp"
                         android:text="Search FAQ  "
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                        android:textColor="@color/colorTextAction" />
+                        android:textColor="@color/colorTextAction"
+                        android:visibility="gone"/>
 
                     <Button
                         android:id="@+id/search_help"
@@ -160,7 +161,8 @@
                         android:paddingRight="15dp"
                         android:text="Search Help  "
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                        android:textColor="@color/colorTextAction" />
+                        android:textColor="@color/colorTextAction"
+                        android:visibility="gone"/>
 
                     <View
                         android:layout_width="8dp"

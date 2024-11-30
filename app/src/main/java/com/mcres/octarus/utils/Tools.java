@@ -456,19 +456,19 @@ public class Tools {
         Uri uri = Uri.parse("market://details?id=" + activity.getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
         try {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://tenwan.octarus.dev/software/bedrock-addons/app-release.apk")));
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://example.com")));
         } catch (ActivityNotFoundException e) {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://tenwan.octarus.dev/software/bedrock-addons/app-release.apk")));
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://example.com")));
         }
     }
 
     // This code is not currently in use. Its here because its 2AM and I am going insane
     public static void discord(Activity activity) {
-        Uri uri = Uri.parse("https://discord.gg/NbtJFR8");
+        Uri uri = Uri.parse("https://google.com");
         try {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/NbtJFR8")));
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://example.com")));
         } catch (ActivityNotFoundException e) {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/NbtJFR8")));
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://example.com")));
         }
     }
 

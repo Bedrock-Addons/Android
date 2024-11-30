@@ -102,7 +102,8 @@
                             android:paddingRight="15dp"
                             android:text="Videos  "
                             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                            android:textColor="@color/colorTextAction" />
+                            android:textColor="@color/colorTextAction"
+                            android:visibility="gone"/>
 
                         <Button
                             android:id="@+id/nav_menu_community"
@@ -117,7 +118,8 @@
                             android:paddingRight="15dp"
                             android:text="Community  "
                             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                            android:textColor="@color/colorTextAction" />
+                            android:textColor="@color/colorTextAction"
+                            android:visibility="gone"/>
 
                         <Button
                             android:id="@+id/nav_menu_help"
@@ -132,7 +134,8 @@
                             android:paddingRight="15dp"
                             android:text="Help  "
                             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                            android:textColor="@color/colorTextAction" />
+                            android:textColor="@color/colorTextAction"
+                            android:visibility="gone"/>
 
                         <Button
                             android:id="@+id/nav_menu_rate"
@@ -170,7 +173,7 @@
             android:layout_width="fill_parent"
             android:layout_height="40dp"
             android:background="@color/colorWarning"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/title"
