@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.core.view.GravityCompat;
@@ -19,10 +21,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -46,7 +51,12 @@ import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import android.webkit.WebChromeClient;
+import com.google.android.gms.ads.MobileAds;
 
 public class ActivityMain extends AppCompatActivity {
 
@@ -80,12 +90,15 @@ public class ActivityMain extends AppCompatActivity {
             finish();
         }
 
+        MobileAds.initialize(this, initializationStatus -> {
+            prepareAds();
+        });
+
         sharedPref = new SharedPref(this);
         dao = AppDatabase.getDb(this).getDAO();
         ThisApp.get().registerNetworkListener();
         initToolbar();
         initDrawerMenu();
-        prepareAds();
 
         actionBar.setTitle("");
         loadFragment(new FragmentHome());
@@ -189,45 +202,38 @@ public class ActivityMain extends AppCompatActivity {
         Fragment fragment = null;
         String title = actionBar.getTitle().toString();
         int menu_id = view.getId();
-        switch (menu_id) {
-            case R.id.nav_menu_home:
-                if (fragmentHome == null) fragmentHome = new FragmentHome();
-                fragment = fragmentHome;
-                toolbar_title.setText(R.string.title_menu_home);
-                break;
-            case R.id.nav_menu_categories:
-                if (fragmentTopic == null) fragmentTopic = new FragmentTopic();
-                fragment = fragmentTopic;
-                toolbar_title.setText(R.string.title_menu_topic);
-                break;
-            case R.id.nav_menu_notif:
-                ActivityNotification.navigate(this);
-                break;
-            case R.id.nav_menu_faq:
-                ActivityFaq.navigate(this);
-                break;
-            case R.id.nav_menu_saved:
-                if (fragmentSaved == null) fragmentSaved = new FragmentSaved();
-                fragment = fragmentSaved;
-                toolbar_title.setText(R.string.title_menu_saved);
-                break;
-            case R.id.nav_menu_streams:
-                Tools.openInAppBrowser(this, Constant.STREAMS, false);
-                break;
-            case R.id.nav_menu_community:
-                Tools.openInAppBrowser(this, Constant.COMMUNITY, false);
-                break;
-            case R.id.nav_menu_help:
-                Tools.openInAppBrowser(this, Constant.HELP, false);
-                break;
-            case R.id.nav_menu_rate:
-                Tools.rateAction(this);
-                break;
+
+        if (menu_id == R.id.nav_menu_home) {
+            if (fragmentHome == null) fragmentHome = new FragmentHome();
+            fragment = fragmentHome;
+            toolbar_title.setText(R.string.title_menu_home);
+        } else if (menu_id == R.id.nav_menu_categories) {
+            if (fragmentTopic == null) fragmentTopic = new FragmentTopic();
+            fragment = fragmentTopic;
+            toolbar_title.setText(R.string.title_menu_topic);
+        } else if (menu_id == R.id.nav_menu_notif) {
+            ActivityNotification.navigate(this);
+        } else if (menu_id == R.id.nav_menu_faq) {
+            ActivityFaq.navigate(this);
+        } else if (menu_id == R.id.nav_menu_saved) {
+            if (fragmentSaved == null) fragmentSaved = new FragmentSaved();
+            fragment = fragmentSaved;
+            toolbar_title.setText(R.string.title_menu_saved);
+        } else if (menu_id == R.id.nav_menu_streams) {
+            Tools.openInAppBrowser(this, Constant.STREAMS, false);
+        } else if (menu_id == R.id.nav_menu_community) {
+            Tools.openInAppBrowser(this, Constant.COMMUNITY, false);
+        } else if (menu_id == R.id.nav_menu_help) {
+            Tools.openInAppBrowser(this, Constant.HELP, false);
+        } else if (menu_id == R.id.nav_menu_rate) {
+            Tools.rateAction(this);
         }
+
         actionBar.setTitle(title);
         drawer.closeDrawers();
         if (fragment != null) loadFragment(fragment);
     }
+
 
     private void loadFragment(Fragment fragment) {
         // load fragment
@@ -415,46 +421,81 @@ public class ActivityMain extends AppCompatActivity {
     }
 
     private void prepareAds() {
-        if (AppConfig.ENABLE_GDPR) GDPR.updateConsentStatus(this); // init GDPR
+        if (AppConfig.ENABLE_GDPR) GDPR.updateConsentStatus(this);
         if (!AppConfig.ADS_MAIN_ALL || !NetworkCheck.isConnect(getApplicationContext())) return;
 
-        // banner
+        // Banner Ad
         mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter.class, GDPR.getBundleAd(this)).build();
-        if (AppConfig.ADS_MAIN_BANNER) mAdView.loadAd(adRequest);
+        if (mAdView == null) {
+            Log.e("AdMob", "AdView not found in layout!");
+            return;
+        }
+        Log.d("AdMob", "Current AdView visibility: " + mAdView.getVisibility());
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .addNetworkExtrasBundle(AdMobAdapter.class, GDPR.getBundleAd(this))
+                .build();
+
+        if (AppConfig.ADS_MAIN_BANNER) {
+            mAdView.loadAd(adRequest);
+        }
+
         mAdView.setAdListener(new AdListener() {
             @Override
             public void onAdLoaded() {
                 super.onAdLoaded();
                 mAdView.setVisibility(View.VISIBLE);
             }
-        });
-
-        // interstitial ads controller
-        mInterstitialAd = new InterstitialAd(getApplicationContext());
-        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-        if (AppConfig.ADS_MAIN_INTERS) mInterstitialAd.loadAd(adRequest);
-        mInterstitialAd.setAdListener(new AdListener() {
             @Override
-            public void onAdClosed() {
-                // delay for next ads
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        prepareAds();
-                    }
-                }, 1000 * AppConfig.ADS_INTERS_MAIN_INTERVAL);
-                super.onAdClosed();
+            public void onAdFailedToLoad(@NonNull LoadAdError adError) {
+                super.onAdFailedToLoad(adError);
+                Log.e("AdMob", "Banner ad failed to load: " + adError.getMessage());
+                mAdView.setVisibility(View.GONE); // Hide banner if failed
             }
         });
+
+        // Interstitial Ads
+        InterstitialAd.load(getApplicationContext(),
+                getString(R.string.interstitial_ad_unit_id),
+                adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        mInterstitialAd = interstitialAd;
+                        mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        prepareAds();  // Reload ads after dismissal
+                                    }
+                                }, 1000 * AppConfig.ADS_INTERS_MAIN_INTERVAL);
+                            }
+                        });
+                    }
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError adError) {
+                        super.onAdFailedToLoad(adError);
+                        Log.e("AdMob", String.format("Banner ad failed to load - Code: %d, Message: %s, Domain: %s, Response Info: %s",
+                                adError.getCode(),
+                                adError.getMessage(),
+                                adError.getDomain(),
+                                adError.getResponseInfo()));
+                        mAdView.setVisibility(View.GONE);
+                    }
+                });
     }
 
     // displays the ads
     public void showInterstitial() {
         // Show the ad if it's ready
-        if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
+        if (mInterstitialAd != null) {
+            mInterstitialAd.show(ActivityMain.this);
+        } else {
+            Log.e("AdMob", "Interstitial ad not ready to show");
         }
     }
+
 
 }

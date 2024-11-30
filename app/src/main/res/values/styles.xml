@@ -78,4 +78,6 @@
         <item name="mrl_rippleColor">#8096989A</item>
     </style>
 
+    <style name="TextAppearance">TextAppearance</style>
+
 </resources>

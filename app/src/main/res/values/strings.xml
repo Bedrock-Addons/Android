@@ -227,9 +227,9 @@
     <string name="privacy_policy_url">http://octarus.com/privacy</string>
 
     <!--AdMob Strings -->
-    <string name="admob_app_id">ca-app-pub-4098781804458151~2726187145</string>
-    <string name="banner_ad_unit_id">ca-app-pub-4098781804458151/7786942134</string>
-    <string name="interstitial_ad_unit_id">ca-app-pub-4098781804458151/4312593371</string>
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
     <string name="messagebox_hint">Review (Required)</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>

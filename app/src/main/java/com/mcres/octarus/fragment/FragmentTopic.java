@@ -206,9 +206,10 @@ public class FragmentTopic extends Fragment {
 
     @Override
     public void onDestroy() {
-        if (callbackTopic != null && !callbackTopic.isCanceled()) callbackTopic.cancel();
-        shimmer.stopShimmer();
         super.onDestroy();
+        if (shimmer != null) {  // Using the correct variable name
+            shimmer.stopShimmer();
+        }
     }
 
     @Override

@@ -132,38 +132,32 @@ public class ActivitySettings extends AppCompatActivity {
 
     public void onClickLayout(View view) {
         int id = view.getId();
-        switch (id) {
-            case R.id.lyt_ringtone:
-                Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
-                intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, Uri.parse(sharedPref.getRingtone()));
-                intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_SILENT, false);
-                intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, true);
-                intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_NOTIFICATION);
-                startActivityForResult(intent, 999);
-                break;
-            case R.id.lyt_img_cache:
-                showDialogClearImageCache();
-                break;
-            case R.id.lyt_contact_us:
-                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText(getString(R.string.pref_title_contact_us), getString(R.string.developer_email));
-                clipboard.setPrimaryClip(clip);
-                Snackbar.make(parent_view, R.string.email_copied, Snackbar.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_menu_rate:
-                Tools.rateAction(this);
-                break;
-            case R.id.lyt_help:
-                Tools.openInAppBrowser(this, Constant.HELP, false);
-                break;
-            case R.id.lyt_news:
-                Tools.openInAppBrowser(this, Constant.NEWS, false);
-                break;
-            case R.id.lyt_theme:
-                showDialogTheme();
-                break;
+
+        if (id == R.id.lyt_ringtone) {
+            Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
+            intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, Uri.parse(sharedPref.getRingtone()));
+            intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_SILENT, false);
+            intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, true);
+            intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_NOTIFICATION);
+            startActivityForResult(intent, 999);
+        } else if (id == R.id.lyt_img_cache) {
+            showDialogClearImageCache();
+        } else if (id == R.id.lyt_contact_us) {
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText(getString(R.string.pref_title_contact_us), getString(R.string.developer_email));
+            clipboard.setPrimaryClip(clip);
+            Snackbar.make(parent_view, R.string.email_copied, Snackbar.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_menu_rate) {
+            Tools.rateAction(this);
+        } else if (id == R.id.lyt_help) {
+            Tools.openInAppBrowser(this, Constant.HELP, false);
+        } else if (id == R.id.lyt_news) {
+            Tools.openInAppBrowser(this, Constant.NEWS, false);
+        } else if (id == R.id.lyt_theme) {
+            showDialogTheme();
         }
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

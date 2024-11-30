@@ -233,7 +233,7 @@ public class ActivityFilterSearch extends AppCompatActivity {
         rb.setMaxLines(1);
         rb.setSingleLine(true);
         rb.setEllipsize(TextUtils.TruncateAt.END);
-        rb.setTextAppearance(this, R.style.TextAppearance_AppCompat_Body1);
+        rb.setTextAppearance(this, R.style.TextAppearance);
         rb.setHighlightColor(getResources().getColor(R.color.colorTextAction));
         rb.setTextColor(getResources().getColor(R.color.grey_60));
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -249,7 +249,7 @@ public class ActivityFilterSearch extends AppCompatActivity {
         rb.setMaxLines(1);
         rb.setSingleLine(true);
         rb.setEllipsize(TextUtils.TruncateAt.END);
-        rb.setTextAppearance(this, R.style.TextAppearance_AppCompat_Body1);
+        rb.setTextAppearance(this, R.style.TextAppearance);
         rb.setHighlightColor(getResources().getColor(R.color.colorTextAction));
         rb.setTextColor(getResources().getColor(R.color.grey_60));
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);

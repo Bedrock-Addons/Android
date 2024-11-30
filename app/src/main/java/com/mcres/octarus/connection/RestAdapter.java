@@ -13,19 +13,23 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RestAdapter {
 
-    public static API createAPI() {
-        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
-        logging.setLevel(Level.BODY);
+    private static final long CONNECT_TIMEOUT_MS = 5000; // 5 seconds
+    private static final long WRITE_TIMEOUT_MS = 10000; // 10 seconds
+    private static final long READ_TIMEOUT_MS = 30000; // 30 seconds
 
-        OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        builder.connectTimeout(5, TimeUnit.SECONDS);
-        builder.writeTimeout(10, TimeUnit.SECONDS);
-        builder.readTimeout(30, TimeUnit.SECONDS);
+    public static API createAPI() {
+        OkHttpClient.Builder httpClientBuilder = new OkHttpClient.Builder();
+        httpClientBuilder.connectTimeout(CONNECT_TIMEOUT_MS, TimeUnit.MILLISECONDS);
+        httpClientBuilder.writeTimeout(WRITE_TIMEOUT_MS, TimeUnit.MILLISECONDS);
+        httpClientBuilder.readTimeout(READ_TIMEOUT_MS, TimeUnit.MILLISECONDS);
+
         if (BuildConfig.DEBUG) {
-            builder.addInterceptor(logging);
+            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+            httpClientBuilder.addInterceptor(loggingInterceptor);
         }
-        builder.cache(null);
-        OkHttpClient okHttpClient = builder.build();
+
+        OkHttpClient okHttpClient = httpClientBuilder.build();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Constant.SERVER)

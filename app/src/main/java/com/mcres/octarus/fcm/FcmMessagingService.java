@@ -121,7 +121,7 @@ public class FcmMessagingService extends FirebaseMessagingService {
 
     private void showNotification(NotificationEntity notif, Bitmap bitmap) {
         Intent intent = ActivityDialogNotification.navigateBase(this, notif, true);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent, PendingIntent.FLAG_IMMUTABLE);
 
         String channelId = getString(R.string.notification_channel_server);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, channelId);

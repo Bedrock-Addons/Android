@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.mcres.octarus.R;
 import com.mcres.octarus.connection.API;
 import com.mcres.octarus.connection.RestAdapter;
@@ -32,9 +34,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.installations.FirebaseInstallations;
 import com.google.firebase.messaging.FirebaseMessaging;
+import android.webkit.WebView;
+import android.webkit.WebSettings;
+import android.webkit.WebChromeClient;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -62,6 +66,7 @@ public class ThisApp extends Application {
     private List<Topic> featured_topic = new ArrayList<>();
     private List<SortBy> sorts = new ArrayList<>();
     private FirebaseAnalytics firebaseAnalytics;
+    private WebView webView;
 
     @Override
     public void onCreate() {
@@ -76,11 +81,27 @@ public class ThisApp extends Application {
         // Init firebase.
         FirebaseApp.initializeApp(this);
 
-        // Init firebase ads.
-        MobileAds.initialize(this, getResources().getString(R.string.admob_app_id));
+        // Init WebView for ads
+        try {
+            webView = new WebView(this);
+            WebSettings webSettings = webView.getSettings();
+            webSettings.setJavaScriptEnabled(true);
+            webSettings.setDomStorageEnabled(true);
+            webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
+            webView.setWebChromeClient(new WebChromeClient());
+        } catch (Exception e) {
+            Log.e("AdMob", "Failed to initialize WebView", e);
+        }
 
-        // Obtain the Firebase Analytics.
-        firebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        // Init firebase ads.
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+                    @Override
+                    public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
+                    }
+                });
+
+                // Obtain the Firebase Analytics.
+                firebaseAnalytics = FirebaseAnalytics.getInstance(this);
         saveCustomLogEvent("OPEN_APP");
 
         obtainFirebaseToken();
@@ -139,11 +160,10 @@ public class ThisApp extends Application {
         if (NetworkCheck.isConnect(this) && shared_pref.isNeedRegister()) {
             fcm_count++;
 
-            Task<InstanceIdResult> resultTask = FirebaseInstanceId.getInstance().getInstanceId();
-            resultTask.addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
+            Task<String> resultTask = FirebaseInstallations.getInstance().getId();
+            resultTask.addOnSuccessListener(new OnSuccessListener<String>() {
                 @Override
-                public void onSuccess(InstanceIdResult instanceIdResult) {
-                    String regId = instanceIdResult.getToken();
+                public void onSuccess(String regId) {
                     shared_pref.setFcmRegId(regId);
                     if (!TextUtils.isEmpty(regId)) sendRegistrationToServer(regId);
                 }

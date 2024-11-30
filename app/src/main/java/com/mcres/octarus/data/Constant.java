@@ -3,7 +3,7 @@ package com.mcres.octarus.data;
 public class Constant {
 
     // The server that you want to connect to
-    public static String SERVER = "http://311310.com/";
+    public static String SERVER = "http://147.219.201.161/";
 
     // Leave this blank to make a general connection
     public static final String KEY = "";

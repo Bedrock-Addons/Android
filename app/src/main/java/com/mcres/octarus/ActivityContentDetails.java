@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -36,6 +37,7 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+
 
 import com.mcres.octarus.adapter.AdapterHome;
 import com.mcres.octarus.connection.API;
@@ -59,7 +61,11 @@ import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -535,31 +541,28 @@ public class ActivityContentDetails extends AppCompatActivity {
     private void prepareIntersAds() {
         if (!AppConfig.ADS_DETAILS_ALL || !NetworkCheck.isConnect(getApplicationContext())) return;
 
-        // interstitial
-        mInterstitialAd = new InterstitialAd(getApplicationContext());
-        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
         AdRequest adRequest = new AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter.class, GDPR.getBundleAd(this)).build();
-        if (AppConfig.ADS_DETAILS_INTERS) mInterstitialAd.loadAd(adRequest);
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                if (!is_activity_active) return;
-                mInterstitialAd.show();
-            }
 
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-                // delay for next ads
-                new Handler().postDelayed(new Runnable() {
+        InterstitialAd.load(getApplicationContext(),
+                "ca-app-pub-409878180445151/431259371",
+                adRequest,
+                new InterstitialAdLoadCallback() {
                     @Override
-                    public void run() {
-                        prepareIntersAds();
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        mInterstitialAd = interstitialAd;
+                        mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                prepareIntersAds();
+                            }
+                        });
                     }
-                }, 1000 * AppConfig.ADS_INTERS_DETAILS_NEXT_INTERVAL);
-            }
-        });
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        mInterstitialAd = null;
+                    }
+                });
     }
 
     private void refreshFontSize(TextView textView, int value) {
@@ -632,8 +635,8 @@ public class ActivityContentDetails extends AppCompatActivity {
     /* show ads */
     public void showInterstitial() {
         // Show the ad if it's ready
-        if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
+        if (mInterstitialAd != null) {
+            mInterstitialAd.show(ActivityContentDetails.this);
         }
     }
 }
