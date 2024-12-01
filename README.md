@@ -1,3 +1,22 @@
+## Bedrock Addons (Release 2.0)
+
+![easy-image-sharing](https://github.com/user-attachments/assets/e76bce8f-37a4-4cd3-a479-665d289999bd)
+
+Welcome to the new and improved Bedrock Addons. We've made significant improvemtns since the original success and eventual disappearance.
+
+Release Notes:
+- AndroidX migration
+- Java 8 -> Java 17 to ensure long term stability
+- Improved security
+- Privacy improvements
+- Smoother UX
+- Rendering upgrades
+- New icon
+- Many bugs squashed!
+
+It's the same BA you used to know and love
+
+----------Legacy README.md----------
 # NOTICE: This code is unmaintained and has known Java vulnerabilities.
 
 # Bedrock Addons
