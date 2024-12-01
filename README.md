@@ -2,7 +2,7 @@
 
 ![easy-image-sharing](https://github.com/user-attachments/assets/e76bce8f-37a4-4cd3-a479-665d289999bd)
 
-Welcome to the new and improved Bedrock Addons. We've made significant improvemtns since the original success and eventual disappearance.
+Welcome to the new and improved Bedrock Addons. We've made significant improvements since the original success and eventual disappearance.
 
 Release Notes:
 - AndroidX migration
