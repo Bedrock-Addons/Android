@@ -14,7 +14,7 @@ Release Notes:
 - New icon
 - Many bugs squashed!
 
-It's the same BA you used to know and love
+It's the same BA you used to know and love, and it is back and better than ever!
 
 ----------Legacy README.md----------
 # NOTICE: This code is unmaintained and has known Java vulnerabilities.
