@@ -30,6 +30,8 @@ It's the same BA you used to know and love, and it is back and better than ever!
 
 ![screenshot3](https://github.com/user-attachments/assets/8747a8a0-11be-4424-b9c3-d4143e8b7135)
 
+![screenshot4](https://github.com/user-attachments/assets/7501f3c9-eafa-4d6d-9b59-5232095797a3)
+
 =10.IN TABLET=
 
 ----------Legacy README.md----------
