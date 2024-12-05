@@ -2,7 +2,6 @@
 
 <img width="752" alt="Screen Shot 2024-12-05 at 17 25 43" src="https://github.com/user-attachments/assets/d149a34d-e72c-47c6-a258-28e0a10d7074">
 
-
 Welcome to the new and improved Bedrock Addons. We've made significant improvements since the original success and eventual disappearance.
 
 Release Notes:
@@ -16,6 +15,17 @@ Release Notes:
 - Many bugs squashed!
 
 It's the same BA you used to know and love, and it is back and better than ever!
+
+===PLAY STORE IMAGE REPO===
+
+![banner](https://github.com/user-attachments/assets/1bce9653-0d3e-4fb9-b51d-d27cfd56b8b2)
+
+![screenshot1](https://github.com/user-attachments/assets/6ea0d658-6a3c-4abc-8e84-337388e59597)
+
+![screenshot2](https://github.com/user-attachments/assets/dd6470fa-db69-4b95-9834-4feed8ed7e72)
+
+![screenshot3](https://github.com/user-attachments/assets/8747a8a0-11be-4424-b9c3-d4143e8b7135)
+
 
 ----------Legacy README.md----------
 # NOTICE: This code is unmaintained and has known Java vulnerabilities.
