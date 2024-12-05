@@ -18,7 +18,11 @@ It's the same BA you used to know and love, and it is back and better than ever!
 
 ===PLAY STORE IMAGE REPO===
 
+=BANNER=
+
 ![banner](https://github.com/user-attachments/assets/1bce9653-0d3e-4fb9-b51d-d27cfd56b8b2)
+
+=PHONE=
 
 ![screenshot1](https://github.com/user-attachments/assets/6ea0d658-6a3c-4abc-8e84-337388e59597)
 
@@ -26,6 +30,9 @@ It's the same BA you used to know and love, and it is back and better than ever!
 
 ![screenshot3](https://github.com/user-attachments/assets/8747a8a0-11be-4424-b9c3-d4143e8b7135)
 
+=7.IN TABLET=
+
+=10.IN TABLET=
 
 ----------Legacy README.md----------
 # NOTICE: This code is unmaintained and has known Java vulnerabilities.
