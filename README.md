@@ -34,6 +34,9 @@ It's the same BA you used to know and love, and it is back and better than ever!
 
 =10.IN TABLET=
 
+![screenshot5](https://github.com/user-attachments/assets/046ce844-0b20-41de-932b-585ab9803133)
+
+
 ----------Legacy README.md----------
 # NOTICE: This code is unmaintained and has known Java vulnerabilities.
 
