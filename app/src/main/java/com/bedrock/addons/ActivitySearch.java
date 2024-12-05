@@ -59,7 +59,8 @@ public class ActivitySearch extends AppCompatActivity {
     private EditText et_search;
     private RecyclerView recyclerView;
     private AdapterContent mAdapter;
-    private Button btn_filter, search_faq, search_help;
+    private Button btn_filter;
+    private Button search_faq;
     private SearchFilter searchFilter = new SearchFilter();
     //private AdView mAdView;
     private SharedPref sharedPref;
@@ -100,7 +101,7 @@ public class ActivitySearch extends AppCompatActivity {
         et_search = findViewById(R.id.et_search);
         btn_filter = findViewById(R.id.btn_filter);
         search_faq = findViewById(R.id.search_faq);
-        search_help = findViewById(R.id.search_help);
+        Button search_help = findViewById(R.id.search_help);
         recyclerView = findViewById(R.id.recyclerView);
 
         et_search.setHint(Html.fromHtml(hint));
