@@ -1,6 +1,7 @@
 ## Bedrock Addons (Release 2.0)
 
-![easy-image-sharing](https://github.com/user-attachments/assets/e76bce8f-37a4-4cd3-a479-665d289999bd)
+<img width="752" alt="Screen Shot 2024-12-05 at 17 25 43" src="https://github.com/user-attachments/assets/d149a34d-e72c-47c6-a258-28e0a10d7074">
+
 
 Welcome to the new and improved Bedrock Addons. We've made significant improvements since the original success and eventual disappearance.
 
