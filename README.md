@@ -32,6 +32,8 @@ It's the same BA you used to know and love, and it is back and better than ever!
 
 ![screenshot4](https://github.com/user-attachments/assets/7501f3c9-eafa-4d6d-9b59-5232095797a3)
 
+![screenshot6](https://github.com/user-attachments/assets/95069cdb-4001-446e-89c7-ac0be83c7371)
+
 =10.IN TABLET=
 
 ![screenshot5](https://github.com/user-attachments/assets/046ce844-0b20-41de-932b-585ab9803133)
